@@ -1,0 +1,16 @@
+[
+{
+  "modid": "carbonado",
+  "name": "carbonado",
+  "description": "New ore spawning on the bedrock level (both in nether and overworld). Tools and Armor made with this ore, the Carbonado, better stats than Diamond",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Insane96MCP"],
+  "credits": "The Forge and Minecraft forum for help :P",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
