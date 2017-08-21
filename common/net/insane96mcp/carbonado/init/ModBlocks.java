@@ -35,7 +35,7 @@ public class ModBlocks {
 		carbonadoOre = new BlockCarbonadoOre();
 		carbonadoOre.setRegistryName(location);
 		carbonadoOre.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
-		carbonadoOre.setHardness(10.0f);
+		carbonadoOre.setHardness(15.0f);
 		carbonadoOre.setResistance(33.3f);
 		carbonadoOre.setHarvestLevel("pickaxe", 3);
 		GameRegistry.register(carbonadoOre);

@@ -7,9 +7,12 @@ import net.insane96mcp.carbonado.init.ModItems;
 import net.insane96mcp.carbonado.lib.Names;
 import net.minecraft.block.BlockOre;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 
 public class BlockCarbonadoOre extends BlockOre{
 	
@@ -25,6 +28,16 @@ public class BlockCarbonadoOre extends BlockOre{
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
 		return ModItems.carbonadoItem;
+	}
+	
+	@Override
+	public boolean canSilkHarvest(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
+		return false;
+	}
+	
+	@Override
+	public void onBlockDestroyedByPlayer(World worldIn, BlockPos pos, IBlockState state) {
+		worldIn.setBlockState(pos, Blocks.BEDROCK.getDefaultState());
 	}
 	
 	@Override
