@@ -15,8 +15,6 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import scala.tools.nsc.doc.model.Public;
-import scala.xml.dtd.PublicID;
 
 public class ModBlocks {
 	
