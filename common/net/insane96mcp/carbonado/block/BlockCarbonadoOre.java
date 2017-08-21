@@ -27,6 +27,8 @@ public class BlockCarbonadoOre extends BlockOre{
 	
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+		if (fortune > 0)
+			fortune--;
 		return ModItems.carbonadoItem;
 	}
 	
