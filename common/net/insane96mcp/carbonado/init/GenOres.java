@@ -30,7 +30,7 @@ public class GenOres implements IWorldGenerator {
 		int dimension = world.provider.getDimension();
 		
 		if (dimension == -1 || dimension == 0) {
-			for (int i = 0; i < 8; i++) {
+			for (int i = 0; i < 12; i++) {
 				worldGenMinableNether.generate(world, random, chunkPos.add(random.nextInt(16), random.nextInt(2) + 3, random.nextInt(16)));
 				if (dimension == -1)
 					worldGenMinableNether.generate(world, random, chunkPos.add(random.nextInt(16), random.nextInt(2) + 126, random.nextInt(16)));
