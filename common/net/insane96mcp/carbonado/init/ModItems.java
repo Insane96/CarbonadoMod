@@ -1,7 +1,13 @@
 package net.insane96mcp.carbonado.init;
 
 import net.insane96mcp.carbonado.Carbonado;
-import net.insane96mcp.carbonado.item.*;
+import net.insane96mcp.carbonado.item.ItemCarbonado;
+import net.insane96mcp.carbonado.item.ItemCarbonadoArmor;
+import net.insane96mcp.carbonado.item.ItemCarbonadoAxe;
+import net.insane96mcp.carbonado.item.ItemCarbonadoHoe;
+import net.insane96mcp.carbonado.item.ItemCarbonadoPickaxe;
+import net.insane96mcp.carbonado.item.ItemCarbonadoShovel;
+import net.insane96mcp.carbonado.item.ItemCarbonadoSword;
 import net.insane96mcp.carbonado.lib.MaterialHandler;
 import net.insane96mcp.carbonado.lib.Names;
 import net.minecraft.client.renderer.ItemModelMesher;
