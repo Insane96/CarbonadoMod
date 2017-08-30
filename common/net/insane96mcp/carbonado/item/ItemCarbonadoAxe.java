@@ -13,7 +13,7 @@ import net.minecraft.util.text.TextFormatting;
 
 public class ItemCarbonadoAxe extends ItemAxe{
 	public ItemCarbonadoAxe(String name, ToolMaterial material, CreativeTabs tab) {
-		super(material, 7f, -3.1f);
+		super(material, 10f, -3.0f);
 		setRegistryName(name);
 		setCreativeTab(tab);
 	}
