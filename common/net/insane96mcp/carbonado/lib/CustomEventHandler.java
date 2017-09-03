@@ -1,11 +1,16 @@
 package net.insane96mcp.carbonado.lib;
 
 import net.insane96mcp.carbonado.init.ModItems;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.monster.EntityWitherSkeleton;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
+import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import scala.tools.nsc.doc.model.Public;
 
 public class CustomEventHandler {
 	@SubscribeEvent
@@ -50,6 +55,17 @@ public class CustomEventHandler {
 		    	amount = amount * (1f - percentageReduction);
 		        event.setAmount(amount);
 		    }
+		}
+	}
+	
+	@SubscribeEvent
+	public static void EntityJoinWorldEvent(EntityJoinWorldEvent event) {
+		Entity entity = event.getEntity();
+		if (entity instanceof EntityWitherSkeleton) {
+			if (event.getWorld().rand.nextInt(100) < 5) {
+				entity.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, new ItemStack(ModItems.carbonadoSwordItem, 1));
+				((EntityWitherSkeleton)entity).setLeftHanded(true);
+			}
 		}
 	}
 }
