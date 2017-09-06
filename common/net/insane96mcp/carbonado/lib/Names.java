@@ -13,4 +13,7 @@ public class Names {
 	public static final String CARBONADO_CHESTPLATE = "carbonado_chestplate";
 	public static final String CARBONADO_LEGGINGS = "carbonado_leggings";
 	public static final String CARBONADO_BOOTS = "carbonado_boots";
+	public static final String CARBONADO_GLASS = "carbonado_glass";
+	public static final String CARBONADO_SHARD = "carbonado_shard";
+	public static final String CARBONADO_SHARD_MOLTEN = "carbonado_shard_molten";
 }

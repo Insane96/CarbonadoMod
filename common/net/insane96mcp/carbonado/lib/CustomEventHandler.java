@@ -1,16 +1,25 @@
 package net.insane96mcp.carbonado.lib;
 
 import net.insane96mcp.carbonado.init.ModItems;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.item.EntityFallingBlock;
 import net.minecraft.entity.monster.EntityWitherSkeleton;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IWorldEventListener;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
+import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraftforge.event.entity.living.LivingSpawnEvent;
+import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import scala.tools.nsc.doc.model.Public;
+import scala.reflect.internal.Trees.This;
 
 public class CustomEventHandler {
 	@SubscribeEvent
@@ -59,7 +68,7 @@ public class CustomEventHandler {
 	}
 	
 	@SubscribeEvent
-	public static void EntityJoinWorldEvent(EntityJoinWorldEvent event) {
+	public static void LivingSpawnEvent(LivingSpawnEvent event) {
 		Entity entity = event.getEntity();
 		if (entity instanceof EntityWitherSkeleton) {
 			if (event.getWorld().rand.nextInt(100) < 5) {
@@ -68,4 +77,10 @@ public class CustomEventHandler {
 			}
 		}
 	}
+	
+	 @SubscribeEvent
+	 public static void WorldEventLoad(WorldEvent.Load event) {
+		 IWorldEventListener WorldEventListener = new WorldEventListener();
+		 event.getWorld().addEventListener(WorldEventListener);
+	 }
 }

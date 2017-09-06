@@ -6,6 +6,8 @@ import net.insane96mcp.carbonado.item.ItemCarbonadoArmor;
 import net.insane96mcp.carbonado.item.ItemCarbonadoAxe;
 import net.insane96mcp.carbonado.item.ItemCarbonadoHoe;
 import net.insane96mcp.carbonado.item.ItemCarbonadoPickaxe;
+import net.insane96mcp.carbonado.item.ItemCarbonadoShard;
+import net.insane96mcp.carbonado.item.ItemCarbonadoShardMolten;
 import net.insane96mcp.carbonado.item.ItemCarbonadoShovel;
 import net.insane96mcp.carbonado.item.ItemCarbonadoSword;
 import net.insane96mcp.carbonado.lib.MaterialHandler;
@@ -24,6 +26,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ModItems {
 	
 	public static ItemCarbonado carbonadoItem;
+	public static ItemCarbonadoShard carbonadoShardItem;
+	public static ItemCarbonadoShardMolten carbonadoShardMoltenItem;
 	
 	public static ItemCarbonadoPickaxe carbonadoPickaxeItem;
 	public static ItemCarbonadoShovel carbonadoShovelItem;
@@ -39,6 +43,12 @@ public class ModItems {
 	public static void Init() {
 		carbonadoItem = new ItemCarbonado(Names.CARBONADO_ITEM, CreativeTabs.MATERIALS);
 		GameRegistry.register(carbonadoItem);
+
+		carbonadoShardItem = new ItemCarbonadoShard(Names.CARBONADO_SHARD, CreativeTabs.MISC);
+		GameRegistry.register(carbonadoShardItem);
+
+		carbonadoShardMoltenItem = new ItemCarbonadoShardMolten(Names.CARBONADO_SHARD_MOLTEN, CreativeTabs.MISC);
+		GameRegistry.register(carbonadoShardMoltenItem);
 
 		carbonadoPickaxeItem = new ItemCarbonadoPickaxe(Names.CARBONADO_PICKAXE, MaterialHandler.Carbonado, CreativeTabs.TOOLS);
 		GameRegistry.register(carbonadoPickaxeItem);
@@ -70,7 +80,8 @@ public class ModItems {
 	
 	public static void PostInit() {
 		GameRegistry.addShapelessRecipe(new ItemStack(carbonadoItem, 9), ModBlocks.carbonadoBlock);
-		GameRegistry.addSmelting(ModBlocks.carbonadoOre, new ItemStack(carbonadoItem), 3.0f);
+		
+		GameRegistry.addSmelting(new ItemStack(carbonadoShardItem), new ItemStack(carbonadoShardMoltenItem), 3.0f);
 
 		GameRegistry.addRecipe(new ItemStack(carbonadoPickaxeItem), "vvv", " s ", " s ", 'v', carbonadoItem, 's', Items.STICK);
 		GameRegistry.addRecipe(new ItemStack(carbonadoShovelItem), " v ", " s ", " s ", 'v', carbonadoItem, 's', Items.STICK);
@@ -89,6 +100,15 @@ public class ModItems {
 		ModelResourceLocation modelResourceLocation = new ModelResourceLocation(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_ITEM);
 		ModelLoader.registerItemVariants(carbonadoItem, modelResourceLocation);
 		mesher.register(carbonadoItem, 0, modelResourceLocation);
+
+		modelResourceLocation = new ModelResourceLocation(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_SHARD);
+		ModelLoader.registerItemVariants(carbonadoShardItem, modelResourceLocation);
+		mesher.register(carbonadoShardItem, 0, modelResourceLocation);
+
+		modelResourceLocation = new ModelResourceLocation(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_SHARD_MOLTEN);
+		ModelLoader.registerItemVariants(carbonadoShardMoltenItem, modelResourceLocation);
+		mesher.register(carbonadoShardMoltenItem, 0, modelResourceLocation);
+		
 		
 		modelResourceLocation = new ModelResourceLocation(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_PICKAXE);
 		ModelLoader.registerItemVariants(carbonadoPickaxeItem, modelResourceLocation);

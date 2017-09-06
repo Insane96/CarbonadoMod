@@ -10,9 +10,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.TextFormatting;
 
-public class ItemCarbonado extends Item {
+public class ItemCarbonadoShard extends Item {
 	
-	public ItemCarbonado(String name, CreativeTabs tab) {
+	public ItemCarbonadoShard(String name, CreativeTabs tab) {
 		setRegistryName(name);
 		setCreativeTab(tab);
 		
@@ -20,11 +20,6 @@ public class ItemCarbonado extends Item {
 	
 	@Override
 	public String getUnlocalizedName(ItemStack stack) {
-		return "item." + Carbonado.RESOURCE_PREFIX + net.insane96mcp.carbonado.lib.Names.CARBONADO_ITEM;
-	}
-	
-	@Override
-	public void addInformation(ItemStack stack, EntityPlayer player, List<String> tooltip, boolean advanced) {
-		tooltip.add(TextFormatting.GRAY + "Known as Black Diamond");
+		return "item." + Carbonado.RESOURCE_PREFIX + net.insane96mcp.carbonado.lib.Names.CARBONADO_SHARD;
 	}
 }
