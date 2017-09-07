@@ -13,6 +13,7 @@ public class Config {
 		
 		return property.getInt();
 	}
+	
 	public static int[] LoadIntListProperty(String category, String key, String description, int[] defaultValue) {
 		Property property = Config.config.get(category, key, defaultValue);
 		description += " (default: [";
@@ -27,21 +28,25 @@ public class Config {
 		
 		return property.getIntList();
 	}
+	
 	public static double LoadDoubleProperty(String category, String key, String description, double defaultValue) {
 		Property property = Config.config.get(category, key, defaultValue);
 		property.setComment(description + " (default: " + defaultValue + ")");
 		
 		return property.getDouble();
 	}
+	
 	public static float LoadFloatProperty(String category, String key, String description, float defaultValue) {
 		return (float)LoadDoubleProperty(category, key, description, defaultValue);
 	}
+	
 	public static String LoadStringProperty(String category, String key, String description, String defaultValue) {
 		Property property = Config.config.get(category, key, defaultValue);
 		property.setComment(description + " (default: " + defaultValue + ")");
 		
 		return property.getString();
 	}
+	
 	public static String[] LoadStringListProperty(String category, String key, String description, String[] defaultValue) {
 		Property property = Config.config.get(category, key, defaultValue);
 		description += " (default: [";
@@ -54,6 +59,7 @@ public class Config {
 		
 		return property.getStringList();
 	}
+	
 	public static boolean LoadBoolProperty(String category, String key, String description, boolean defaultValue) {
 		Property property = Config.config.get(category, key, defaultValue);
 		property.setComment(description + " (default: " + defaultValue + ")");
