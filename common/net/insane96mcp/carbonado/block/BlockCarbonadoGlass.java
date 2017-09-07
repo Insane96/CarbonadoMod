@@ -2,6 +2,7 @@ package net.insane96mcp.carbonado.block;
 
 import net.insane96mcp.carbonado.Carbonado;
 import net.insane96mcp.carbonado.lib.Names;
+import net.insane96mcp.carbonado.lib.Stats;
 import net.minecraft.block.BlockGlass;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -18,7 +19,7 @@ public class BlockCarbonadoGlass extends BlockGlass{
 		super(Material.GLASS, false);
 		this.setHardness(0.9f);
 		this.setResistance(10f);
-		this.setLightOpacity(10);
+		this.setLightOpacity(Stats.glassLightBlocking);
 		this.setSoundType(SoundType.GLASS);
 	}
 

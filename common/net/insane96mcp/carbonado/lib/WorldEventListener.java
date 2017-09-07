@@ -2,7 +2,6 @@ package net.insane96mcp.carbonado.lib;
 
 import net.insane96mcp.carbonado.init.ModBlocks;
 import net.insane96mcp.carbonado.init.ModItems;
-import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityFallingBlock;
@@ -10,15 +9,11 @@ import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorldEventListener;
 import net.minecraft.world.World;
-import scala.inline;
-import scala.tools.nsc.backend.icode.analysis.CopyPropagation.Const;
 
 public class WorldEventListener implements IWorldEventListener {
 	
@@ -31,14 +26,13 @@ public class WorldEventListener implements IWorldEventListener {
         return null;
     }
 
-    private final int MAX_SHARD_DROP = 128;
+    private final int SHARD_DROP_AT_BASE_HEIGHT = Stats.shardAtBaseHeight;
 
-    private final int MIN_HEIGHT_FALLTIME = 27;
-    private final int MAX_HEIGHT_FALLTIME = 108;
+    private final int MIN_HEIGHT_FALLTIME = Stats.minHeightFalltime;
+    private final int BASE_HEIGHT_FALLTIME = Stats.baseHeightFalltime;
     
 	@Override
 	public void onEntityRemoved(Entity entity) {
-		// TODO Auto-generated method stub
 		EntityFallingBlock anvil = isAnvil(entity);
 		if(anvil == null)
 			return;
@@ -51,7 +45,7 @@ public class WorldEventListener implements IWorldEventListener {
 		IBlockState blockBelow = world.getBlockState(pos);
 		if(blockBelow.getBlock() == ModBlocks.carbonadoBlock) {
             world.destroyBlock(pos, false);
-            int dropCount = anvil.fallTime * MAX_SHARD_DROP / MAX_HEIGHT_FALLTIME;
+            int dropCount = anvil.fallTime * SHARD_DROP_AT_BASE_HEIGHT / BASE_HEIGHT_FALLTIME;
     		System.out.println(anvil.fallTime + " " + dropCount);
             EntityItem shards = null;
             for (int i = 0; i < dropCount; i++) {
