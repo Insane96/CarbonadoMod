@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "VV",
+    "S ",
+    "S "
+  ],
+  "key": {
+    "V": {
+      "item": "carbonado:carbonado"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "carbonado:carbonado_hoe"
+  }
+}
