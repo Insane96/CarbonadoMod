@@ -38,6 +38,11 @@ public class RegistryEventHandler {
 	@SubscribeEvent
 	public static void RegisterModels(ModelRegistryEvent event) {
 		for (Item item : ModItems.ITEMS) {
+			if (item.equals(ModItems.carbonadoShardMoltenItem) && Stats.oldMoltenShardTexture) {
+				ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_SHARD_MOLTEN_OLD, "inventory"));
+				continue;
+			}
+				
 			ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
 		}
 		for (Block block : ModBlocks.BLOCKS) {
