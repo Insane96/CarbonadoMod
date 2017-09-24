@@ -12,6 +12,7 @@ import net.insane96mcp.carbonado.item.ItemCarbonadoShovel;
 import net.insane96mcp.carbonado.item.ItemCarbonadoSword;
 import net.insane96mcp.carbonado.lib.MaterialHandler;
 import net.insane96mcp.carbonado.lib.Names;
+import net.insane96mcp.carbonado.lib.Stats;
 import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
@@ -84,10 +85,10 @@ public class ModItems {
 		GameRegistry.addSmelting(new ItemStack(carbonadoShardItem), new ItemStack(carbonadoShardMoltenItem), 3.0f);
 
 		GameRegistry.addRecipe(new ItemStack(carbonadoPickaxeItem), "vvv", " s ", " s ", 'v', carbonadoItem, 's', Items.STICK);
-		GameRegistry.addRecipe(new ItemStack(carbonadoShovelItem), " v ", " s ", " s ", 'v', carbonadoItem, 's', Items.STICK);
-		GameRegistry.addRecipe(new ItemStack(carbonadoAxeItem), " vv", " sv", " s ", 'v', carbonadoItem, 's', Items.STICK);
-		GameRegistry.addRecipe(new ItemStack(carbonadoHoeItem), " vv", " s ", " s ", 'v', carbonadoItem, 's', Items.STICK);
-		GameRegistry.addRecipe(new ItemStack(carbonadoSwordItem), " v ", " v ", " s ", 'v', carbonadoItem, 's', Items.STICK);
+		GameRegistry.addRecipe(new ItemStack(carbonadoShovelItem), "v", "s", "s", 'v', carbonadoItem, 's', Items.STICK);
+		GameRegistry.addRecipe(new ItemStack(carbonadoAxeItem), "vv", "sv", "s ", 'v', carbonadoItem, 's', Items.STICK);
+		GameRegistry.addRecipe(new ItemStack(carbonadoHoeItem), "vv", "s ", "s ", 'v', carbonadoItem, 's', Items.STICK);
+		GameRegistry.addRecipe(new ItemStack(carbonadoSwordItem), "v", "v", "s", 'v', carbonadoItem, 's', Items.STICK);
 
 		GameRegistry.addRecipe(new ItemStack(carbonadoHelmetItem), "vvv", "v v", 'v', carbonadoItem);
 		GameRegistry.addRecipe(new ItemStack(carbonadoChestplateItem), "v v", "vvv", "vvv", 'v', carbonadoItem);
@@ -105,7 +106,10 @@ public class ModItems {
 		ModelLoader.registerItemVariants(carbonadoShardItem, modelResourceLocation);
 		mesher.register(carbonadoShardItem, 0, modelResourceLocation);
 
-		modelResourceLocation = new ModelResourceLocation(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_SHARD_MOLTEN);
+		if (Stats.oldMoltenShardTexture)
+			modelResourceLocation = new ModelResourceLocation(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_SHARD_MOLTEN_OLD);
+		else
+			modelResourceLocation = new ModelResourceLocation(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_SHARD_MOLTEN);
 		ModelLoader.registerItemVariants(carbonadoShardMoltenItem, modelResourceLocation);
 		mesher.register(carbonadoShardMoltenItem, 0, modelResourceLocation);
 		
