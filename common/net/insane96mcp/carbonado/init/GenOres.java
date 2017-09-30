@@ -27,6 +27,12 @@ public class GenOres implements IWorldGenerator {
 
 		int dimension = world.provider.getDimension();
 		
+		if (dimension == -1 && !Stats.OreGeneration.enableNetherGeneration)
+			return;
+		
+		if (dimension == 0 && !Stats.OreGeneration.enableOverworldGeneration)
+			return;
+		
 		if (dimension == -1 || dimension == 0) {
 			for (int i = 0; i < Stats.OreGeneration.veinPerChunk; i++) {
 				worldGenMinableNether.generate(world, random, chunkPos.add(random.nextInt(16), random.nextInt(2) + 3, random.nextInt(16)));

@@ -65,10 +65,14 @@ public class Stats {
 	public static class OreGeneration{
 		public static int orePerVein;
 		public static int veinPerChunk;
+		public static boolean enableNetherGeneration;
+		public static boolean enableOverworldGeneration;
 		
 		public static void Init() {
 			orePerVein = Config.LoadIntProperty("ore_generation", "ore_per_vein", "Ores Generated Per Vein", 3);
-			veinPerChunk = Config.LoadIntProperty("ore_generation", "vein_per_chunk", "Veins that try to spawn in a chunk", 10);
+			veinPerChunk = Config.LoadIntProperty("ore_generation", "vein_per_chunk", "Veins that try to spawn in a chunk", 7);
+			enableNetherGeneration = Config.LoadBoolProperty("ore_generation", "enable_nether_generation", "", true);
+			enableOverworldGeneration = Config.LoadBoolProperty("ore_generation", "enable_overworld_generation", "", true);
 		}
 	}
 }
