@@ -1,0 +1,56 @@
+{
+    "display": {
+        "icon": {
+            "item": "carbonado:carbonado_chestplate"
+        },
+        "title": {
+            "translate": "advancements.carbonado.armor.title"
+        },
+        "description": {
+            "translate": "advancements.carbonado.armor.description"
+        }
+    },
+    "parent": "carbonado:carbonado/carbonado",
+    "criteria": {
+        "carbonado_helmet": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "carbonado:carbonado_helmet"
+                    }
+                ]
+            }
+        },
+        "carbonado_chestplate": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "carbonado:carbonado_chestplate"
+                    }
+                ]
+            }
+        },
+        "carbonado_leggings": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "carbonado:carbonado_leggings"
+                    }
+                ]
+            }
+        },
+        "carbonado_boots": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "carbonado:carbonado_boots"
+                    }
+                ]
+            }
+        }
+    }
+}

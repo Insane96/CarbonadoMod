@@ -1,0 +1,30 @@
+{
+    "display": {
+        "icon": {
+            "item": "carbonado:carbonado_glass"
+        },
+        "title": {
+            "translate": "advancements.carbonado.glass.title"
+        },
+        "description": {
+            "translate": "advancements.carbonado.glass.description"
+        },
+		"frame": "goal"
+    },
+    "parent": "carbonado:carbonado/carbonado_shards",
+    "criteria": {
+        "carbonado_sword": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "carbonado:carbonado_glass"
+                    }
+                ]
+            }
+        }
+    },
+	"rewards": {
+		"experience": 200
+	}
+}

@@ -8,6 +8,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraftforge.fml.common.IWorldGenerator;
 
@@ -21,10 +22,16 @@ public class GenOres implements IWorldGenerator {
 	
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world,
-			net.minecraft.world.gen.IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
+			IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
 		BlockPos chunkPos = new BlockPos(chunkX * 16, 0, chunkZ * 16);
 
 		int dimension = world.provider.getDimension();
+		
+		if (dimension == -1 && !Stats.OreGeneration.enableNetherGeneration)
+			return;
+		
+		if (dimension == 0 && !Stats.OreGeneration.enableOverworldGeneration)
+			return;
 		
 		if (dimension == -1 || dimension == 0) {
 			for (int i = 0; i < Stats.OreGeneration.veinPerChunk; i++) {
@@ -35,5 +42,4 @@ public class GenOres implements IWorldGenerator {
 		}
 	}
 
-	
 }

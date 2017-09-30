@@ -1,0 +1,21 @@
+{
+    "display": {
+        "icon": {
+            "item": "carbonado:carbonado_ore"
+        },
+        "title": {
+            "translate": "advancements.carbonado.root.title"
+        },
+        "description": {
+            "translate": "advancements.carbonado.root.description"
+        },
+        "background": "carbonado:textures/blocks/carbonado_glass.png",
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    "criteria": {
+        "carbonado": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}

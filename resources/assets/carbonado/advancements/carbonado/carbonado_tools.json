@@ -1,0 +1,56 @@
+{
+    "display": {
+        "icon": {
+            "item": "carbonado:carbonado_hoe"
+        },
+        "title": {
+            "translate": "advancements.carbonado.tools.title"
+        },
+        "description": {
+            "translate": "advancements.carbonado.tools.description"
+        }
+    },
+    "parent": "carbonado:carbonado/carbonado",
+    "criteria": {
+        "carbonado_pickaxe": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "carbonado:carbonado_pickaxe"
+                    }
+                ]
+            }
+        },
+        "carbonado_shovel": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "carbonado:carbonado_shovel"
+                    }
+                ]
+            }
+        },
+        "carbonado_axe": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "carbonado:carbonado_axe"
+                    }
+                ]
+            }
+        },
+        "carbonado_hoe": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "carbonado:carbonado_hoe"
+                    }
+                ]
+            }
+        }
+    }
+}

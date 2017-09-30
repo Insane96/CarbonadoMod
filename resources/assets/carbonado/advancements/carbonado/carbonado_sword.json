@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "carbonado:carbonado_sword"
+        },
+        "title": {
+            "translate": "advancements.carbonado.sword.title"
+        },
+        "description": {
+            "translate": "advancements.carbonado.sword.description"
+        }
+    },
+    "parent": "carbonado:carbonado/carbonado",
+    "criteria": {
+        "carbonado_sword": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "carbonado:carbonado_sword"
+                    }
+                ]
+            }
+        }
+    }
+}

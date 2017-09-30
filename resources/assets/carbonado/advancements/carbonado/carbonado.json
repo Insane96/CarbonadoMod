@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "carbonado:carbonado"
+        },
+        "title": {
+            "translate": "advancements.carbonado.carbonado.title"
+        },
+        "description": {
+            "translate": "advancements.carbonado.carbonado.description"
+        }
+    },
+    "parent": "carbonado:carbonado/root",
+    "criteria": {
+        "carbonado": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "carbonado:carbonado"
+                    }
+                ]
+            }
+        }
+    }
+}
