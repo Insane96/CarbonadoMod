@@ -28,7 +28,6 @@ public class ItemCarbonadoArmor extends ItemArmor{
 	
 	@Override
 	public void addInformation(ItemStack stack, EntityPlayer player, List<String> tooltip, boolean advanced) {
-		tooltip.add(TextFormatting.GRAY + "Reduces even more any type of damage");
-		tooltip.add(TextFormatting.GRAY + "Full Armor set damage reduction: " + TextFormatting.RED + "20%");
+
 	}
 }

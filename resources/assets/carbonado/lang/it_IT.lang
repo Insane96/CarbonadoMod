@@ -1,0 +1,20 @@
+item.carbonado:carbonado.name=Carbonado
+item.carbonado:carbonado_shard.name=Frammento di Carbonado
+item.carbonado:carbonado_shard_molten.name=Frammento di Carbonado Fuso
+
+item.carbonado:carbonado_pickaxe.name=Piccone di Carbonado
+item.carbonado:carbonado_axe.name=Ascia di Carbonado
+item.carbonado:carbonado_shovel.name=Pala di Carbonado
+item.carbonado:carbonado_hoe.name=Zappa di Carbonado
+item.carbonado:carbonado_sword.name=Spada di Carbonado
+
+item.carbonado:carbonado_helmet.name=Elmetto di Carbonado
+item.carbonado:carbonado_chestplate.name=Corazza di Carbonado
+item.carbonado:carbonado_leggings.name=Pantaloni di Carbonado
+item.carbonado:carbonado_boots.name=Stivali di Carbonado
+
+tile.carbonado:carbonado_block.name=Blocco di Carbonado
+tile.carbonado:carbonado_ore.name=Carbonado Grezzo
+tile.carbonado:carbonado_glass.name=Vetro Rinforzato con Carbonado
+
+tooltip.carbonado.base_blackDiamond=§7Conosciuto anche come Diamante Nero

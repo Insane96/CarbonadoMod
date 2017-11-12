@@ -18,27 +18,22 @@ import net.minecraft.world.World;
 
 public class WorldEventListener implements IWorldEventListener {
 	
-    public EntityFallingBlock isAnvil(Entity entity) {
+    public boolean isAnvil(Entity entity) {
         if(!(entity instanceof EntityFallingBlock))
-        	return null;
+        	return false;
         EntityFallingBlock entityFallingBlock = (EntityFallingBlock)entity;
         if (entityFallingBlock.getBlock().getBlock() == Blocks.ANVIL)
-            return entityFallingBlock;
-        return null;
+            return true;
+        return false;
     }
-
-    private final int SHARD_DROP_AT_BASE_HEIGHT = Properties.shardAtBaseHeight;
-
-    private final int MIN_HEIGHT_FALLTIME = Properties.minHeightFalltime;
-    private final int BASE_HEIGHT_FALLTIME = Properties.baseHeightFalltime;
     
 	@Override
 	public void onEntityRemoved(Entity entity) {
-		EntityFallingBlock anvil = isAnvil(entity);
-		if(anvil == null)
+		if (!isAnvil(entity))
 			return;
+		EntityFallingBlock anvil = (EntityFallingBlock)entity;
 
-		if (anvil.fallTime < MIN_HEIGHT_FALLTIME)
+		if (anvil.fallTime < Properties.Shards.minHeightFalltime)
 			return;
 		
 		World world = entity.getEntityWorld();
@@ -46,9 +41,8 @@ public class WorldEventListener implements IWorldEventListener {
 		IBlockState blockBelow = world.getBlockState(pos);
 		if(blockBelow.getBlock() == ModBlocks.carbonadoBlock) {
             world.destroyBlock(pos, false);
-            int dropCount = anvil.fallTime * SHARD_DROP_AT_BASE_HEIGHT / BASE_HEIGHT_FALLTIME;
-    		System.out.println(anvil.fallTime + " " + dropCount);
-            EntityItem shards = null;
+            int dropCount = anvil.fallTime * Properties.Shards.countAtBaseHeight / Properties.Shards.baseHeightFalltime;
+            EntityItem shards;
             for (int i = 0; i < dropCount; i++) {
             	shards = new EntityItem(world, (double)pos.getX(), (double)pos.getY(), (double)pos.getZ(), new ItemStack(ModItems.carbonadoShardItem, 1));
             	world.spawnEntity(shards);
