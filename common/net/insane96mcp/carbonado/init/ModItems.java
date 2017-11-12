@@ -12,7 +12,7 @@ import net.insane96mcp.carbonado.item.ItemCarbonadoShovel;
 import net.insane96mcp.carbonado.item.ItemCarbonadoSword;
 import net.insane96mcp.carbonado.lib.MaterialHandler;
 import net.insane96mcp.carbonado.lib.Names;
-import net.insane96mcp.carbonado.lib.Stats;
+import net.insane96mcp.carbonado.lib.Properties;
 import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
@@ -106,7 +106,7 @@ public class ModItems {
 		ModelLoader.registerItemVariants(carbonadoShardItem, modelResourceLocation);
 		mesher.register(carbonadoShardItem, 0, modelResourceLocation);
 
-		if (Stats.oldMoltenShardTexture)
+		if (Properties.oldMoltenShardTexture)
 			modelResourceLocation = new ModelResourceLocation(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_SHARD_MOLTEN_OLD);
 		else
 			modelResourceLocation = new ModelResourceLocation(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_SHARD_MOLTEN);

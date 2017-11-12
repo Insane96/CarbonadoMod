@@ -1,8 +1,8 @@
-package net.insane96mcp.carbonado;
+package net.insane96mcp.carbonado.proxies;
 
 import net.insane96mcp.carbonado.init.ModBlocks;
 import net.insane96mcp.carbonado.init.ModItems;
-import net.insane96mcp.carbonado.lib.Stats;
+import net.insane96mcp.carbonado.lib.Properties;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -13,7 +13,7 @@ public class ClientProxy extends CommonProxy{
 	@Override
 	public void PreInit(FMLPreInitializationEvent event) {
 		super.PreInit(event);
-		Stats.Init();
+		Properties.Init();
 	}
 
 	@Override

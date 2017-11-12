@@ -1,7 +1,8 @@
-package net.insane96mcp.carbonado.lib;
+package net.insane96mcp.carbonado.events;
 
 import net.insane96mcp.carbonado.init.ModBlocks;
 import net.insane96mcp.carbonado.init.ModItems;
+import net.insane96mcp.carbonado.lib.Properties;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityFallingBlock;
@@ -26,10 +27,10 @@ public class WorldEventListener implements IWorldEventListener {
         return null;
     }
 
-    private final int SHARD_DROP_AT_BASE_HEIGHT = Stats.shardAtBaseHeight;
+    private final int SHARD_DROP_AT_BASE_HEIGHT = Properties.shardAtBaseHeight;
 
-    private final int MIN_HEIGHT_FALLTIME = Stats.minHeightFalltime;
-    private final int BASE_HEIGHT_FALLTIME = Stats.baseHeightFalltime;
+    private final int MIN_HEIGHT_FALLTIME = Properties.minHeightFalltime;
+    private final int BASE_HEIGHT_FALLTIME = Properties.baseHeightFalltime;
     
 	@Override
 	public void onEntityRemoved(Entity entity) {

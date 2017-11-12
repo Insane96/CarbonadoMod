@@ -1,4 +1,4 @@
-package net.insane96mcp.carbonado;
+package net.insane96mcp.carbonado.proxies;
 
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;

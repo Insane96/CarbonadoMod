@@ -1,9 +1,11 @@
-package net.insane96mcp.carbonado;
+package net.insane96mcp.carbonado.proxies;
 
+import net.insane96mcp.carbonado.events.EntityJoinWorld;
+import net.insane96mcp.carbonado.events.WorldLoad;
 import net.insane96mcp.carbonado.init.ModBlocks;
 import net.insane96mcp.carbonado.init.ModItems;
-import net.insane96mcp.carbonado.lib.CustomEventHandler;
-import net.insane96mcp.carbonado.lib.Stats;
+import net.insane96mcp.carbonado.lib.Config;
+import net.insane96mcp.carbonado.lib.Properties;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -14,7 +16,7 @@ public class CommonProxy {
 	public void PreInit(FMLPreInitializationEvent event) {
 		Config.config = new Configuration(event.getSuggestedConfigurationFile());
 		Config.SyncConfig();
-		Stats.Init();
+		Properties.Init();
 		
 		ModItems.Init();
 		ModBlocks.Init();
@@ -23,7 +25,8 @@ public class CommonProxy {
 	public void Init(FMLInitializationEvent event) {
 		ModItems.PostInit();
 		ModBlocks.PostInit();
-		MinecraftForge.EVENT_BUS.register(CustomEventHandler.class);
+		MinecraftForge.EVENT_BUS.register(EntityJoinWorld.class);
+		MinecraftForge.EVENT_BUS.register(WorldLoad.class);
 	}
 	
 	public void PostInit(FMLPostInitializationEvent event) {

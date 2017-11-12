@@ -1,4 +1,4 @@
-package net.insane96mcp.carbonado;
+package net.insane96mcp.carbonado.lib;
 
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;

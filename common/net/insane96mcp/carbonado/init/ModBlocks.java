@@ -5,6 +5,7 @@ import net.insane96mcp.carbonado.block.BlockCarbonado;
 import net.insane96mcp.carbonado.block.BlockCarbonadoGlass;
 import net.insane96mcp.carbonado.block.BlockCarbonadoOre;
 import net.insane96mcp.carbonado.lib.Names;
+import net.insane96mcp.carbonado.worldgen.OreGeneration;
 import net.minecraft.client.renderer.ItemModelMesher;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
@@ -45,7 +46,7 @@ public class ModBlocks {
 		carbonadoOre.setHarvestLevel("pickaxe", 3);
 		GameRegistry.register(carbonadoOre);
 		GameRegistry.register(new ItemBlock(carbonadoOre), location);
-		GameRegistry.registerWorldGenerator(new GenOres(), 0);
+		GameRegistry.registerWorldGenerator(new OreGeneration(), 0);
 
 		location = new ResourceLocation(Carbonado.MOD_ID, Names.CARBONADO_GLASS);
 		carbonadoGlass = new BlockCarbonadoGlass();

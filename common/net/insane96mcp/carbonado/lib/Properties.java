@@ -1,8 +1,6 @@
 package net.insane96mcp.carbonado.lib;
 
-import net.insane96mcp.carbonado.Config;
-
-public class Stats {
+public class Properties {
 	public static float carbonadoSwordChance;
 	
 	public static int shardAtBaseHeight;
@@ -50,15 +48,11 @@ public class Stats {
 		public static int enchantability;
 		public static float toughness;
 		
-		public static float armorDamageReduction;
-		
 		public static void Init() {
 			baseDurability = Config.LoadIntProperty("armor", "base_durability", "Base durability for Carbonado Armor\n(this value is multiplied by [11, 16, 15, 13] respectively from helmet to boots)\n", 50);
 			armorPoints = Config.LoadIntListProperty("armor", "armor_points", "Armor points for Carbonado Armor", new int[] {3, 8, 6, 3});
 			enchantability = Config.LoadIntProperty("armor", "enchantability", "Enchantability for Carbonado Armor", 12);
 			toughness = Config.LoadFloatProperty("armor", "toughness", "Toughness for Carbonado Armor", 3f);
-			
-			armorDamageReduction = Config.LoadFloatProperty("armor", "damage_reduction", "Percentage Damage reduction for full Carbonado Armor Set", 20f);
 		}
 	}
 	
@@ -69,8 +63,8 @@ public class Stats {
 		public static boolean enableOverworldGeneration;
 		
 		public static void Init() {
-			orePerVein = Config.LoadIntProperty("ore_generation", "ore_per_vein", "Ores Generated Per Vein", 3);
-			veinPerChunk = Config.LoadIntProperty("ore_generation", "vein_per_chunk", "Veins that try to spawn in a chunk", 7);
+			orePerVein = Config.LoadIntProperty("ore_generation", "ore_per_vein", "Ores Generated Per Vein (not precise)", 3);
+			veinPerChunk = Config.LoadIntProperty("ore_generation", "vein_per_chunk", "Veins that try to spawn in a chunk", 6);
 			enableNetherGeneration = Config.LoadBoolProperty("ore_generation", "enable_nether_generation", "", true);
 			enableOverworldGeneration = Config.LoadBoolProperty("ore_generation", "enable_overworld_generation", "", true);
 		}
