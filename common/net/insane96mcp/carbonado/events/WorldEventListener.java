@@ -18,7 +18,7 @@ import net.minecraft.world.World;
 
 public class WorldEventListener implements IWorldEventListener {
 	
-    public boolean isAnvil(Entity entity) {
+    private boolean isAnvil(Entity entity) {
         if(!(entity instanceof EntityFallingBlock))
         	return false;
         EntityFallingBlock entityFallingBlock = (EntityFallingBlock)entity;

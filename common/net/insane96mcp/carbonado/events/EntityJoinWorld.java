@@ -29,7 +29,7 @@ public class EntityJoinWorld {
 		isAlreadyChecked = 1;
 		tags.setByte("carbonado:witherSkeletonSwordCheck", isAlreadyChecked);
 		
-		if (event.getWorld().rand.nextFloat() < Properties.carbonadoSwordChance / 100f) {
+		if (event.getWorld().rand.nextFloat() < Properties.General.carbonadoSwordChance / 100f) {
 			witherSkeleton.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, new ItemStack(ModItems.carbonadoSwordItem, 1));
 			witherSkeleton.setLeftHanded(true);
 		}

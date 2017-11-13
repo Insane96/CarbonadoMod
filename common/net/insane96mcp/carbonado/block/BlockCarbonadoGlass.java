@@ -26,7 +26,7 @@ public class BlockCarbonadoGlass extends BlockGlass{
 		super(Material.GLASS, false);
 		this.setHardness(0.9f);
 		this.setResistance(10f);
-		this.setLightOpacity(Properties.glassLightBlocking);
+		this.setLightOpacity(Properties.General.glassLightBlocking);
 		this.setSoundType(SoundType.GLASS);
 	}
 

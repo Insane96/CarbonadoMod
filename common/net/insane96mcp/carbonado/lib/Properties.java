@@ -1,33 +1,38 @@
 package net.insane96mcp.carbonado.lib;
 
 public class Properties {
-	public static float carbonadoSwordChance;
-	
-	public static int glassLightBlocking;
-	
-	public static boolean oldMoltenShardTexture;
 	
 	public static void Init() {
-		glassLightBlocking = Config.LoadIntProperty("general", "carbonado_glass_light_blocking", "Light value removed from actual light that passes through a Carbonado Glass (0-15)", 10);
-		carbonadoSwordChance = Config.LoadFloatProperty("general", "carbonado_wither_chance", "Chance for Wither Skeletons to have Carbonado Sword (1-100)", 5f);
-		
-		oldMoltenShardTexture = Config.LoadBoolProperty("general", "old_molten_shard_texture", "Set to true to use the horrible, original and old (pre-1.1.1) Molten Shard Texture", false);
-		
+		General.Init();
 		Tool.Init();
 		Armor.Init();
 		OreGeneration.Init();
 		Shards.Init();
 	}
 	
+	public static class General{
+		public static float carbonadoSwordChance;
+		public static int glassLightBlocking;
+		
+		public static void Init() {
+			glassLightBlocking = Config.LoadIntProperty("general", "carbonado_glass_light_blocking", "Light value removed from actual light that passes through a Carbonado Glass (0-15)", 10);
+			carbonadoSwordChance = Config.LoadFloatProperty("general", "carbonado_wither_chance", "Chance for Wither Skeletons to have Carbonado Sword (1-100)", 5f);
+		}
+	}
+	
 	public static class Shards{
 		public static int countAtBaseHeight;
 		public static int baseHeightFalltime;
 		public static int minHeightFalltime;
+		
+		public static boolean oldMoltenShardTexture;
 
 		public static void Init() {
 		countAtBaseHeight = Config.LoadIntProperty("shards", "count_at_base_height", "Number of shards dropped at base_height_falltime", 128);
 		baseHeightFalltime = Config.LoadIntProperty("shards", "base_height_falltime", "Anvil height to drop shard_at_base_height specified amount\nMath behind the calculations for shard drops at other height levels isn't easy\nE.g. The default value: 108, means a falling anvil from 128 blocks\nFrom 128 blocks (108 falltime) the carbonado block will drop count_at_base_height number of shards\n", 108);
 		minHeightFalltime = Config.LoadIntProperty("shards", "min_height_falltime", "Anvil minimum height to fall for the carbonado block to be destroyed\nE.g. The default value: 27, means a falling anvil from 12 blocks\nE.g. From 12 blocks (27 fallingtime) the carbonado block will drop 32 shards\n", 27);
+		
+		oldMoltenShardTexture = Config.LoadBoolProperty("shards", "old_molten_shard_texture", "Set to true to use the horrible, original and old (pre-1.1.1) Molten Shard Texture", false);
 		}
 	}
 	public static class Tool{

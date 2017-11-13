@@ -106,7 +106,7 @@ public class ModItems {
 		ModelLoader.registerItemVariants(carbonadoShardItem, modelResourceLocation);
 		mesher.register(carbonadoShardItem, 0, modelResourceLocation);
 
-		if (Properties.oldMoltenShardTexture)
+		if (Properties.Shards.oldMoltenShardTexture)
 			modelResourceLocation = new ModelResourceLocation(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_SHARD_MOLTEN_OLD);
 		else
 			modelResourceLocation = new ModelResourceLocation(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_SHARD_MOLTEN);
