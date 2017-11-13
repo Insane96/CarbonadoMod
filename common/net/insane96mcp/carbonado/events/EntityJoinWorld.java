@@ -38,6 +38,7 @@ public class EntityJoinWorld {
 			float difficulty = event.getWorld().getDifficulty().getDifficultyId() / 2;
 			float chance = Properties.General.carbonadoSwordChance * difficulty;
 		}
+		
 		if (event.getWorld().rand.nextFloat() < Properties.General.carbonadoSwordChance / 100f) {
 			witherSkeleton.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, new ItemStack(ModItems.carbonadoSwordItem, 1));
 			witherSkeleton.setLeftHanded(true);
