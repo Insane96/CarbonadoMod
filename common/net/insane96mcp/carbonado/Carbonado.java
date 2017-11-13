@@ -2,6 +2,7 @@ package net.insane96mcp.carbonado;
 
 import java.util.Random;
 
+import net.insane96mcp.carbonado.proxies.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -23,7 +24,7 @@ public class Carbonado {
 	@Instance(MOD_ID)
 	public static Carbonado instance;
 	
-	@SidedProxy(clientSide = "net.insane96mcp.carbonado.ClientProxy", serverSide = "net.insane96mcp.carbonado.ServerProxy")
+	@SidedProxy(clientSide = "net.insane96mcp.carbonado.proxies.ClientProxy", serverSide = "net.insane96mcp.carbonado.proxies.ServerProxy")
 	public static CommonProxy proxy;
 	
 	@EventHandler

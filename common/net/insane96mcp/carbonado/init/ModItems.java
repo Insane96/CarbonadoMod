@@ -2,7 +2,6 @@ package net.insane96mcp.carbonado.init;
 
 import java.util.ArrayList;
 
-import net.insane96mcp.carbonado.Carbonado;
 import net.insane96mcp.carbonado.item.ItemCarbonado;
 import net.insane96mcp.carbonado.item.ItemCarbonadoArmor;
 import net.insane96mcp.carbonado.item.ItemCarbonadoAxe;
@@ -12,20 +11,13 @@ import net.insane96mcp.carbonado.item.ItemCarbonadoShard;
 import net.insane96mcp.carbonado.item.ItemCarbonadoShardMolten;
 import net.insane96mcp.carbonado.item.ItemCarbonadoShovel;
 import net.insane96mcp.carbonado.item.ItemCarbonadoSword;
-import net.insane96mcp.carbonado.lib.MaterialHandler;
+import net.insane96mcp.carbonado.item.material.ModMaterial;
 import net.insane96mcp.carbonado.lib.Names;
-import net.minecraft.client.renderer.ItemModelMesher;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
-import scala.collection.mutable.ArrayLike;
 
 public class ModItems {
 	
@@ -56,31 +48,31 @@ public class ModItems {
 		carbonadoShardMoltenItem = new ItemCarbonadoShardMolten(Names.CARBONADO_SHARD_MOLTEN, CreativeTabs.MISC);
 		ITEMS.add(carbonadoShardMoltenItem);
 
-		carbonadoPickaxeItem = new ItemCarbonadoPickaxe(Names.CARBONADO_PICKAXE, MaterialHandler.Carbonado, CreativeTabs.TOOLS);
+		carbonadoPickaxeItem = new ItemCarbonadoPickaxe(Names.CARBONADO_PICKAXE, ModMaterial.Tools, CreativeTabs.TOOLS);
 		ITEMS.add(carbonadoPickaxeItem);
 
-		carbonadoShovelItem = new ItemCarbonadoShovel(Names.CARBONADO_SHOVEL, MaterialHandler.Carbonado, CreativeTabs.TOOLS);
+		carbonadoShovelItem = new ItemCarbonadoShovel(Names.CARBONADO_SHOVEL, ModMaterial.Tools, CreativeTabs.TOOLS);
 		ITEMS.add(carbonadoShovelItem);
 
-		carbonadoAxeItem = new ItemCarbonadoAxe(Names.CARBONADO_AXE, MaterialHandler.Carbonado, CreativeTabs.TOOLS);
+		carbonadoAxeItem = new ItemCarbonadoAxe(Names.CARBONADO_AXE, ModMaterial.Tools, CreativeTabs.TOOLS);
 		ITEMS.add(carbonadoAxeItem);
 		
-		carbonadoHoeItem = new ItemCarbonadoHoe(Names.CARBONADO_HOE, MaterialHandler.Carbonado, CreativeTabs.TOOLS);
+		carbonadoHoeItem = new ItemCarbonadoHoe(Names.CARBONADO_HOE, ModMaterial.Tools, CreativeTabs.TOOLS);
 		ITEMS.add(carbonadoHoeItem);
 		
-		carbonadoSwordItem = new ItemCarbonadoSword(Names.CARBONADO_SWORD, MaterialHandler.Carbonado, CreativeTabs.COMBAT);
+		carbonadoSwordItem = new ItemCarbonadoSword(Names.CARBONADO_SWORD, ModMaterial.Tools, CreativeTabs.COMBAT);
 		ITEMS.add(carbonadoSwordItem);
 
-		carbonadoHelmetItem = new ItemCarbonadoArmor(Names.CARBONADO_HELMET, MaterialHandler.carbonadoArmorMaterial, 0, EntityEquipmentSlot.HEAD);
+		carbonadoHelmetItem = new ItemCarbonadoArmor(Names.CARBONADO_HELMET, ModMaterial.Armor, 0, EntityEquipmentSlot.HEAD);
 		ITEMS.add(carbonadoHelmetItem);
 
-		carbonadoChestplateItem = new ItemCarbonadoArmor(Names.CARBONADO_CHESTPLATE, MaterialHandler.carbonadoArmorMaterial, 0, EntityEquipmentSlot.CHEST);
+		carbonadoChestplateItem = new ItemCarbonadoArmor(Names.CARBONADO_CHESTPLATE, ModMaterial.Armor, 0, EntityEquipmentSlot.CHEST);
 		ITEMS.add(carbonadoChestplateItem);
 
-		carbonadoLeggingsItem = new ItemCarbonadoArmor(Names.CARBONADO_LEGGINGS, MaterialHandler.carbonadoArmorMaterial, 1, EntityEquipmentSlot.LEGS);
+		carbonadoLeggingsItem = new ItemCarbonadoArmor(Names.CARBONADO_LEGGINGS, ModMaterial.Armor, 1, EntityEquipmentSlot.LEGS);
 		ITEMS.add(carbonadoLeggingsItem);
 
-		carbonadoBootsItem = new ItemCarbonadoArmor(Names.CARBONADO_BOOTS, MaterialHandler.carbonadoArmorMaterial, 0, EntityEquipmentSlot.FEET);
+		carbonadoBootsItem = new ItemCarbonadoArmor(Names.CARBONADO_BOOTS, ModMaterial.Armor, 0, EntityEquipmentSlot.FEET);
 		ITEMS.add(carbonadoBootsItem);
 	}
 	

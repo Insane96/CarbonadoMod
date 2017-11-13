@@ -1,6 +1,7 @@
 package net.insane96mcp.carbonado.item;
 
 import net.insane96mcp.carbonado.Carbonado;
+import net.insane96mcp.carbonado.lib.Names;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
@@ -14,6 +15,6 @@ public class ItemCarbonadoPickaxe extends ItemPickaxe {
 
 	@Override
 	public String getUnlocalizedName(ItemStack stack) {
-		return "item." + Carbonado.RESOURCE_PREFIX + net.insane96mcp.carbonado.lib.Names.CARBONADO_PICKAXE;
+		return "item." + Carbonado.RESOURCE_PREFIX + Names.CARBONADO_PICKAXE;
 	}
 }

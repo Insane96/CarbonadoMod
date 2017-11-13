@@ -1,13 +1,20 @@
 package net.insane96mcp.carbonado.block;
 
+import java.util.List;
+
+import javax.annotation.Nullable;
+
 import net.insane96mcp.carbonado.Carbonado;
 import net.insane96mcp.carbonado.lib.Names;
-import net.insane96mcp.carbonado.lib.Stats;
+import net.insane96mcp.carbonado.lib.Properties;
+import net.insane96mcp.carbonado.lib.Tooltips;
 import net.minecraft.block.BlockGlass;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.resources.I18n;
+import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -19,7 +26,7 @@ public class BlockCarbonadoGlass extends BlockGlass{
 		super(Material.GLASS, false);
 		this.setHardness(0.9f);
 		this.setResistance(10f);
-		this.setLightOpacity(Stats.glassLightBlocking);
+		this.setLightOpacity(Properties.General.glassLightBlocking);
 		this.setSoundType(SoundType.GLASS);
 	}
 
@@ -38,5 +45,12 @@ public class BlockCarbonadoGlass extends BlockGlass{
 	@Override
 	public boolean canDropFromExplosion(Explosion explosionIn) {
 		return true;
+	}
+	
+	@Override
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+		tooltip.add(I18n.format(Tooltips.GlassCreation.base_info));
+		tooltip.add("");
+		tooltip.add(I18n.format(Tooltips.GlassCreation.base_createGlass));
 	}
 }
