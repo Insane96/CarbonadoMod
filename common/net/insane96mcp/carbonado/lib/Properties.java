@@ -12,11 +12,13 @@ public class Properties {
 	
 	public static class General{
 		public static float carbonadoSwordChance;
+		public static boolean swordChanceDifficultyBased;
 		public static int glassLightBlocking;
 		
 		public static void Init() {
 			glassLightBlocking = Config.LoadIntProperty("general", "carbonado_glass_light_blocking", "Light value removed from actual light that passes through a Carbonado Glass (0-15)", 10);
 			carbonadoSwordChance = Config.LoadFloatProperty("general", "carbonado_wither_chance", "Chance for Wither Skeletons to have Carbonado Sword (1-100)", 5f);
+			swordChanceDifficultyBased = Config.LoadBoolProperty("general", "carbonado_wither_difficulty_based", "If the world's difficulty should affect the chance for a wither skeleton to get a carbonado sword.\nNormal Difficulty: chance equal to carbonado_wither_chance, Easy Difficulty: half chance, Hard Difficulty: 50% more chance\n", true);
 		}
 	}
 	

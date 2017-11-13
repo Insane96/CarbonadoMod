@@ -45,12 +45,11 @@ public class WorldEventListener implements IWorldEventListener {
             EntityItem shards;
             for (int i = 0; i < dropCount; i++) {
             	shards = new EntityItem(world, (double)pos.getX(), (double)pos.getY(), (double)pos.getZ(), new ItemStack(ModItems.carbonadoShardItem, 1));
-            	world.spawnEntity(shards);
+            	world.spawnEntityInWorld(shards);
             }
         }
-
 	}
-	
+
 	@Override
 	public void notifyBlockUpdate(World worldIn, BlockPos pos, IBlockState oldState, IBlockState newState, int flags) {
 		// TODO Auto-generated method stub
@@ -85,14 +84,6 @@ public class WorldEventListener implements IWorldEventListener {
 	@Override
 	public void spawnParticle(int particleID, boolean ignoreRange, double xCoord, double yCoord, double zCoord,
 			double xSpeed, double ySpeed, double zSpeed, int... parameters) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void spawnParticle(int p_190570_1_, boolean p_190570_2_, boolean p_190570_3_, double p_190570_4_,
-			double p_190570_6_, double p_190570_8_, double p_190570_10_, double p_190570_12_, double p_190570_14_,
-			int... p_190570_16_) {
 		// TODO Auto-generated method stub
 		
 	}
