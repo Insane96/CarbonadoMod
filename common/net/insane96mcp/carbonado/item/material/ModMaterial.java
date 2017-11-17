@@ -1,8 +1,6 @@
 package net.insane96mcp.carbonado.item.material;
 
 import net.insane96mcp.carbonado.lib.Properties;
-import net.insane96mcp.carbonado.lib.Properties.Armor;
-import net.insane96mcp.carbonado.lib.Properties.Tool;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;

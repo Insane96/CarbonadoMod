@@ -4,6 +4,7 @@ import net.insane96mcp.carbonado.events.EntityJoinWorld;
 import net.insane96mcp.carbonado.events.WorldLoad;
 import net.insane96mcp.carbonado.init.ModBlocks;
 import net.insane96mcp.carbonado.init.ModItems;
+import net.insane96mcp.carbonado.item.material.ModMaterial;
 import net.insane96mcp.carbonado.lib.Config;
 import net.insane96mcp.carbonado.lib.Properties;
 import net.minecraftforge.common.MinecraftForge;
