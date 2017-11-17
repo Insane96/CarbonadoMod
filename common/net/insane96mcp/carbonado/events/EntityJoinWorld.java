@@ -34,12 +34,13 @@ public class EntityJoinWorld {
 		isAlreadyChecked = 1;
 		tags.setByte("carbonado:witherSkeletonSwordCheck", isAlreadyChecked);
 
+		float chance = Properties.General.carbonadoSwordChance / 100f;
 		if (Properties.General.swordChanceDifficultyBased) {
 			float difficulty = event.getWorld().getDifficulty().getDifficultyId() / 2;
-			float chance = Properties.General.carbonadoSwordChance * difficulty;
+			chance *= difficulty;
 		}
 		
-		if (event.getWorld().rand.nextFloat() < Properties.General.carbonadoSwordChance / 100f) {
+		if (event.getWorld().rand.nextFloat() < chance) {
 			witherSkeleton.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, new ItemStack(ModItems.carbonadoSwordItem, 1));
 			witherSkeleton.setLeftHanded(true);
 		}
