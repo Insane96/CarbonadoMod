@@ -3,12 +3,12 @@ package net.insane96mcp.carbonado.item;
 import java.util.List;
 
 import net.insane96mcp.carbonado.Carbonado;
+import net.insane96mcp.carbonado.init.ModItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.text.TextFormatting;
 
 public class ItemCarbonadoArmor extends ItemArmor{
 
@@ -27,7 +27,7 @@ public class ItemCarbonadoArmor extends ItemArmor{
 	}
 	
 	@Override
-	public void addInformation(ItemStack stack, EntityPlayer player, List<String> tooltip, boolean advanced) {
-
-	}
+	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
+		return ItemStack.areItemsEqualIgnoreDurability(repair, new ItemStack(ModItems.carbonadoItem)) ? true : super.getIsRepairable(toRepair, repair);
+  	}
 }

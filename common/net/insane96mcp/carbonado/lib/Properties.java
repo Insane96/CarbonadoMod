@@ -17,7 +17,7 @@ public class Properties {
 		
 		public static void Init() {
 			glassLightBlocking = Config.LoadIntProperty("general", "carbonado_glass_light_blocking", "Light value removed from actual light that passes through a Carbonado Glass (0-15)", 10);
-			carbonadoSwordChance = Config.LoadFloatProperty("general", "carbonado_wither_chance", "Chance for Wither Skeletons to have Carbonado Sword (1-100)", 5f);
+			carbonadoSwordChance = Config.LoadFloatProperty("general", "carbonado_wither_chance", "Chance for Wither Skeletons to have Carbonado Sword (0.0-100.0)", 5f);
 			swordChanceDifficultyBased = Config.LoadBoolProperty("general", "carbonado_wither_difficulty_based", "If the world's difficulty should affect the chance for a wither skeleton to get a carbonado sword.\nNormal Difficulty: chance equal to carbonado_wither_chance, Easy Difficulty: half chance, Hard Difficulty: 50% more chance\n", true);
 		}
 	}
@@ -60,7 +60,7 @@ public class Properties {
 		
 		public static void Init() {
 			baseDurability = Config.LoadIntProperty("armor", "base_durability", "Base durability for Carbonado Armor\n(this value is multiplied by [11, 16, 15, 13] respectively from helmet to boots)\n", 50);
-			armorPoints = Config.LoadIntListProperty("armor", "armor_points", "Armor points for Carbonado Armor", new int[] {4, 7, 9, 5});
+			armorPoints = Config.LoadIntListProperty("armor", "armor_points", "Armor points for Carbonado Armor", new int[] {4, 7, 8, 5});
 			enchantability = Config.LoadIntProperty("armor", "enchantability", "Enchantability for Carbonado Armor", 12);
 			toughness = Config.LoadFloatProperty("armor", "toughness", "Toughness for Carbonado Armor", 3f);
 		}
@@ -73,7 +73,7 @@ public class Properties {
 		public static boolean enableOverworldGeneration;
 		
 		public static void Init() {
-			orePerVein = Config.LoadIntProperty("ore_generation", "ore_per_vein", "Ores Generated Per Vein (not precise)", 3);
+			orePerVein = Config.LoadIntProperty("ore_generation", "ore_per_vein", "Ores Generated Per Vein (not precise, 3 doesn't mean that will always spawn a vein of 3 Ores. Mostly with 3 you'll find 1 max 2 ores)", 3);
 			veinPerChunk = Config.LoadIntProperty("ore_generation", "vein_per_chunk", "Veins that try to spawn in a chunk", 6);
 			enableNetherGeneration = Config.LoadBoolProperty("ore_generation", "enable_nether_generation", "", true);
 			enableOverworldGeneration = Config.LoadBoolProperty("ore_generation", "enable_overworld_generation", "", true);
