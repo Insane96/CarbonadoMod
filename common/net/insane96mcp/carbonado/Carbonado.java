@@ -11,13 +11,14 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Carbonado.MOD_ID, name = Carbonado.MOD_NAME, version = Carbonado.VERSION)
+@Mod(modid = Carbonado.MOD_ID, name = Carbonado.MOD_NAME, version = Carbonado.VERSION, acceptedMinecraftVersions = Carbonado.MINECRAFT_VERSIONS)
 public class Carbonado {
 	
 	public static final String MOD_ID = "carbonado";
 	public static final String MOD_NAME = "Carbonado";
-	public static final String VERSION = "1.4.1";
+	public static final String VERSION = "1.4.2";
 	public static final String RESOURCE_PREFIX = MOD_ID.toLowerCase() + ":";
+	public static final String MINECRAFT_VERSIONS = "[1.12,1.12.2]";
 
 	public static Random random = new Random();
 	
