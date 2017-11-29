@@ -1,45 +1,45 @@
-item.carbonado:carbonado.name=Carbonado
-item.carbonado:carbonado_shard.name=Carbonado Shard
-item.carbonado:carbonado_shard_molten.name=Molten Carbonado Shard
+item.carbonado:carbonado.name=Карбонадо
+item.carbonado:carbonado_shard.name=Карбонадовый осколок
+item.carbonado:carbonado_shard_molten.name=Расплавленный карбонадовый осколок
 
-item.carbonado:carbonado_pickaxe.name=Carbonado Pickaxe
-item.carbonado:carbonado_axe.name=Carbonado Axe
-item.carbonado:carbonado_shovel.name=Carbonado Shovel
-item.carbonado:carbonado_hoe.name=Carbonado Hoe
-item.carbonado:carbonado_sword.name=Carbonado Sword
+item.carbonado:carbonado_pickaxe.name=Карбонадовая кирка
+item.carbonado:carbonado_axe.name=Карбонадовый топор
+item.carbonado:carbonado_shovel.name=Карбонадовая лопата
+item.carbonado:carbonado_hoe.name=Карбонадовая мотыга
+item.carbonado:carbonado_sword.name=Карбонадовый меч
 
-item.carbonado:carbonado_helmet.name=Carbonado Helmet
-item.carbonado:carbonado_chestplate.name=Carbonado Chestplate
-item.carbonado:carbonado_leggings.name=Carbonado Leggings
-item.carbonado:carbonado_boots.name=Carbonado Boots
+item.carbonado:carbonado_helmet.name=Карбонадовый шлем
+item.carbonado:carbonado_chestplate.name=Карбонадовый нагрудник
+item.carbonado:carbonado_leggings.name=Карбонадовые поножи
+item.carbonado:carbonado_boots.name=Карбонадовые сапоги
 
-tile.carbonado:carbonado_block.name=Carbonado Block
-tile.carbonado:carbonado_ore.name=Carbonado Ore
-tile.carbonado:carbonado_glass.name=Carbonado Reinforced Glass
+tile.carbonado:carbonado_block.name=Карбонадовый слиток
+tile.carbonado:carbonado_ore.name=Карбонадовая руда
+tile.carbonado:carbonado_glass.name=Карбонадовое стекло
 
-tooltip.carbonado.base_blackDiamond=§7Also known as Black Diamond
-tooltip.carbonado_shard.base_info=§7Used to create Carbonado Reinforced Glass
+tooltip.carbonado.base_blackDiamond=§7Известный также как черный алмаз
+tooltip.carbonado_shard.base_info=§7Используется для создания карбонадового стекла
 
-tooltip.carbonado_glass.base_info=§8Stronger than normal Glass and stops almost all the light from passing through
-tooltip.carbonado_glass.base_createGlass=§7To create that glass, drop an anvil from really high (I mean, reaaaaally high) on a Carbonado Block to get Carbonado Shards, then smelt them to get Molten Carbonado Shards and with 8 normal Glass create 8 Carbonado Reinforced Glass
+tooltip.carbonado_glass.base_info=§8Крепче обычного стекла и почти не пропускает свет
+tooltip.carbonado_glass.base_createGlass=§7Чтобы изготовить это стекло, бросьте наковальню с большой высоты (я имею ввиду, с действительно огромной высоты) на карбонадовый слиток для получения карбонадовых осколков, расплавьте осколки, чтобы получить расплавленные карбонадовые осколки, затем добавьте 8 кусков обычного стекла и получите 8 кусоков карбонадового стекла
 
-advancements.carbonado.root.title=Carbonado Mod
-advancements.carbonado.root.description=Install Carbonado Ore Mod!
+advancements.carbonado.root.title=Карбонадо Мод
+advancements.carbonado.root.description=Установите мод Карбонадовая руда!
 
-advancements.carbonado.carbonado.title=Stronger than Diamond
-advancements.carbonado.carbonado.description=Obtain a Carbonado. Also Called Black Diamond
+advancements.carbonado.carbonado.title=Крепче алмаза
+advancements.carbonado.carbonado.description=Получите карбонадо. Также известный как черный алмаз
 
-advancements.carbonado.armor.title=Man in Black
-advancements.carbonado.armor.description=Obtain a full set of Carbonado armor
+advancements.carbonado.armor.title=Человек в Черном
+advancements.carbonado.armor.description=Получите полный набор карбонадовой брони
 
-advancements.carbonado.sword.title=Not That Shiny, but Sharp
-advancements.carbonado.sword.description=Obtain a Carbonado Sword
+advancements.carbonado.sword.title=Не блестит, зато острый
+advancements.carbonado.sword.description=Получите карбонадовый меч
 
-advancements.carbonado.tools.title=Full Black
-advancements.carbonado.tools.description=Obtain a full set of Carbonado Tools (yep, the Hoe too)
+advancements.carbonado.tools.title=Всё Чёрное
+advancements.carbonado.tools.description=Получите полный набор карбонадовых инструментов (ага, мотыгу тоже)
 
-advancements.carbonado.shard.title=A falling Anvil from really high
-advancements.carbonado.shard.description=Make an anvil fall from really high on top of a Carbonado Block to obtain shards
+advancements.carbonado.shard.title=Падающая с огромной высоты наковальня
+advancements.carbonado.shard.description=Сбросьте наковальню с огромной высоты на карбонадовый слиток для получения осколков
 
-advancements.carbonado.glass.title=Tinted Window
-advancements.carbonado.glass.description=Melt the shards and use them to get Carbonado Reinforced Glass
+advancements.carbonado.glass.title=Тонированное стекло
+advancements.carbonado.glass.description=Расплавьте осколки и используйте их, чтобы изготовить карбонадовое стекло
