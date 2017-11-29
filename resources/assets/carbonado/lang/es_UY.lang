@@ -1,0 +1,24 @@
+﻿item.carbonado:carbonado.name=Carbonado
+item.carbonado:carbonado_shard.name=Fragmento de Carbonado
+item.carbonado:carbonado_shard_molten.name=Fragmento de Carbonado derretido
+
+item.carbonado:carbonado_pickaxe.name=Pico de Carbonado
+item.carbonado:carbonado_axe.name=Hacha de Carbonado
+item.carbonado:carbonado_shovel.name=Pala de Carbonado
+item.carbonado:carbonado_hoe.name=Azada de Carbonado
+item.carbonado:carbonado_sword.name=Espada de Carbonado
+
+item.carbonado:carbonado_helmet.name=Casco de Carbonado
+item.carbonado:carbonado_chestplate.name=Pechera de Carbonado
+item.carbonado:carbonado_leggings.name=Pantalones de Carbonado
+item.carbonado:carbonado_boots.name=Botas de Carbonado
+
+tile.carbonado:carbonado_block.name=Bloque de Carbonado
+tile.carbonado:carbonado_ore.name=Mena de Carbonado
+tile.carbonado:carbonado_glass.name=Vidrio Reforzado de Carbonado
+
+tooltip.carbonado.base_blackDiamond=§7Tambien conocido como Diamante Negro
+tooltip.carbonado_shard.base_info=§7Usado para crear Vidrio Reforzado de Carbonado
+
+tooltip.carbonado_glass.base_info=§8Mas fuerte que el vidrio normal, impide el paso de la luz en casi su totalidad
+tooltip.carbonado_glass.base_createGlass=§7Para crear este vidrio, suelta un yunque desde una altura MUY alta (En serio, MUUUUUY alta) sobre un Bloque de Carbonado para obtener Fragmentos de Carbonado, luego derrítelos en el horno para obtener Fragmentos Derretidos de Carbonado y sumado a 8 vidrios normales se crean 8 Vidrios Reforzados de Carbonado.
