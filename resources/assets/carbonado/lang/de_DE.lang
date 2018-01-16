@@ -1,0 +1,24 @@
+item.carbonado:carbonado.name=Carbonado
+item.carbonado:carbonado_shard.name=Carbonado Splitter
+item.carbonado:carbonado_shard_molten.name=Geschmolzener Carbonado Splitter
+
+item.carbonado:carbonado_pickaxe.name=Carbonado Spitzhacke
+item.carbonado:carbonado_axe.name=Carbonado Axt
+item.carbonado:carbonado_shovel.name=Carbonado Schaufel
+item.carbonado:carbonado_hoe.name=Carbonado Hacke
+item.carbonado:carbonado_sword.name=Carbonado Schwert
+
+item.carbonado:carbonado_helmet.name=Carbonado Helm
+item.carbonado:carbonado_chestplate.name=Carbonado Brustpanzer
+item.carbonado:carbonado_leggings.name=Carbonado Hosen
+item.carbonado:carbonado_boots.name=Carbonado Schuhe
+
+tile.carbonado:carbonado_block.name=Carbonado Block
+tile.carbonado:carbonado_ore.name=Carbonado Erz
+tile.carbonado:carbonado_glass.name=Carbonado verstärktes Glas
+
+tooltip.carbonado.base_blackDiamond=§7Auch bekannt als schwarzer Diamant
+tooltip.carbonado_shard.base_info=§7Benutzt um Carbonado verstärktes Glas herzustellen
+
+tooltip.carbonado_glass.base_info=§8Stärker als normales Glas und stoppt fast all das Licht vor dem durchdringen
+tooltip.carbonado_glass.base_createGlass=§7Um das Glas zu erstellen, muss ein Amboss von einer sehr hohen Höhe (damit meine ich, seeeeehr hoch) auf einen Carbonado Block fallen gelassen werden, um Carbonado Splitter zu erhalten. Diese können dann geschmolzen werden, um Geschmolzene Carbonado Splitter zu erhalten. Gemeinsam mit 8 normalen Glass-Blöcken können 8 Carbonado verstärktes Glas hergestellt werden
