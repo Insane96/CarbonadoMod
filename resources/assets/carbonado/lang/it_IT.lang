@@ -23,16 +23,13 @@ tooltip.carbonado_shard.base_info=§7Usato per creare il Vetro Rinforzato con Ca
 tooltip.carbonado_glass.base_info=§8Più reistente del Vetro normale e blocca quasi tutta la luce che ci passa attraverso
 tooltip.carbonado_glass.base_createGlass=§7Per creare questo vetro, butta un'incudine da molto in alto (ma mooooolto in alto) su un Blocco di Carbonado per ottenere i Frammenti di Carbonado. Poi fondi questi frammenti per ottenere un Frammento di Carbonado Fuso che con 8 blocchi di Vetro faranno 8 Vetri Rinforzati con Carbonado
 
-advancements.carbonado.root.title=Carbonado Mod
-advancements.carbonado.root.description=Installa la Mod del Carbonado!
-
 advancements.carbonado.carbonado.title=Migliore del Diamante
 advancements.carbonado.carbonado.description=Ottieni un Carbonado. Anche chiamato Diamante Nero
 
 advancements.carbonado.armor.title=Man in Black
 advancements.carbonado.armor.description=Ottieni un set completo di armatura di Carbonado
 
-advancements.carbonado.sword.title=Non splendente, ma affilata
+advancements.carbonado.sword.title=Non così splendente, ma affilata
 advancements.carbonado.sword.description=Ottieni una spada di Carbonado
 
 advancements.carbonado.tools.title=Tutto in Nero

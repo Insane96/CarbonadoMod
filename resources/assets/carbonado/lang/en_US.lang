@@ -27,9 +27,6 @@ tooltip.carbonado_shard.base_info=§7Used to create Carbonado Reinforced Glass
 tooltip.carbonado_glass.base_info=§8Stronger than normal Glass and stops almost all the light from passing through
 tooltip.carbonado_glass.base_createGlass=§7To create that glass, drop an anvil from really high (I mean, reaaaaally high) on a Carbonado Block to get Carbonado Shards, then smelt them to get Molten Carbonado Shards and with 8 normal Glass create 8 Carbonado Reinforced Glass
 
-advancements.carbonado.root.title=Carbonado Mod
-advancements.carbonado.root.description=Install Carbonado Ore Mod!
-
 advancements.carbonado.carbonado.title=Stronger than Diamond
 advancements.carbonado.carbonado.description=Obtain a Carbonado. Also Called Black Diamond
 

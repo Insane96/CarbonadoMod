@@ -23,9 +23,6 @@ tooltip.carbonado_shard.base_info=§7Usado para crear Vidrio Reforzado de Carbon
 tooltip.carbonado_glass.base_info=§8Mas fuerte que el vidrio normal, impide el paso de la luz en casi su totalidad
 tooltip.carbonado_glass.base_createGlass=§7Para crear este vidrio, suelta un yunque desde una altura MUY alta (En serio, MUUUUUY alta) sobre un Bloque de Carbonado para obtener Fragmentos de Carbonado, luego derrítelos en el horno para obtener Fragmentos Derretidos de Carbonado y sumado a 8 vidrios normales se crean 8 Vidrios Reforzados de Carbonado.
 
-advancements.carbonado.root.title=Carbonado Mod
-advancements.carbonado.root.description=Instalar el Mod Mena de Carbonado!
-
 advancements.carbonado.carbonado.title=Mas fuerte que el diamante
 advancements.carbonado.carbonado.description=Obtener un Carbonado. Tambien conocido como Diamante Negro
 
