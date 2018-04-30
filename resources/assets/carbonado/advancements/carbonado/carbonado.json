@@ -8,9 +8,9 @@
         },
         "description": {
             "translate": "advancements.carbonado.carbonado.description"
-        },
-        "background": "carbonado:textures/blocks/carbonado_glass.png"
+        }
     },
+    "parent": "carbonado:carbonado/root",
     "criteria": {
         "carbonado": {
             "trigger": "minecraft:inventory_changed",

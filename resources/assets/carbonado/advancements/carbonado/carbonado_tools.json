@@ -1,7 +1,7 @@
 {
     "display": {
         "icon": {
-            "item": "carbonado:carbonado_hoe"
+            "item": "carbonado:carbonado_pickaxe"
         },
         "title": {
             "translate": "advancements.carbonado.tools.title"

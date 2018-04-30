@@ -25,10 +25,13 @@ tooltip.carbonado.base_blackDiamond=§7Also known as Black Diamond
 tooltip.carbonado_shard.base_info=§7Used to create Carbonado Reinforced Glass
 
 tooltip.carbonado_glass.base_info=§8Stronger than normal Glass and stops almost all the light from passing through
-tooltip.carbonado_glass.base_createGlass=§7To create that glass, drop an anvil from really high (I mean, reaaaaally high) on a Carbonado Block to get Carbonado Shards, then smelt them to get Molten Carbonado Shards and with 8 normal Glass create 8 Carbonado Reinforced Glass
+tooltip.carbonado_glass.base_createGlass=§7Drop an anvil from really high (I mean, reaaaaally high) on a Carbonado Block to get Carbonado Shards, then smelt them ...
+
+advancements.carbonado.root.title=Carbonado Mod
+advancements.carbonado.root.description=Also called Black Diamond
 
 advancements.carbonado.carbonado.title=Stronger than Diamond
-advancements.carbonado.carbonado.description=Obtain a Carbonado. Also Called Black Diamond
+advancements.carbonado.carbonado.description=Obtain a Carbonado. Try checking inside bedrock
 
 advancements.carbonado.armor.title=Man in Black
 advancements.carbonado.armor.description=Obtain a full set of Carbonado armor
@@ -38,6 +41,9 @@ advancements.carbonado.sword.description=Obtain a Carbonado Sword
 
 advancements.carbonado.tools.title=Full Black
 advancements.carbonado.tools.description=Obtain a full set of Carbonado Tools (yep, the Hoe too)
+
+advancements.carbonado.hoe.title=Even more dedication
+advancements.carbonado.hoe.description=Break down a Carbonado Hoe
 
 advancements.carbonado.shard.title=A falling Anvil from really high
 advancements.carbonado.shard.description=Make an anvil fall from really high on top of a Carbonado Block to obtain shards

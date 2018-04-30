@@ -20,8 +20,8 @@ tile.carbonado:carbonado_glass.name=Vetro Rinforzato con Carbonado
 tooltip.carbonado.base_blackDiamond=§7Conosciuto anche come Diamante Nero
 tooltip.carbonado_shard.base_info=§7Usato per creare il Vetro Rinforzato con Carbonado
 
-tooltip.carbonado_glass.base_info=§8Più reistente del Vetro normale e blocca quasi tutta la luce che ci passa attraverso
-tooltip.carbonado_glass.base_createGlass=§7Per creare questo vetro, butta un'incudine da molto in alto (ma mooooolto in alto) su un Blocco di Carbonado per ottenere i Frammenti di Carbonado. Poi fondi questi frammenti per ottenere un Frammento di Carbonado Fuso che con 8 blocchi di Vetro faranno 8 Vetri Rinforzati con Carbonado
+tooltip.carbonado_glass.base_info=§8Più reistente del Vetro normale e blocca quasi tutta la luce vi passa attraverso
+tooltip.carbonado_glass.base_createGlass=§7Getta un'incudine da molto in alto (ma mooooolto in alto) su un Blocco di Carbonado per ottenere i Frammenti di Carbonado. Poi fondi questi frammenti ...
 
 advancements.carbonado.carbonado.title=Migliore del Diamante
 advancements.carbonado.carbonado.description=Ottieni un Carbonado. Anche chiamato Diamante Nero
@@ -35,8 +35,11 @@ advancements.carbonado.sword.description=Ottieni una spada di Carbonado
 advancements.carbonado.tools.title=Tutto in Nero
 advancements.carbonado.tools.description=Ottieni un set completo di Attrezzi di Carbonado (si, anche la zappa)
 
+advancements.carbonado.hoe.title=Ancora più dedizione
+advancements.carbonado.hoe.description=Consuma completamente una Zappa di Carbonado
+
 advancements.carbonado.shard.title=Un'incudine dall'alto dei cieli
-advancements.carbonado.shard.description=Fai cadere una Anvil da molto in alto su un Blocco di Carbonado per ottenerne i frammenti
+advancements.carbonado.shard.description=Fai cadere un'incudine da molto in alto su un Blocco di Carbonado per ottenerne i frammenti
 
 advancements.carbonado.glass.title=Vetri Oscurati
 advancements.carbonado.glass.description=Fondi i frammenti ed usali per ottenere del Vetro Rinforzato con Carbonado

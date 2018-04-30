@@ -1,0 +1,28 @@
+{
+    "display": {
+        "icon": {
+            "item": "carbonado:carbonado_hoe"
+        },
+        "title": {
+            "translate": "advancements.carbonado.hoe.title"
+        },
+        "description": {
+            "translate": "advancements.carbonado.hoe.description"
+        }
+    },
+    "parent": "carbonado:carbonado/carbonado_tools",
+    "rewards": {
+        "experience": 300
+    },
+    "criteria": {
+		"broke_hoe": {
+			"trigger": "minecraft:item_durability_changed",
+			"conditions": {
+			    "item": {
+			        "item": "carbonado:carbonado_hoe"
+			    },
+			    "durability": -1
+			}
+        }
+    }
+}
