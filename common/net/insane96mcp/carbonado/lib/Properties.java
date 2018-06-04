@@ -67,16 +67,16 @@ public class Properties {
 	}
 	
 	public static class OreGeneration{
-		public static int orePerVein;
-		public static int veinPerChunk;
-		public static boolean enableNetherGeneration;
-		public static boolean enableOverworldGeneration;
+		public static int netherOrePerVein;
+		public static int netherVeinPerChunk;
+		public static int overworldOrePerVein;
+		public static int overworldVeinPerChunk;
 		
 		public static void Init() {
-			orePerVein = Config.LoadIntProperty("ore_generation", "ore_per_vein", "Ores Generated Per Vein (not precise, 3 doesn't mean that will always spawn a vein of 3 Ores. Mostly with 3 you'll find 1 max 2 ores)", 3);
-			veinPerChunk = Config.LoadIntProperty("ore_generation", "vein_per_chunk", "Veins that try to spawn in a chunk", 6);
-			enableNetherGeneration = Config.LoadBoolProperty("ore_generation", "enable_nether_generation", "", true);
-			enableOverworldGeneration = Config.LoadBoolProperty("ore_generation", "enable_overworld_generation", "", true);
+			netherOrePerVein = Config.LoadIntProperty("ore_generation", "nether_ore_per_vein", "Ores Generated Per Vein in the nether (not precise, 3 doesn't mean that will always spawn a vein of 3 Ores. Mostly with 3 you'll find 1, max 2 ores)", 3);
+			netherVeinPerChunk = Config.LoadIntProperty("ore_generation", "nether_vein_per_chunk", "Veins that try to spawn in a nether chunk", 8);
+			overworldOrePerVein = Config.LoadIntProperty("ore_generation", "overworld_ore_per_vein", "Ores Generated Per Vein in the overworld (not precise, 3 doesn't mean that will always spawn a vein of 3 Ores. Mostly with 3 you'll find 1, max 2 ores)", 3);
+			overworldVeinPerChunk = Config.LoadIntProperty("ore_generation", "overworld_vein_per_chunk", "Veins that try to spawn in a chunk in the overworld", 12);
 		}
 	}
 }

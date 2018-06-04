@@ -16,32 +16,45 @@ import net.minecraftforge.fml.common.IWorldGenerator;
 public class OreGeneration implements IWorldGenerator {
 
 	private final WorldGenMinable worldGenMinableNether;
+	private final WorldGenMinable worldGenMinableOverworld;
 	
 	public OreGeneration() {
-		worldGenMinableNether = new WorldGenMinable(ModBlocks.carbonadoOre.getDefaultState(), Properties.OreGeneration.orePerVein, BlockMatcher.forBlock(Blocks.BEDROCK));
+		worldGenMinableNether = new WorldGenMinable(ModBlocks.carbonadoOre.getDefaultState(), Properties.OreGeneration.netherOrePerVein, BlockMatcher.forBlock(Blocks.BEDROCK));
+		worldGenMinableOverworld = new WorldGenMinable(ModBlocks.carbonadoOre.getDefaultState(), Properties.OreGeneration.overworldOrePerVein, BlockMatcher.forBlock(Blocks.BEDROCK));
 	}
 	
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator,
 			IChunkProvider chunkProvider) {
-		BlockPos chunkPos = new BlockPos(chunkX * 16, 0, chunkZ * 16);
+		BlockPos pos = new BlockPos(chunkX * 16, 0, chunkZ * 16);
 
 		int dimension = world.provider.getDimension();
-		
-		if (dimension == -1 && !Properties.OreGeneration.enableNetherGeneration)
+
+		GenerateNether(random, chunkX, chunkZ, world, pos, dimension);
+		GenerateOverworld(random, chunkX, chunkZ, world, pos, dimension);
+	}
+
+	private void GenerateNether(Random random, int chunkX, int chunkZ, World world, BlockPos pos, int dimension) {		
+		if (dimension == -1 && Properties.OreGeneration.netherVeinPerChunk <= 0)
 			return;
 		
-		if (dimension == 0 && !Properties.OreGeneration.enableOverworldGeneration)
-			return;
-		
-		if (dimension == -1 || dimension == 0) {
-			for (int i = 0; i < Properties.OreGeneration.veinPerChunk; i++) {
-				worldGenMinableNether.generate(world, random, chunkPos.add(random.nextInt(16), random.nextInt(2) + 3, random.nextInt(16)));
-				if (dimension == -1)
-					worldGenMinableNether.generate(world, random, chunkPos.add(random.nextInt(16), random.nextInt(2) + 126, random.nextInt(16)));
+		if (dimension == -1) {
+			for (int i = 0; i < Properties.OreGeneration.netherVeinPerChunk; i++) {
+				worldGenMinableNether.generate(world, random, pos.add(random.nextInt(16), random.nextInt(2) + 3, random.nextInt(16)));
+				worldGenMinableNether.generate(world, random, pos.add(random.nextInt(16), random.nextInt(2) + 126, random.nextInt(16)));
 			}
 		}
 	}
-
 	
+	private void GenerateOverworld(Random random, int chunkX, int chunkZ, World world, BlockPos pos, int dimension) {
+		
+		if (dimension == 0 && Properties.OreGeneration.overworldVeinPerChunk <= 0)
+			return;
+
+		if (dimension == 0) {
+			for (int i = 0; i < Properties.OreGeneration.overworldVeinPerChunk; i++) {
+				worldGenMinableNether.generate(world, random, pos.add(random.nextInt(16), random.nextInt(2) + 3, random.nextInt(16)));
+			}
+		}
+	}
 }
