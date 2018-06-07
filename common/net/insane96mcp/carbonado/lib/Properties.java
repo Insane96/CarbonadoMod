@@ -18,7 +18,7 @@ public class Properties {
 		public static void Init() {
 			glassLightBlocking = Config.LoadIntProperty("general", "carbonado_glass_light_blocking", "Light value removed from actual light that passes through a Carbonado Glass (0-15)", 10);
 			carbonadoSwordChance = Config.LoadFloatProperty("general", "carbonado_wither_chance", "Chance for Wither Skeletons to have Carbonado Sword (0.0-100.0)", 5f);
-			swordChanceDifficultyBased = Config.LoadBoolProperty("general", "carbonado_wither_difficulty_based", "If the world's difficulty should affect the chance for a wither skeleton to get a carbonado sword.\nNormal Difficulty: chance equal to carbonado_wither_chance, Easy Difficulty: half chance, Hard Difficulty: 50% more chance\n", true);
+			swordChanceDifficultyBased = Config.LoadBoolProperty("general", "carbonado_wither_difficulty_based", "If the world's difficulty should affect the chance for a wither skeleton to get a carbonado sword.\nNormal Difficulty: chance equal to carbonado_wither_chance, Easy Difficulty: half chance, Hard Difficulty: double chance\n", true);
 		}
 	}
 	
@@ -31,8 +31,8 @@ public class Properties {
 
 		public static void Init() {
 		countAtBaseHeight = Config.LoadIntProperty("shards", "count_at_base_height", "Number of shards dropped at base_height_falltime", 128);
-		baseHeightFalltime = Config.LoadIntProperty("shards", "base_height_falltime", "Anvil height to drop shard_at_base_height specified amount\nMath behind the calculations for shard drops at other height levels isn't easy\nE.g. The default value: 108, means a falling anvil from 128 blocks\nFrom 128 blocks (108 falltime) the carbonado block will drop count_at_base_height number of shards\n", 108);
-		minHeightFalltime = Config.LoadIntProperty("shards", "min_height_falltime", "Anvil minimum height to fall for the carbonado block to be destroyed\nE.g. The default value: 27, means a falling anvil from 12 blocks\nE.g. From 12 blocks (27 fallingtime) the carbonado block will drop 32 shards\n", 27);
+		baseHeightFalltime = Config.LoadIntProperty("shards", "base_height_falltime", "Anvil height to drop count_at_base_height specified amount\nMath behind the calculations for shard drops at other height levels isn't easy\nE.g. The default value: 108, means a falling anvil from 128 blocks\nFrom 128 blocks (108 falltime) the carbonado block will drop count_at_base_height number of shards\n", 108);
+		minHeightFalltime = Config.LoadIntProperty("shards", "min_height_falltime", "Anvil minimum height to fall for the carbonado block to be destroyed\nE.g. The default value: 27, means a falling anvil from 12 blocks\nE.g. From 12 blocks (27 falling_time) the carbonado block will drop 32 shards\n", 27);
 		
 		oldMoltenShardTexture = Config.LoadBoolProperty("shards", "old_molten_shard_texture", "Set to true to use the horrible, original and old (pre-1.1.1) Molten Shard Texture", false);
 		}
@@ -67,16 +67,12 @@ public class Properties {
 	}
 	
 	public static class OreGeneration{
-		public static int netherOrePerVein;
 		public static int netherVeinPerChunk;
-		public static int overworldOrePerVein;
 		public static int overworldVeinPerChunk;
 		
 		public static void Init() {
-			netherOrePerVein = Config.LoadIntProperty("ore_generation", "nether_ore_per_vein", "Ores Generated Per Vein in the nether (not precise, 3 doesn't mean that will always spawn a vein of 3 Ores. Mostly with 3 you'll find 1, max 2 ores)", 3);
-			netherVeinPerChunk = Config.LoadIntProperty("ore_generation", "nether_vein_per_chunk", "Veins that try to spawn in a nether chunk", 8);
-			overworldOrePerVein = Config.LoadIntProperty("ore_generation", "overworld_ore_per_vein", "Ores Generated Per Vein in the overworld (not precise, 3 doesn't mean that will always spawn a vein of 3 Ores. Mostly with 3 you'll find 1, max 2 ores)", 3);
-			overworldVeinPerChunk = Config.LoadIntProperty("ore_generation", "overworld_vein_per_chunk", "Veins that try to spawn in a chunk in the overworld", 12);
+			netherVeinPerChunk = Config.LoadIntProperty("ore_generation", "nether_ore_per_chunk", "Ores that try to spawn in a nether chunk, both top and bottom of the nether", 5);
+			overworldVeinPerChunk = Config.LoadIntProperty("ore_generation", "overworld_ore_per_chunk", "Ores that try to spawn in a chunk in the overworld", 7);
 		}
 	}
 }

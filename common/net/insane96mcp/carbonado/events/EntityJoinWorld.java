@@ -7,6 +7,7 @@ import net.minecraft.entity.monster.EntityWitherSkeleton;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.world.EnumDifficulty;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -31,8 +32,11 @@ public class EntityJoinWorld {
 
 		float chance = Properties.General.carbonadoSwordChance / 100f;
 		if (Properties.General.swordChanceDifficultyBased) {
-			float difficulty = event.getWorld().getDifficulty().getDifficultyId() / 2;
-			chance *= difficulty;
+			EnumDifficulty difficulty = event.getWorld().getDifficulty();
+			if (difficulty.equals(EnumDifficulty.EASY))
+				chance /= 2f;
+			else if (difficulty.equals(EnumDifficulty.HARD))
+				chance *= 2f;
 		}
 		
 		if (event.getWorld().rand.nextFloat() < chance) {

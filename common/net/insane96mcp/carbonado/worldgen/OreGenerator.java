@@ -13,14 +13,14 @@ import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraftforge.fml.common.IWorldGenerator;
 
-public class OreGeneration implements IWorldGenerator {
+public class OreGenerator implements IWorldGenerator {
 
-	private final WorldGenMinable worldGenMinableNether;
-	private final WorldGenMinable worldGenMinableOverworld;
+	private final WorldGenCarbonado worldGenCarbonadoNether;
+	private final WorldGenCarbonado worldGenCarbonadoOverworld;
 	
-	public OreGeneration() {
-		worldGenMinableNether = new WorldGenMinable(ModBlocks.carbonadoOre.getDefaultState(), Properties.OreGeneration.netherOrePerVein, BlockMatcher.forBlock(Blocks.BEDROCK));
-		worldGenMinableOverworld = new WorldGenMinable(ModBlocks.carbonadoOre.getDefaultState(), Properties.OreGeneration.overworldOrePerVein, BlockMatcher.forBlock(Blocks.BEDROCK));
+	public OreGenerator() {
+		worldGenCarbonadoNether = new WorldGenCarbonado(ModBlocks.carbonadoOre.getDefaultState(), BlockMatcher.forBlock(Blocks.BEDROCK));
+		worldGenCarbonadoOverworld = new WorldGenCarbonado(ModBlocks.carbonadoOre.getDefaultState(), BlockMatcher.forBlock(Blocks.BEDROCK));
 	}
 	
 	@Override
@@ -40,8 +40,8 @@ public class OreGeneration implements IWorldGenerator {
 		
 		if (dimension == -1) {
 			for (int i = 0; i < Properties.OreGeneration.netherVeinPerChunk; i++) {
-				worldGenMinableNether.generate(world, random, pos.add(random.nextInt(16), random.nextInt(2) + 3, random.nextInt(16)));
-				worldGenMinableNether.generate(world, random, pos.add(random.nextInt(16), random.nextInt(2) + 126, random.nextInt(16)));
+				worldGenCarbonadoNether.generate(world, random, pos.add(random.nextInt(16), random.nextInt(5), random.nextInt(16)));
+				worldGenCarbonadoNether.generate(world, random, pos.add(random.nextInt(16), random.nextInt(5) + 123, random.nextInt(16)));
 			}
 		}
 	}
@@ -53,7 +53,7 @@ public class OreGeneration implements IWorldGenerator {
 
 		if (dimension == 0) {
 			for (int i = 0; i < Properties.OreGeneration.overworldVeinPerChunk; i++) {
-				worldGenMinableNether.generate(world, random, pos.add(random.nextInt(16), random.nextInt(2) + 3, random.nextInt(16)));
+				worldGenCarbonadoNether.generate(world, random, pos.add(random.nextInt(16), random.nextInt(5), random.nextInt(16)));
 			}
 		}
 	}
