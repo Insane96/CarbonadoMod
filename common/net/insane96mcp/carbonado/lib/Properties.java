@@ -23,18 +23,18 @@ public class Properties {
 	}
 	
 	public static class Shards{
-		public static int countAtBaseHeight;
-		public static int baseHeightFalltime;
-		public static int minHeightFalltime;
+		public static int minHeight;
+		public static int countAtMinHeight;
+		public static int maxCount;
 		
 		public static boolean oldMoltenShardTexture;
 
 		public static void Init() {
-		countAtBaseHeight = Config.LoadIntProperty("shards", "count_at_base_height", "Number of shards dropped at base_height_falltime", 128);
-		baseHeightFalltime = Config.LoadIntProperty("shards", "base_height_falltime", "Anvil height to drop count_at_base_height specified amount\nMath behind the calculations for shard drops at other height levels isn't easy\nE.g. The default value: 108, means a falling anvil from 128 blocks\nFrom 128 blocks (108 falltime) the carbonado block will drop count_at_base_height number of shards\n", 108);
-		minHeightFalltime = Config.LoadIntProperty("shards", "min_height_falltime", "Anvil minimum height to fall for the carbonado block to be destroyed\nE.g. The default value: 27, means a falling anvil from 12 blocks\nE.g. From 12 blocks (27 falling_time) the carbonado block will drop 32 shards\n", 27);
+			minHeight = Config.LoadIntProperty("shards", "min_height", "Anvil minimum height to fall for the carbonado block to be destroyed", 32);
+			countAtMinHeight = Config.LoadIntProperty("shards", "count_at_min_height", "Number of shards dropped at min_height, increased by 1 for each block height more", 32);
+			maxCount = Config.LoadIntProperty("shards", "max_count", "Maximum shards that can drop", 192);
 		
-		oldMoltenShardTexture = Config.LoadBoolProperty("shards", "old_molten_shard_texture", "Set to true to use the horrible, original and old (pre-1.1.1) Molten Shard Texture", false);
+			oldMoltenShardTexture = Config.LoadBoolProperty("shards", "old_molten_shard_texture", "Set to true to use the horrible, original and old (pre-1.1.1) Molten Shard Texture", false);
 		}
 	}
 	public static class Tool{
@@ -71,8 +71,8 @@ public class Properties {
 		public static int overworldVeinPerChunk;
 		
 		public static void Init() {
-			netherVeinPerChunk = Config.LoadIntProperty("ore_generation", "nether_ore_per_chunk", "Ores that try to spawn in a nether chunk, both top and bottom of the nether", 5);
-			overworldVeinPerChunk = Config.LoadIntProperty("ore_generation", "overworld_ore_per_chunk", "Ores that try to spawn in a chunk in the overworld", 7);
+			netherVeinPerChunk = Config.LoadIntProperty("ore_generation", "nether_ore_per_chunk", "Ores that try to spawn in a nether chunk, both top and bottom of the nether", 4);
+			overworldVeinPerChunk = Config.LoadIntProperty("ore_generation", "overworld_ore_per_chunk", "Ores that try to spawn in a chunk in the overworld", 6);
 		}
 	}
 }
