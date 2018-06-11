@@ -1,0 +1,52 @@
+item.carbonado:carbonado.name=Carbonado
+item.carbonado:carbonado_shard.name=Carbonado ParÃ§asÄ±
+item.carbonado:carbonado_shard_molten.name=ErimiÅŸ Carbonado ParÃ§asÄ±
+
+item.carbonado:carbonado_pickaxe.name=Carbonado Kazma
+item.carbonado:carbonado_axe.name=Carbonado Balta
+item.carbonado:carbonado_shovel.name=Carbonado KÃ¼rek
+item.carbonado:carbonado_hoe.name=Carbonado Ã‡apa
+item.carbonado:carbonado_sword.name=Carbonado KÄ±lÄ±Ã§
+
+item.carbonado:carbonado_helmet.name=Carbonado Kask
+item.carbonado:carbonado_chestplate.name=Carbonado GÃ¶ÄŸÃ¼slÃ¼k
+item.carbonado:carbonado_leggings.name=Carbonado Pantolon
+item.carbonado:carbonado_boots.name=Carbonado Bot
+
+tile.carbonado:carbonado_block.name=Carbonado BloÄŸu
+tile.carbonado:carbonado_ore.name=Carbonado Cevheri
+tile.carbonado:carbonado_glass.name=Carbonado GÃ¼Ã§lendirilmiÅŸ Cam
+
+tile.carbonado:carbonado_block.name=Carbonado BloÄŸu
+tile.carbonado:carbonado_ore.name=Carbonado Cevheri
+tile.carbonado:carbonado_glass.name=Carbonado GÃ¼Ã§lendirilmiÅŸ Cam
+
+tooltip.carbonado.base_blackDiamond=à¸¢à¸‡7Siyah Elmas olarak da bilinir
+tooltip.carbonado_shard.base_info=Carbonado GÃ¼Ã§lendirilmiÅŸ Cam yapmak iÃ§in kullanÄ±lÄ±r
+
+tooltip.carbonado_glass.base_info=Normal cama gÃ¶re Ã§ok dayanÄ±klÄ±dÄ±r ve gelen Ä±ÅŸÄ±ÄŸÄ±n Ã§oÄŸunu engeller.
+tooltip.carbonado_glass.base_createGlass=Carbonado ParÃ§asÄ± elde etmek iÃ§in, bir Ã¶rsÃ¼ yÃ¼ksekten (Yani, Ã§ooook yÃ¼ksekten) Carbonado BloÄŸunun Ã¼stÃ¼ne dÃ¼ÅŸÃ¼rmelisin ve onlarÄ± piÅŸirmelisin...
+
+advancements.carbonado.root.title=Carbonado Mod
+advancements.carbonado.root.description=Siyah Elmas olarak da bilinir
+
+advancements.carbonado.carbonado.title=Elmastan GÃ¼Ã§lÃ¼sÃ¼n
+advancements.carbonado.carbonado.description=Carbonado elde et. Katman kayasÄ±nÄ±n iÃ§ine bakmaya ne dersin?
+
+advancements.carbonado.armor.title=Siyah Giyen Adam
+advancements.carbonado.armor.description=Tam set ÅŸeklinde bir Carbonado zÄ±rhÄ± elde et, giy.
+
+advancements.carbonado.sword.title=Pek parlak deÄŸil ama, Ã‡OK keskin.
+advancements.carbonado.sword.description=Bir Carbonado KÄ±lÄ±cÄ± elde et.
+
+advancements.carbonado.tools.title=Tamamen Siyah!
+advancements.carbonado.tools.description=TÃ¼m Carbonado aletlerini Ã¼ret! (evet, Ã§apa da Ã¼retmelisin..)
+
+advancements.carbonado.hoe.title=Fazla fazla baÄŸÄ±mlÄ±lÄ±k
+advancements.carbonado.hoe.description=Bir Carbonado Ã‡apasÄ±nÄ± kÄ±rana kadar kullan.
+
+advancements.carbonado.shard.title=Ã‡OK yÃ¼ksekten dÃ¼ÅŸen bir Ã¶rs?
+advancements.carbonado.shard.description=Carbonado ParÃ§asÄ± elde etmek iÃ§in bir Ã¶rsÃ¼ Carbonado BloÄŸunun Ã¼stÃ¼ne "Ã‡OK" yÃ¼ksekten dÃ¼ÅŸÃ¼r.
+
+advancements.carbonado.glass.title=Kapkara Pencereler
+advancements.carbonado.glass.description=Carbonado ParÃ§alarÄ±nÄ± piÅŸir, ardÄ±ndan Carbonado GÃ¼Ã§lendirilmiÅŸ CamÄ± yapmak iÃ§in kullan.
