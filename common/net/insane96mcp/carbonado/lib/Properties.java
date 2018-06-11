@@ -30,8 +30,8 @@ public class Properties {
 		public static boolean oldMoltenShardTexture;
 
 		public static void Init() {
-			minHeight = Config.LoadIntProperty("shards", "min_height", "Anvil minimum height to fall for the carbonado block to be destroyed", 32);
-			countAtMinHeight = Config.LoadIntProperty("shards", "count_at_min_height", "Number of shards dropped at min_height, increased by 1 for each block height more", 32);
+			minHeight = Config.LoadIntProperty("shards", "min_height", "Anvil minimum height to fall for the carbonado block to be destroyed", 24);
+			countAtMinHeight = Config.LoadIntProperty("shards", "count_at_min_height", "Number of shards dropped at min_height, increased by 1 for each block higher", 16);
 			maxCount = Config.LoadIntProperty("shards", "max_count", "Maximum shards that can drop", 192);
 		
 			oldMoltenShardTexture = Config.LoadBoolProperty("shards", "old_molten_shard_texture", "Set to true to use the horrible, original and old (pre-1.1.1) Molten Shard Texture", false);
