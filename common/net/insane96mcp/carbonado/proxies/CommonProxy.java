@@ -23,13 +23,13 @@ public class CommonProxy {
 	}
 	
 	public void Init(FMLInitializationEvent event) {
-		ModItems.PostInit();
-		ModBlocks.PostInit();
 		MinecraftForge.EVENT_BUS.register(EntityJoinWorld.class);
 		MinecraftForge.EVENT_BUS.register(WorldLoad.class);
 	}
 	
 	public void PostInit(FMLPostInitializationEvent event) {
 		Config.SaveConfig();
+		ModItems.PostInit();
+		ModBlocks.PostInit();
 	}
 }

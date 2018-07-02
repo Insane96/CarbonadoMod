@@ -18,6 +18,7 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class ModItems {
 	
@@ -78,5 +79,7 @@ public class ModItems {
 	
 	public static void PostInit() {
 		GameRegistry.addSmelting(new ItemStack(carbonadoShardItem), new ItemStack(carbonadoShardMoltenItem), 3.0f);
+		
+		OreDictionary.registerOre("gemCarbonado", carbonadoItem);
 	}
 }

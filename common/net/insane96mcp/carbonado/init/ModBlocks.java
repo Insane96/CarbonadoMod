@@ -12,6 +12,7 @@ import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class ModBlocks {
 	
@@ -49,6 +50,7 @@ public class ModBlocks {
 	}
 	
 	public static void PostInit() {
-	
+		OreDictionary.registerOre("oreCarbonado", carbonadoOre);
+		OreDictionary.registerOre("blockCarbonado", carbonadoBlock);
 	}
 }

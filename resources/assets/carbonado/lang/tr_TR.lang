@@ -1,0 +1,52 @@
+item.carbonado:carbonado.name=Carbonado
+item.carbonado:carbonado_shard.name=Carbonado Parçası
+item.carbonado:carbonado_shard_molten.name=Erimiş Carbonado Parçası
+
+item.carbonado:carbonado_pickaxe.name=Carbonado Kazma
+item.carbonado:carbonado_axe.name=Carbonado Balta
+item.carbonado:carbonado_shovel.name=Carbonado Kürek
+item.carbonado:carbonado_hoe.name=Carbonado Çapa
+item.carbonado:carbonado_sword.name=Carbonado Kılıç
+
+item.carbonado:carbonado_helmet.name=Carbonado Kask
+item.carbonado:carbonado_chestplate.name=Carbonado Göğüslük
+item.carbonado:carbonado_leggings.name=Carbonado Pantolon
+item.carbonado:carbonado_boots.name=Carbonado Bot
+
+tile.carbonado:carbonado_block.name=Carbonado Bloğu
+tile.carbonado:carbonado_ore.name=Carbonado Cevheri
+tile.carbonado:carbonado_glass.name=Carbonado Güçlendirilmiş Cam
+
+tile.carbonado:carbonado_block.name=Carbonado Bloğu
+tile.carbonado:carbonado_ore.name=Carbonado Cevheri
+tile.carbonado:carbonado_glass.name=Carbonado Güçlendirilmiş Cam
+
+tooltip.carbonado.base_blackDiamond=ยง7Siyah Elmas olarak da bilinir
+tooltip.carbonado_shard.base_info=Carbonado Güçlendirilmiş Cam yapmak için kullanılır
+
+tooltip.carbonado_glass.base_info=Normal cama göre çok dayanıklıdır ve gelen ışığın çoğunu engeller.
+tooltip.carbonado_glass.base_createGlass=Carbonado Parçası elde etmek için, bir örsü yüksekten (Yani, çooook yüksekten) Carbonado Bloğunun üstüne düşürmelisin ve onları pişirmelisin...
+
+advancements.carbonado.root.title=Carbonado Mod
+advancements.carbonado.root.description=Siyah Elmas olarak da bilinir
+
+advancements.carbonado.carbonado.title=Elmastan Güçlüsün
+advancements.carbonado.carbonado.description=Carbonado elde et. Katman kayasının içine bakmaya ne dersin?
+
+advancements.carbonado.armor.title=Siyah Giyen Adam
+advancements.carbonado.armor.description=Tam set şeklinde bir Carbonado zırhı elde et, giy.
+
+advancements.carbonado.sword.title=Pek parlak değil ama, ÇOK keskin.
+advancements.carbonado.sword.description=Bir Carbonado Kılıcı elde et.
+
+advancements.carbonado.tools.title=Tamamen Siyah!
+advancements.carbonado.tools.description=Tüm Carbonado aletlerini üret! (evet, çapa da üretmelisin..)
+
+advancements.carbonado.hoe.title=Fazla fazla bağımlılık
+advancements.carbonado.hoe.description=Bir Carbonado Çapasını kırana kadar kullan.
+
+advancements.carbonado.shard.title=ÇOK yüksekten düşen bir örs?
+advancements.carbonado.shard.description=Carbonado Parçası elde etmek için bir örsü Carbonado Bloğunun üstüne "ÇOK" yüksekten düşür.
+
+advancements.carbonado.glass.title=Kapkara Pencereler
+advancements.carbonado.glass.description=Carbonado Parçalarını pişir, ardından Carbonado Güçlendirilmiş Camı yapmak için kullan.
