@@ -32,7 +32,7 @@ public class BlockCarbonadoGlass extends BlockGlass{
 
 	
 	@Override
-	public String getUnlocalizedName() {
+	public String getTranslationKey() {
 		return "tile." + Carbonado.RESOURCE_PREFIX + Names.CARBONADO_GLASS;
 	}
 	

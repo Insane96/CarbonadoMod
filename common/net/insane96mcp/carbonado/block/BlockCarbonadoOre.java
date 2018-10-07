@@ -21,7 +21,7 @@ public class BlockCarbonadoOre extends BlockOre{
 	}
 	
 	@Override
-	public String getUnlocalizedName() {
+	public String getTranslationKey() {
 		return "tile." + Carbonado.RESOURCE_PREFIX + Names.CARBONADO_ORE;
 	}
 	
@@ -38,7 +38,7 @@ public class BlockCarbonadoOre extends BlockOre{
 	}
 	
 	@Override
-	public void onBlockDestroyedByPlayer(World worldIn, BlockPos pos, IBlockState state) {
+	public void onPlayerDestroy(World worldIn, BlockPos pos, IBlockState state) {
 		worldIn.setBlockState(pos, Blocks.BEDROCK.getDefaultState());
 	}
 	

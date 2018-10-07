@@ -15,7 +15,7 @@ public class ItemCarbonadoShovel extends ItemSpade{
 	}
 
 	@Override
-	public String getUnlocalizedName(ItemStack stack) {
+	public String getTranslationKey(ItemStack stack) {
 		return "item." + Carbonado.RESOURCE_PREFIX + Names.CARBONADO_SHOVEL;
 	}
 	

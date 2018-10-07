@@ -31,10 +31,11 @@ public class WorldGenCarbonado extends WorldGenerator {
 
     public boolean generate(World worldIn, Random rand, BlockPos position)
     {
-        IBlockState state = worldIn.getBlockState(position);
-        if (state.getBlock().isReplaceableOreGen(state, worldIn, position, this.predicate))
+    	BlockPos shiftedPosition = position.add(8, 0, 8);
+        IBlockState state = worldIn.getBlockState(shiftedPosition);
+        if (state.getBlock().isReplaceableOreGen(state, worldIn, shiftedPosition, this.predicate))
         {
-            worldIn.setBlockState(position, this.oreBlock, 2);
+            worldIn.setBlockState(shiftedPosition, this.oreBlock, 2);
         }
 
         return true;

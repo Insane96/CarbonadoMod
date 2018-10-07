@@ -19,7 +19,7 @@ public class ItemCarbonadoArmor extends ItemArmor{
 	}
 
 	@Override
-	public String getUnlocalizedName(ItemStack stack) {
+	public String getTranslationKey(ItemStack stack) {
 		return "item." + Carbonado.RESOURCE_PREFIX + this.name;
 	}
 	
