@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "item": "carbonado:carbonado_shard_molten"
+            "item": "carbonado:carbonado_shard"
           }
         ]
       }

@@ -13,12 +13,15 @@ import net.minecraft.entity.item.EntityFallingBlock;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorldEventListener;
 import net.minecraft.world.World;
+import scala.reflect.internal.Trees.New;
 
 public class WorldEventListener implements IWorldEventListener {
 	
@@ -33,6 +36,8 @@ public class WorldEventListener implements IWorldEventListener {
     
 	@Override
 	public void onEntityRemoved(Entity entity) {
+		if (entity.getEntityWorld().isRemote)
+			return;
 		if (!isAnvil(entity))
 			return;
 		EntityFallingBlock anvil = (EntityFallingBlock)entity;
@@ -48,17 +53,24 @@ public class WorldEventListener implements IWorldEventListener {
 			return;
 		
 		World world = entity.getEntityWorld();
-		BlockPos pos = entity.getPosition().down();
-		IBlockState blockBelow = world.getBlockState(pos);
-		if(blockBelow.getBlock() == ModBlocks.carbonadoBlock) {
-            world.destroyBlock(pos, false);
-            int dropCount = Properties.Shards.countAtMinHeight + (fallHeight - Properties.Shards.minHeight);
-            if (dropCount > Properties.Shards.maxCount)
-            	dropCount = Properties.Shards.maxCount;
-            EntityItem shards = new EntityItem(world, (double)pos.getX() + .5d, (double)pos.getY() + .5d, (double)pos.getZ() + .5d, new ItemStack(ModItems.carbonadoShardItem, dropCount));
-            world.spawnEntity(shards);
-        }
+		BlockPos pos = entity.getPosition();
+		AxisAlignedBB aabb = new AxisAlignedBB(pos, pos.add(1, 1, 1));
+		List<EntityItem> entityItems = world.getEntitiesWithinAABB(EntityItem.class, aabb);
+		if (entityItems.isEmpty())
+			return;
+		
+		for (EntityItem entityItem : entityItems) {
+			ItemStack stack = entityItem.getItem();
+			if (ItemStack.areItemsEqual(stack, new ItemStack(ModItems.carbonadoItem))) {
+				int dropCount = Properties.Shards.countAtMinHeight + (fallHeight - Properties.Shards.minHeight) * stack.getCount();
 
+	            if (dropCount > Properties.Shards.maxCount * stack.getCount())
+	            	dropCount = Properties.Shards.maxCount * stack.getCount();
+	            EntityItem shards = new EntityItem(world, (double)pos.getX() + .5d, (double)pos.getY() + .5d, (double)pos.getZ() + .5d, new ItemStack(ModItems.carbonadoShardItem, dropCount));
+	            world.spawnEntity(shards);
+	            world.removeEntity(entityItem);
+			}
+		}
 	}
 
 	public static List<FallingAnvil> fallingAnvils = new ArrayList<FallingAnvil>();
