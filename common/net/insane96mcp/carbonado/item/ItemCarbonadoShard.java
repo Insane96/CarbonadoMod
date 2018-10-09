@@ -26,9 +26,4 @@ public class ItemCarbonadoShard extends Item {
 	public String getTranslationKey(ItemStack stack) {
 		return "item." + Carbonado.RESOURCE_PREFIX + Names.CARBONADO_SHARD;
 	}
-	
-	@Override
-	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-		tooltip.add(I18n.format(Tooltips.Shard.base_info));
-	}
 }
