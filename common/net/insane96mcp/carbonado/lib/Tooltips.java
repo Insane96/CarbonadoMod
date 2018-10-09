@@ -14,8 +14,4 @@ public class Tooltips {
 		public static final String base_createGlass = "tooltip.carbonado_glass.base_createGlass";
 		public static final String base_info = "tooltip.carbonado_glass.base_info";
 	}
-	
-	public static class Shard{
-		public static final String base_info = "tooltip.carbonado_shard.base_info";
-	}
 }
