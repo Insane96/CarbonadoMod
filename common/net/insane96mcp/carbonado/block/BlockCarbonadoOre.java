@@ -4,7 +4,7 @@ import java.util.Random;
 
 import net.insane96mcp.carbonado.Carbonado;
 import net.insane96mcp.carbonado.init.ModItems;
-import net.insane96mcp.carbonado.lib.Names;
+import net.insane96mcp.carbonado.lib.Strings.Names;
 import net.minecraft.block.BlockOre;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;

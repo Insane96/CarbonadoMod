@@ -5,9 +5,8 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 import net.insane96mcp.carbonado.Carbonado;
-import net.insane96mcp.carbonado.lib.Names;
-import net.insane96mcp.carbonado.lib.Properties;
-import net.insane96mcp.carbonado.lib.Tooltips;
+import net.insane96mcp.carbonado.lib.Strings.Names;
+import net.insane96mcp.carbonado.lib.Strings.Tooltips;
 import net.minecraft.block.BlockGlass;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -26,7 +25,7 @@ public class BlockCarbonadoGlass extends BlockGlass{
 		super(Material.GLASS, false);
 		this.setHardness(0.9f);
 		this.setResistance(10f);
-		this.setLightOpacity(Properties.General.glassLightBlocking);
+		this.setLightOpacity(15);
 		this.setSoundType(SoundType.GLASS);
 	}
 

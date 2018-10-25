@@ -3,9 +3,6 @@ package net.insane96mcp.carbonado.events;
 import net.insane96mcp.carbonado.Carbonado;
 import net.insane96mcp.carbonado.init.ModBlocks;
 import net.insane96mcp.carbonado.init.ModItems;
-import net.insane96mcp.carbonado.lib.Names;
-import net.insane96mcp.carbonado.lib.Properties;
-import net.insane96mcp.carbonado.lib.Properties.Shards;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -40,12 +37,7 @@ public class RegistryEventHandler {
 	@SideOnly(Side.CLIENT)
 	@SubscribeEvent
 	public static void RegisterModels(ModelRegistryEvent event) {
-		for (Item item : ModItems.ITEMS) {
-			if (item.equals(ModItems.carbonadoShardMoltenItem) && Properties.Shards.oldMoltenShardTexture) {
-				ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_SHARD_MOLTEN_OLD, "inventory"));
-				continue;
-			}
-				
+		for (Item item : ModItems.ITEMS) {			
 			ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
 		}
 		for (Block block : ModBlocks.BLOCKS) {

@@ -5,8 +5,8 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 import net.insane96mcp.carbonado.Carbonado;
-import net.insane96mcp.carbonado.lib.Names;
-import net.insane96mcp.carbonado.lib.Tooltips;
+import net.insane96mcp.carbonado.lib.Strings.Names;
+import net.insane96mcp.carbonado.lib.Strings.Tooltips;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;

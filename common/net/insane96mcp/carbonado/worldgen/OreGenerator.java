@@ -10,7 +10,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.IChunkGenerator;
-import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraftforge.fml.common.IWorldGenerator;
 
 public class OreGenerator implements IWorldGenerator {
@@ -35,11 +34,11 @@ public class OreGenerator implements IWorldGenerator {
 	}
 
 	private void GenerateNether(Random random, int chunkX, int chunkZ, World world, BlockPos pos, int dimension) {		
-		if (dimension == -1 && Properties.OreGeneration.netherVeinPerChunk <= 0)
+		if (dimension == -1 && Properties.config.oreGeneration.orePerChunkNether <= 0)
 			return;
 		
 		if (dimension == -1) {
-			for (int i = 0; i < Properties.OreGeneration.netherVeinPerChunk; i++) {
+			for (int i = 0; i < Properties.config.oreGeneration.orePerChunkNether; i++) {
 				worldGenCarbonadoNether.generate(world, random, pos.add(random.nextInt(16), random.nextInt(5), random.nextInt(16)));
 				worldGenCarbonadoNether.generate(world, random, pos.add(random.nextInt(16), random.nextInt(5) + 123, random.nextInt(16)));
 			}
@@ -48,11 +47,11 @@ public class OreGenerator implements IWorldGenerator {
 	
 	private void GenerateOverworld(Random random, int chunkX, int chunkZ, World world, BlockPos pos, int dimension) {
 		
-		if (dimension == 0 && Properties.OreGeneration.overworldVeinPerChunk <= 0)
+		if (dimension == 0 && Properties.config.oreGeneration.orePerChunkOverworld <= 0)
 			return;
 
 		if (dimension == 0) {
-			for (int i = 0; i < Properties.OreGeneration.overworldVeinPerChunk; i++) {
+			for (int i = 0; i < Properties.config.oreGeneration.orePerChunkOverworld; i++) {
 				worldGenCarbonadoNether.generate(world, random, pos.add(random.nextInt(16), random.nextInt(5), random.nextInt(16)));
 			}
 		}

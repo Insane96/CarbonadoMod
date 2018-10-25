@@ -6,7 +6,7 @@ import net.insane96mcp.carbonado.Carbonado;
 import net.insane96mcp.carbonado.block.BlockCarbonado;
 import net.insane96mcp.carbonado.block.BlockCarbonadoGlass;
 import net.insane96mcp.carbonado.block.BlockCarbonadoOre;
-import net.insane96mcp.carbonado.lib.Names;
+import net.insane96mcp.carbonado.lib.Strings.Names;
 import net.insane96mcp.carbonado.worldgen.OreGenerator;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;

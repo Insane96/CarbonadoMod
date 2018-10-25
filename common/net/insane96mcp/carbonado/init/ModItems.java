@@ -12,7 +12,7 @@ import net.insane96mcp.carbonado.item.ItemCarbonadoShardMolten;
 import net.insane96mcp.carbonado.item.ItemCarbonadoShovel;
 import net.insane96mcp.carbonado.item.ItemCarbonadoSword;
 import net.insane96mcp.carbonado.item.material.ModMaterial;
-import net.insane96mcp.carbonado.lib.Names;
+import net.insane96mcp.carbonado.lib.Strings.Names;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;

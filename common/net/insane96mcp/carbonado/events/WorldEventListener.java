@@ -3,7 +3,6 @@ package net.insane96mcp.carbonado.events;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.insane96mcp.carbonado.init.ModBlocks;
 import net.insane96mcp.carbonado.init.ModItems;
 import net.insane96mcp.carbonado.lib.Properties;
 import net.insane96mcp.carbonado.utils.FallingAnvil;
@@ -13,7 +12,6 @@ import net.minecraft.entity.item.EntityFallingBlock;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
@@ -21,7 +19,6 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorldEventListener;
 import net.minecraft.world.World;
-import scala.reflect.internal.Trees.New;
 
 public class WorldEventListener implements IWorldEventListener {
 	
@@ -49,7 +46,7 @@ public class WorldEventListener implements IWorldEventListener {
 			}
 		}
 
-		if (fallHeight < Properties.Shards.minHeight)
+		if (fallHeight < Properties.config.shards.minHeight)
 			return;
 		
 		World world = entity.getEntityWorld();
@@ -62,10 +59,10 @@ public class WorldEventListener implements IWorldEventListener {
 		for (EntityItem entityItem : entityItems) {
 			ItemStack stack = entityItem.getItem();
 			if (ItemStack.areItemsEqual(stack, new ItemStack(ModItems.carbonadoItem))) {
-				int dropCount = Properties.Shards.countAtMinHeight + (fallHeight - Properties.Shards.minHeight) * stack.getCount();
+				int dropCount = Properties.config.shards.countAtMinHeight + (fallHeight - Properties.config.shards.minHeight) * stack.getCount();
 
-	            if (dropCount > Properties.Shards.maxCount * stack.getCount())
-	            	dropCount = Properties.Shards.maxCount * stack.getCount();
+	            if (dropCount > Properties.config.shards.maxCount * stack.getCount())
+	            	dropCount = Properties.config.shards.maxCount * stack.getCount();
 	            EntityItem shards = new EntityItem(world, (double)pos.getX() + .5d, (double)pos.getY() + .5d, (double)pos.getZ() + .5d, new ItemStack(ModItems.carbonadoShardItem, dropCount));
 	            world.spawnEntity(shards);
 	            world.removeEntity(entityItem);

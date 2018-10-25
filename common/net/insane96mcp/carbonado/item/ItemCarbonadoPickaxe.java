@@ -2,7 +2,7 @@ package net.insane96mcp.carbonado.item;
 
 import net.insane96mcp.carbonado.Carbonado;
 import net.insane96mcp.carbonado.init.ModItems;
-import net.insane96mcp.carbonado.lib.Names;
+import net.insane96mcp.carbonado.lib.Strings.Names;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
