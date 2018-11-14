@@ -1,16 +1,15 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "carbonado:diamond_upgrade",
   "pattern": [
     "VVV",
-    " S ",
-    " S "
+    " D "
   ],
   "key": {
     "V": {
       "item": "carbonado:carbonado"
     },
-    "S": {
-      "item": "minecraft:stick"
+    "D": {
+      "item": "minecraft:diamond_pickaxe"
     }
   },
   "result": {

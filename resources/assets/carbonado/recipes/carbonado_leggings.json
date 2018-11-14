@@ -1,13 +1,17 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "carbonado:diamond_upgrade",
   "pattern": [
     "VVV",
-    "V V",
+    "VDV",
 	"V V"
   ],
   "key": {
     "V": {
       "item": "carbonado:carbonado"
+    },
+    "D": {
+      "item": "minecraft:diamond_leggings",
+	  "data": 32767
     }
   },
   "result": {

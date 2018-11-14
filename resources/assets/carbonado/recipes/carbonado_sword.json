@@ -1,16 +1,17 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "carbonado:diamond_upgrade",
   "pattern": [
     "V",
     "V",
-    "S"
+    "D"
   ],
   "key": {
     "V": {
       "item": "carbonado:carbonado"
     },
-    "S": {
-      "item": "minecraft:stick"
+    "D": {
+      "item": "minecraft:diamond_sword",
+	  "data": 32767
     }
   },
   "result": {
