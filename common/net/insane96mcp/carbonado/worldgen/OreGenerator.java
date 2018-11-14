@@ -40,7 +40,7 @@ public class OreGenerator implements IWorldGenerator {
 		if (dimension == -1) {
 			for (int i = 0; i < Properties.config.oreGeneration.orePerChunkNether; i++) {
 				worldGenCarbonadoNether.generate(world, random, pos.add(random.nextInt(16), random.nextInt(5), random.nextInt(16)));
-				worldGenCarbonadoNether.generate(world, random, pos.add(random.nextInt(16), random.nextInt(5) + 123, random.nextInt(16)));
+				worldGenCarbonadoNether.generate(world, random, pos.add(random.nextInt(16), random.nextInt(4) + 123, random.nextInt(16)));
 			}
 		}
 	}

@@ -19,10 +19,10 @@ public class Properties {
 		public static class OreGeneration {
 			@Name("Nether: Ore Per Chunk")
 			@Comment("Ores that try to spawn in a nether chunk, both top and bottom of the nether")
-			public int orePerChunkNether = 4;
+			public int orePerChunkNether = 5;
 			@Name("Overworld: Ore Per Chunk")
 			@Comment("Ores that try to spawn in a chunk in the overworld")
-			public int orePerChunkOverworld = 6;
+			public int orePerChunkOverworld = 7;
 		}
 		
 		

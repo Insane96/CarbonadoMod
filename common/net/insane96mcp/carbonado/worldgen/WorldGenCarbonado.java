@@ -8,9 +8,7 @@ import net.minecraft.block.BlockStone;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
-import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class WorldGenCarbonado extends WorldGenerator {
@@ -31,11 +29,11 @@ public class WorldGenCarbonado extends WorldGenerator {
 
     public boolean generate(World worldIn, Random rand, BlockPos position)
     {
-    	BlockPos shiftedPosition = position.add(8, 0, 8);
-        IBlockState state = worldIn.getBlockState(shiftedPosition);
-        if (state.getBlock().isReplaceableOreGen(state, worldIn, shiftedPosition, this.predicate))
+    	position = position.add(8, 0, 8);
+        IBlockState state = worldIn.getBlockState(position);
+        if (state.getBlock().isReplaceableOreGen(state, worldIn, position, this.predicate))
         {
-            worldIn.setBlockState(shiftedPosition, this.oreBlock, 2);
+            worldIn.setBlockState(position, this.oreBlock, 2);
         }
 
         return true;
