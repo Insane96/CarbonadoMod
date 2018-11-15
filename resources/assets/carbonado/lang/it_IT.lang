@@ -19,20 +19,20 @@ tile.carbonado:carbonado_glass.name=Vetro Rinforzato con Carbonado
 
 tooltip.carbonado.base_blackDiamond=§7Conosciuto anche come Diamante Nero
 
-tooltip.carbonado_glass.base_info=§8Più reistente del Vetro normale e previene che la luce vi passi attraverso
+tooltip.carbonado_glass.base_info=§8Più resistente del Vetro normale e previene che la luce vi passi attraverso
 tooltip.carbonado_glass.base_createGlass=§7Getta un'incudine da almeno 4 blocchi su un Carbonado per ottenere i Frammenti di Carbonado. Poi fondi questi frammenti ...
 
 advancements.carbonado.carbonado.title=Migliore del Diamante
 advancements.carbonado.carbonado.description=Ottieni un Carbonado. Anche chiamato Diamante Nero
 
 advancements.carbonado.armor.title=Man in Black
-advancements.carbonado.armor.description=Ottieni un set completo di armatura di Carbonado
+advancements.carbonado.armor.description=Ottieni un set completo di armatura di Carbonado. Possono essere creati in un'incudine con un pezzo d'armatura di Diamante e il giusto numero di Carbonado. Gli incantesimi vengono tenuti ma costeranno.
 
 advancements.carbonado.sword.title=Non così splendente, ma affilata
-advancements.carbonado.sword.description=Ottieni una spada di Carbonado
+advancements.carbonado.sword.description=Ottieni una spada di Carbonado. Può essere creati in un'incudine con una Spada di Diamante e il giusto numero di Carbonado. Gli incantesimi vengono tenuti ma costeranno.
 
 advancements.carbonado.tools.title=Tutto in Nero
-advancements.carbonado.tools.description=Ottieni un set completo di Attrezzi di Carbonado (si, anche la zappa)
+advancements.carbonado.tools.description=Ottieni un set completo di Attrezzi di Carbonado (si, anche la zappa). Possono essere creati in un'incudine con un attrezzo di Diamante e il giusto numero di Carbonado. Gli incantesimi vengono tenuti ma costeranno.
 
 advancements.carbonado.hoe.title=Ancora più dedizione
 advancements.carbonado.hoe.description=Consuma completamente una Zappa di Carbonado
