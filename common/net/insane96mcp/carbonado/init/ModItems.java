@@ -43,13 +43,13 @@ public class ModItems {
 		ITEMS.add(carbonadoItem);
 
 		carbonadoShardItem = new Item();
-		carbonadoShardItem.setTranslationKey("item." + Carbonado.RESOURCE_PREFIX + Names.CARBONADO_SHARD);
+		carbonadoShardItem.setTranslationKey(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_SHARD);
 		carbonadoShardItem.setRegistryName(Names.CARBONADO_SHARD);
 		carbonadoShardItem.setCreativeTab(CreativeTabs.MISC);
 		ITEMS.add(carbonadoShardItem);
 
 		carbonadoShardMoltenItem = new Item();
-		carbonadoShardMoltenItem.setTranslationKey("item." + Carbonado.RESOURCE_PREFIX + Names.CARBONADO_SHARD_MOLTEN);
+		carbonadoShardMoltenItem.setTranslationKey(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_SHARD_MOLTEN);
 		carbonadoShardMoltenItem.setRegistryName(Names.CARBONADO_SHARD_MOLTEN);
 		carbonadoShardMoltenItem.setCreativeTab(CreativeTabs.MISC);
 		ITEMS.add(carbonadoShardMoltenItem);
