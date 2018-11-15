@@ -17,7 +17,6 @@ public class Strings {
 		public static final String CARBONADO_GLASS = "carbonado_glass";
 		public static final String CARBONADO_SHARD = "carbonado_shard";
 		public static final String CARBONADO_SHARD_MOLTEN = "carbonado_shard_molten";
-		public static final String CARBONADO_SHARD_MOLTEN_OLD = "carbonado_shard_molten_old";
 	}
 	
 	public static class Tooltips {

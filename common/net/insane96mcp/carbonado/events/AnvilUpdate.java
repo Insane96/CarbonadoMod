@@ -20,7 +20,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @Mod.EventBusSubscriber(modid = Carbonado.MOD_ID)
-public class AnvilOuput {
+public class AnvilUpdate {
 	
 	final static ItemStack[] validInputs = new ItemStack[] {
 		new ItemStack(Items.DIAMOND_AXE),

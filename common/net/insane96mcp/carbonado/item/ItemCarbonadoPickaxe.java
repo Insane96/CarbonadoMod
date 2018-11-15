@@ -22,5 +22,5 @@ public class ItemCarbonadoPickaxe extends ItemPickaxe {
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
 		return ItemStack.areItemsEqualIgnoreDurability(repair, new ItemStack(ModItems.carbonadoItem)) ? true : super.getIsRepairable(toRepair, repair);
-  	}
+	}
 }

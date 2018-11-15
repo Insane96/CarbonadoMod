@@ -11,8 +11,8 @@ public class ItemCarbonadoArmor extends ItemArmor{
 
 	private final String name;
 	
-	public ItemCarbonadoArmor(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
-		super(materialIn, renderIndexIn, equipmentSlotIn);
+	public ItemCarbonadoArmor(String name, ArmorMaterial materialIn, EntityEquipmentSlot equipmentSlotIn) {
+		super(materialIn, 0, equipmentSlotIn);
 		this.name = name;
 		setRegistryName(name);
 		setCreativeTab(CreativeTabs.COMBAT);
