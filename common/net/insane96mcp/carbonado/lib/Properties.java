@@ -37,7 +37,7 @@ public class Properties {
 			public int countAtMinHeight = 8;
 			@Name("Max Amount")
 			@Comment("Maximum shards that can drop a single carbonado")
-			public int maxCount = 16;
+			public int maxCount = 24;
 		}
 	}
 }

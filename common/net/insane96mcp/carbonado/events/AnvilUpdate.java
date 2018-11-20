@@ -56,7 +56,7 @@ public class AnvilUpdate {
 					carbonadoAmount++;
 			}
 
-			if (right.getCount() != carbonadoAmount)
+			if (right.getCount() < carbonadoAmount)
 				return;
 			
 			String itemName = left.getItem().getRegistryName().getPath();
@@ -65,6 +65,7 @@ public class AnvilUpdate {
 			NBTTagCompound tags = left.getTagCompound();
 			output.setTagCompound(tags);
 			event.setOutput(output);
+			event.setMaterialCost(carbonadoAmount);
 			
 			int cost = 0;
 			Map<Enchantment, Integer> enchantments = EnchantmentHelper.getEnchantments(left);
@@ -87,10 +88,8 @@ public class AnvilUpdate {
                 }
 				cost += baseCost * lvl;
 			}
-			if (cost != 0) {
-				cost *= 0.5f;
-				event.setCost(MathHelper.clamp(cost, 1, 39));
-			}
+			cost *= 0.5f;
+			event.setCost(MathHelper.clamp(cost, 1, 39));
 		}
 	}
 }
