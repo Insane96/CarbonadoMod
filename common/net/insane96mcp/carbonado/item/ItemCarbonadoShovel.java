@@ -1,26 +1,13 @@
 package net.insane96mcp.carbonado.item;
 
-import net.insane96mcp.carbonado.Carbonado;
-import net.insane96mcp.carbonado.init.ModItems;
-import net.insane96mcp.carbonado.lib.Strings.Names;
-import net.minecraft.creativetab.CreativeTabs;
+import net.insane96mcp.carbonado.item.material.ModMaterial;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemSpade;
-import net.minecraft.item.ItemStack;
 
 public class ItemCarbonadoShovel extends ItemSpade{
-	public ItemCarbonadoShovel(String name, ToolMaterial material, CreativeTabs tab) {
-		super(material);
-		setRegistryName(name);
-		setCreativeTab(tab);
+	public ItemCarbonadoShovel(String id) {
+		super(ModMaterial.TOOLS_CARBONADO, 1.5f, -3f, new Properties().group(ItemGroup.TOOLS));
+		
+		setRegistryName(id);
 	}
-
-	@Override
-	public String getTranslationKey(ItemStack stack) {
-		return "item." + Carbonado.RESOURCE_PREFIX + Names.CARBONADO_SHOVEL;
-	}
-	
-	@Override
-	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
-		return ItemStack.areItemsEqualIgnoreDurability(repair, new ItemStack(ModItems.carbonadoItem)) ? true : super.getIsRepairable(toRepair, repair);
-  	}
 }

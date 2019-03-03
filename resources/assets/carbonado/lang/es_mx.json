@@ -1,0 +1,44 @@
+﻿{
+    "item.carbonado.carbonado": "Carbonado",
+    "item.carbonado.carbonado_shard": "Fragmento de Carbonado",
+    "item.carbonado.carbonado_shard_molten": "Fragmento de Carbonado derretido",
+
+    "item.carbonado.carbonado_pickaxe": "Pico de Carbonado",
+    "item.carbonado.carbonado_axe": "Hacha de Carbonado",
+    "item.carbonado.carbonado_shovel": "Pala de Carbonado",
+    "item.carbonado.carbonado_hoe": "Azada de Carbonado",
+    "item.carbonado.carbonado_sword": "Espada de Carbonado",
+
+    "item.carbonado.carbonado_helmet": "Casco de Carbonado",
+    "item.carbonado.carbonado_chestplate": "Pechera de Carbonado",
+    "item.carbonado.carbonado_leggings": "Pantalones de Carbonado",
+    "item.carbonado.carbonado_boots": "Botas de Carbonado",
+
+    "block.carbonado.carbonado_block": "Bloque de Carbonado",
+    "block.carbonado.carbonado_ore": "Mena de Carbonado",
+    "block.carbonado.carbonado_glass": "Vidrio Reforzado de Carbonado",
+
+    "tooltip.carbonado.base_blackDiamond": "§7Tambien conocido como Diamante Negro",
+    "tooltip.carbonado_shard.base_info": "§7Usado para crear Vidrio Reforzado de Carbonado",
+
+    "tooltip.carbonado_glass.base_info": "§8Mas fuerte que el vidrio normal, impide el paso de la luz en casi su totalidad",
+    "tooltip.carbonado_glass.base_createGlass": "§7Para crear este vidrio, suelta un yunque desde una altura MUY alta (En serio, MUUUUUY alta) sobre un Bloque de Carbonado para obtener Fragmentos de Carbonado, luego derrítelos en el horno para obtener Fragmentos Derretidos de Carbonado y sumado a 8 vidrios normales se crean 8 Vidrios Reforzados de Carbonado.",
+
+    "advancements.carbonado.carbonado.title": "Mas fuerte que el diamante",
+    "advancements.carbonado.carbonado.description": "Obtener un Carbonado. Tambien conocido como Diamante Negro",
+
+    "advancements.carbonado.armor.title": "Hombre de Negro",
+    "advancements.carbonado.armor.description": "Obtener un set completo de armadura de Carbonado",
+
+    "advancements.carbonado.sword.title": "No tan brillante, pero afilado",
+    "advancements.carbonado.sword.description": "Obten una espada de Carbonado",
+
+    "advancements.carbonado.tools.title": "Negro total",
+    "advancements.carbonado.tools.description": "Obten un set completo de herramientas de Carbonado (eso incluye la azada tambien!)",
+
+    "advancements.carbonado.shard.title": "Un Yunque cayendo desde muy alto",
+    "advancements.carbonado.shard.description": "Haz que un yunque caiga sobre una altura muy alta sobre un Bloque de Carbonado para obtener un fragmento",
+
+    "advancements.carbonado.glass.title": "Ventana Teñida",
+    "advancements.carbonado.glass.description": "Derrite los fragmentos y usalos para obtener Vidrio Reforzado de Carbonado"
+}

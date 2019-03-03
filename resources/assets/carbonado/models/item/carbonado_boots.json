@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "carbonado:items/carbonado_boots"
+    "layer0": "carbonado:item/carbonado_boots"
   }
 }
 

@@ -1,29 +1,24 @@
 package net.insane96mcp.carbonado.init;
 
-import java.util.ArrayList;
-
 import net.insane96mcp.carbonado.Carbonado;
 import net.insane96mcp.carbonado.block.BlockCarbonado;
 import net.insane96mcp.carbonado.block.BlockCarbonadoGlass;
 import net.insane96mcp.carbonado.block.BlockCarbonadoOre;
-import net.insane96mcp.carbonado.lib.Strings.Names;
-import net.insane96mcp.carbonado.worldgen.OreGenerator;
-import net.minecraft.block.Block;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.oredict.OreDictionary;
+import net.insane96mcp.carbonado.init.Strings.Names;
+import net.minecraftforge.registries.ObjectHolder;
 
 public class ModBlocks {
 	
+	@ObjectHolder(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_BLOCK)
 	public static BlockCarbonado carbonadoBlock;
+
+	@ObjectHolder(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_ORE)
 	public static BlockCarbonadoOre carbonadoOre;
+
+	@ObjectHolder(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_GLASS)
 	public static BlockCarbonadoGlass carbonadoGlass;
 	
-	public static ArrayList<Block> BLOCKS = new ArrayList<Block>();
-	
-	public static void Init() {
-		ResourceLocation location = new ResourceLocation(Carbonado.MOD_ID, Names.CARBONADO_BLOCK);
+	/*ResourceLocation location = new ResourceLocation(Carbonado.MOD_ID, Names.CARBONADO_BLOCK);
 		carbonadoBlock = new BlockCarbonado();
 		carbonadoBlock.setRegistryName(location);
 		carbonadoBlock.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
@@ -47,10 +42,5 @@ public class ModBlocks {
 		carbonadoGlass.setRegistryName(location);
 		carbonadoGlass.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
 		BLOCKS.add(carbonadoGlass);
-	}
-	
-	public static void PostInit() {
-		OreDictionary.registerOre("oreCarbonado", carbonadoOre);
-		OreDictionary.registerOre("blockCarbonado", carbonadoBlock);
-	}
+	}*/
 }

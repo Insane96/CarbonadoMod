@@ -1,7 +1,7 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "carbonado:items/carbonado_shovel"
+    "layer0": "carbonado:item/carbonado_shovel"
   }
 }
 

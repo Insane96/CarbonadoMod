@@ -1,45 +1,41 @@
 package net.insane96mcp.carbonado;
 
+import java.nio.file.Paths;
 import java.util.Random;
 
-import net.insane96mcp.carbonado.proxies.CommonProxy;
+import net.insane96mcp.carbonado.init.ModConfig;
+import net.insane96mcp.carbonado.worldgen.OreGenerator;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.Mod.Instance;
-import net.minecraftforge.fml.common.SidedProxy;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.config.ModConfig.Type;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-@Mod(modid = Carbonado.MOD_ID, name = Carbonado.MOD_NAME, version = Carbonado.VERSION, acceptedMinecraftVersions = Carbonado.MINECRAFT_VERSIONS)
+@Mod(Carbonado.MOD_ID)
 public class Carbonado {
 	
 	public static final String MOD_ID = "carbonado";
-	public static final String MOD_NAME = "Carbonado";
-	public static final String VERSION = "1.5.1";
-	public static final String RESOURCE_PREFIX = MOD_ID.toLowerCase() + ":";
-	public static final String MINECRAFT_VERSIONS = "[1.12,1.12.2]";
+	public static final String RESOURCE_PREFIX = MOD_ID + ":";
 
-	public static Random random = new Random();
+	public static final Random RANDOM = new Random();
 	
-	@Instance(MOD_ID)
-	public static Carbonado instance;
-	
-	@SidedProxy(clientSide = "net.insane96mcp.carbonado.proxies.ClientProxy", serverSide = "net.insane96mcp.carbonado.proxies.ServerProxy")
-	public static CommonProxy proxy;
-	
-	@EventHandler
-	public void PreInit(FMLPreInitializationEvent event) {
-		proxy.PreInit(event);
+	public Carbonado() {
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
 	}
 	
-	@EventHandler
-	public void Init(FMLInitializationEvent event) {
-		proxy.Init(event);
-	}
-	
-	@EventHandler
-	public void PostInit(FMLPostInitializationEvent event) {
-		proxy.PostInit(event);
-	}
+
+
+    private void setup(final FMLCommonSetupEvent event)
+    {    	
+       	ModLoadingContext.get().registerConfig(Type.COMMON, ModConfig.SPEC);
+       	ModConfig.Init(Paths.get("config", MOD_ID + ".toml"));
+       	
+       	OreGenerator.Init();
+    }
+
+    private void clientSetup(final FMLClientSetupEvent event) {
+        
+    }
 }

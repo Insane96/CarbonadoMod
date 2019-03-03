@@ -2,40 +2,34 @@ package net.insane96mcp.carbonado.block;
 
 import java.util.List;
 
-import javax.annotation.Nullable;
-
-import net.insane96mcp.carbonado.Carbonado;
-import net.insane96mcp.carbonado.lib.Strings.Names;
-import net.insane96mcp.carbonado.lib.Strings.Tooltips;
+import net.insane96mcp.carbonado.init.Strings.Tooltips;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockGlass;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.resources.I18n;
+import net.minecraft.block.material.MaterialColor;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.Explosion;
-import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraft.world.IBlockReader;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class BlockCarbonadoGlass extends BlockGlass{
 
-	public BlockCarbonadoGlass() {
-		super(Material.GLASS, false);
-		this.setHardness(0.9f);
-		this.setResistance(10f);
-		this.setLightOpacity(15);
-		this.setSoundType(SoundType.GLASS);
-	}
+	public BlockCarbonadoGlass(String id) {
+		super(Block.Properties.create(Material.GLASS, MaterialColor.BLACK_TERRACOTTA).hardnessAndResistance(0.9f, 10f).sound(SoundType.GLASS));
 
-	
-	@Override
-	public String getTranslationKey() {
-		return "tile." + Carbonado.RESOURCE_PREFIX + Names.CARBONADO_GLASS;
+		setRegistryName(id);
 	}
 	
-	@SideOnly(Side.CLIENT)
+	@OnlyIn(Dist.CLIENT)
     public BlockRenderLayer getBlockLayer()
     {
         return BlockRenderLayer.TRANSLUCENT;
@@ -47,9 +41,14 @@ public class BlockCarbonadoGlass extends BlockGlass{
 	}
 	
 	@Override
-	public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-		tooltip.add(I18n.format(Tooltips.GlassCreation.base_info));
-		tooltip.add("");
-		tooltip.add(I18n.format(Tooltips.GlassCreation.base_createGlass));
+	public int getOpacity(IBlockState state, IBlockReader worldIn, BlockPos pos) {
+		return 15;
+	}
+	
+	@Override
+	public void addInformation(ItemStack stack, IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+		tooltip.add(new TextComponentTranslation(Tooltips.GlassCreation.base_info));
+		tooltip.add(new TextComponentString(""));
+		tooltip.add(new TextComponentTranslation(Tooltips.GlassCreation.base_createGlass));
 	}
 }

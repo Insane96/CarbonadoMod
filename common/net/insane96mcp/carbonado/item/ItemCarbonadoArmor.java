@@ -1,30 +1,15 @@
 package net.insane96mcp.carbonado.item;
 
-import net.insane96mcp.carbonado.Carbonado;
-import net.insane96mcp.carbonado.init.ModItems;
-import net.minecraft.creativetab.CreativeTabs;
+import net.insane96mcp.carbonado.item.material.ModMaterial;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemGroup;
 
 public class ItemCarbonadoArmor extends ItemArmor{
 
-	private final String name;
-	
-	public ItemCarbonadoArmor(String name, ArmorMaterial materialIn, EntityEquipmentSlot equipmentSlotIn) {
-		super(materialIn, 0, equipmentSlotIn);
-		this.name = name;
-		setRegistryName(name);
-		setCreativeTab(CreativeTabs.COMBAT);
-	}
+	public ItemCarbonadoArmor(EntityEquipmentSlot slots, String id) {
+		super(ModMaterial.ARMOR_CARBONADO, slots, new Properties().group(ItemGroup.COMBAT));
 
-	@Override
-	public String getTranslationKey(ItemStack stack) {
-		return "item." + Carbonado.RESOURCE_PREFIX + this.name;
+		setRegistryName(id);
 	}
-	
-	@Override
-	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
-		return ItemStack.areItemsEqualIgnoreDurability(repair, new ItemStack(ModItems.carbonadoItem)) ? true : super.getIsRepairable(toRepair, repair);
-  	}
 }

@@ -1,4 +1,4 @@
-package net.insane96mcp.carbonado.lib;
+package net.insane96mcp.carbonado.init;
 
 public class Strings {
 	public static class Names {
@@ -19,12 +19,7 @@ public class Strings {
 		public static final String CARBONADO_SHARD_MOLTEN = "carbonado_shard_molten";
 	}
 	
-	public static class Tooltips {
-		
-		public static class General{
-			public static final String shiftForMore = "tooltip.general.shift_for_more";
-		}
-		
+	public static class Tooltips {		
 		public static class Gem{
 			public static final String base_blackDiamond = "tooltip.carbonado.base_blackDiamond";
 		}

@@ -1,0 +1,2 @@
+* Carbonado Items Crafting now requires slightly more levels when upgrading an enchanted items
+* Reduced by 1% armor durability

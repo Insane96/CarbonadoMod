@@ -3,8 +3,8 @@ package net.insane96mcp.carbonado.events;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.insane96mcp.carbonado.init.ModConfig;
 import net.insane96mcp.carbonado.init.ModItems;
-import net.insane96mcp.carbonado.lib.Properties;
 import net.insane96mcp.carbonado.utils.FallingAnvil;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
@@ -13,10 +13,12 @@ import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+import net.minecraft.particles.IParticleData;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorldEventListener;
 import net.minecraft.world.World;
 
@@ -26,7 +28,7 @@ public class WorldEventListener implements IWorldEventListener {
         if(!(entity instanceof EntityFallingBlock))
         	return false;
         EntityFallingBlock entityFallingBlock = (EntityFallingBlock)entity;
-        if (entityFallingBlock.getBlock().getBlock() == Blocks.ANVIL)
+        if (entityFallingBlock.getBlockState().getBlock() == Blocks.ANVIL)
             return true;
         return false;
     }
@@ -46,7 +48,7 @@ public class WorldEventListener implements IWorldEventListener {
 			}
 		}
 
-		if (fallHeight < Properties.config.shards.minHeight)
+		if (fallHeight < ModConfig.Shards.minHeight.get())
 			return;
 		
 		World world = entity.getEntityWorld();
@@ -58,12 +60,12 @@ public class WorldEventListener implements IWorldEventListener {
 		
 		for (EntityItem entityItem : entityItems) {
 			ItemStack stack = entityItem.getItem();
-			if (ItemStack.areItemsEqual(stack, new ItemStack(ModItems.carbonadoItem))) {
-				int dropCount = Properties.config.shards.countAtMinHeight + (fallHeight - Properties.config.shards.minHeight) * stack.getCount();
+			if (ItemStack.areItemsEqual(stack, new ItemStack(ModItems.carbonado))) {
+				int dropCount = ModConfig.Shards.amountAtMinHeight.get() + (fallHeight - ModConfig.Shards.minHeight.get()) * stack.getCount();
 
-	            if (dropCount > Properties.config.shards.maxCount * stack.getCount())
-	            	dropCount = Properties.config.shards.maxCount * stack.getCount();
-	            EntityItem shards = new EntityItem(world, (double)pos.getX() + .5d, (double)pos.getY() + .5d, (double)pos.getZ() + .5d, new ItemStack(ModItems.carbonadoShardItem, dropCount));
+	            if (dropCount > ModConfig.Shards.maxAmount.get() * stack.getCount())
+	            	dropCount = ModConfig.Shards.maxAmount.get() * stack.getCount();
+	            EntityItem shards = new EntityItem(world, (double)pos.getX() + .5d, (double)pos.getY() + .5d, (double)pos.getZ() + .5d, new ItemStack(ModItems.carbonadoShard, dropCount));
 	            world.spawnEntity(shards);
 	            world.removeEntity(entityItem);
 			}
@@ -86,38 +88,34 @@ public class WorldEventListener implements IWorldEventListener {
 
 		fallingAnvils.add(new FallingAnvil(anvil, anvil.posY));
 	}
-	
-	@Override
-	public void notifyBlockUpdate(World worldIn, BlockPos pos, IBlockState oldState, IBlockState newState, int flags) {}
 
 	@Override
-	public void notifyLightSet(BlockPos pos) {}
+	public void notifyBlockUpdate(IBlockReader worldIn, BlockPos pos, IBlockState oldState, IBlockState newState, int flags) { }
 
 	@Override
-	public void markBlockRangeForRenderUpdate(int x1, int y1, int z1, int x2, int y2, int z2) {}
+	public void notifyLightSet(BlockPos pos) { }
 
 	@Override
-	public void playSoundToAllNearExcept(EntityPlayer player, SoundEvent soundIn, SoundCategory category, double x,
-			double y, double z, float volume, float pitch) {}
+	public void markBlockRangeForRenderUpdate(int x1, int y1, int z1, int x2, int y2, int z2) { }
 
 	@Override
-	public void playRecord(SoundEvent soundIn, BlockPos pos) {}
+	public void playSoundToAllNearExcept(EntityPlayer player, SoundEvent soundIn, SoundCategory category, double x, double y, double z, float volume, float pitch) { }
 
 	@Override
-	public void spawnParticle(int particleID, boolean ignoreRange, double xCoord, double yCoord, double zCoord,
-			double xSpeed, double ySpeed, double zSpeed, int... parameters) {}
+	public void playRecord(SoundEvent soundIn, BlockPos pos) { }
 
 	@Override
-	public void spawnParticle(int p_190570_1_, boolean p_190570_2_, boolean p_190570_3_, double p_190570_4_,
-			double p_190570_6_, double p_190570_8_, double p_190570_10_, double p_190570_12_, double p_190570_14_,
-			int... p_190570_16_) {}
+	public void addParticle(IParticleData particleData, boolean alwaysRender, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) { }
 
 	@Override
-	public void broadcastSound(int soundID, BlockPos pos, int data) {}
+	public void addParticle(IParticleData particleData, boolean ignoreRange, boolean minimizeLevel, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) { }
 
 	@Override
-	public void playEvent(EntityPlayer player, int type, BlockPos blockPosIn, int data) {}
+	public void broadcastSound(int soundID, BlockPos pos, int data) { }
 
 	@Override
-	public void sendBlockBreakProgress(int breakerId, BlockPos pos, int progress) {}
+	public void playEvent(EntityPlayer player, int type, BlockPos blockPosIn, int data) { }
+
+	@Override
+	public void sendBlockBreakProgress(int breakerId, BlockPos pos, int progress) { }
 }
