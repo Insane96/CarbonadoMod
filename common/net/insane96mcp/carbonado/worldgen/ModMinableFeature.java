@@ -8,13 +8,12 @@ import net.minecraft.world.IWorld;
 import net.minecraft.world.gen.IChunkGenSettings;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.MinableConfig;
 
-public class ModMinableFeature extends Feature<MinableConfig> {
+public class ModMinableFeature extends Feature<ModMinableConfig> {
 
 	@Override
 	public boolean place(IWorld world, IChunkGenerator<? extends IChunkGenSettings> chunkGenerator,
-			Random random, BlockPos pos, MinableConfig minableConfig) {
+			Random random, BlockPos pos, ModMinableConfig minableConfig) {
 		IBlockState state = world.getBlockState(pos);
         if (state.isReplaceableOreGen(world.getWorld(), pos, minableConfig.canReplace))
         {

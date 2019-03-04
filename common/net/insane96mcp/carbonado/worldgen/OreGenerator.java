@@ -9,7 +9,6 @@ import net.minecraft.init.Blocks;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biome.Category;
 import net.minecraft.world.gen.GenerationStage.Decoration;
-import net.minecraft.world.gen.feature.MinableConfig;
 import net.minecraft.world.gen.placement.CountRange;
 import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -31,7 +30,7 @@ public class OreGenerator {
 					Decoration.UNDERGROUND_ORES, 
 					Biome.createCompositeFeature(
 						MINABLE, 
-						new MinableConfig(IS_BEDROCK, ModBlocks.carbonadoOre.getDefaultState(), 3), 
+						new ModMinableConfig(IS_BEDROCK, ModBlocks.carbonadoOre.getDefaultState()), 
 						new CountRange(), 
 						placementConfigNetherTop
 					)
@@ -40,7 +39,7 @@ public class OreGenerator {
 					Decoration.UNDERGROUND_ORES, 
 					Biome.createCompositeFeature(
 						MINABLE, 
-						new MinableConfig(IS_BEDROCK, ModBlocks.carbonadoOre.getDefaultState(), 3), 
+						new ModMinableConfig(IS_BEDROCK, ModBlocks.carbonadoOre.getDefaultState()), 
 						new CountRange(), 
 						placementConfigNetherBottom
 					)
@@ -52,7 +51,7 @@ public class OreGenerator {
 					Decoration.UNDERGROUND_ORES, 
 					Biome.createCompositeFeature(
 						MINABLE, 
-						new MinableConfig(IS_BEDROCK, ModBlocks.carbonadoOre.getDefaultState(), 3), 
+						new ModMinableConfig(IS_BEDROCK, ModBlocks.carbonadoOre.getDefaultState()), 
 						new CountRange(), 
 						placementConfigOverworld
 					)
