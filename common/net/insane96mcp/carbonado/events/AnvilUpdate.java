@@ -1,12 +1,23 @@
 package net.insane96mcp.carbonado.events;
 
+import java.util.Map;
+
 import net.insane96mcp.carbonado.Carbonado;
 import net.insane96mcp.carbonado.init.ModItems;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.event.AnvilUpdateEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.server.ServerLifecycleHooks;
+import net.minecraftforge.registries.ForgeRegistries;
 
 @Mod.EventBusSubscriber(modid = Carbonado.MOD_ID)
 public class AnvilUpdate {
@@ -33,11 +44,11 @@ public class AnvilUpdate {
 			new ItemStack(Items.DIAMOND_BOOTS),
 		};
 		
-		/*for (ItemStack itemStack : validInputs) {
+		for (ItemStack itemStack : validInputs) {
 			if (!ItemStack.areItemsEqualIgnoreDurability(left, itemStack))
 				continue;
-			//TODO
-			IRecipe recipe = CraftingManager.getRecipe(left.getItem().getRegistryName());
+			
+			IRecipe recipe = ServerLifecycleHooks.getCurrentServer().getRecipeManager().getRecipe(left.getItem().getRegistryName());
 
 			int carbonadoAmount = 0;
 			for (Ingredient ingredient : recipe.getIngredients()) {
@@ -80,6 +91,6 @@ public class AnvilUpdate {
 			}
 			cost *= 0.6f;
 			event.setCost(MathHelper.clamp(cost, 1, 39));
-		}*/
+		}
 	}
 }

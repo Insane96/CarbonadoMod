@@ -48,12 +48,4 @@ public class ModItems {
 
 	@ObjectHolder(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_BOOTS)
 	public static ItemCarbonadoArmor carbonadoBoots;
-	
-	//TODO
-	/*
-	public static void PostInit() {
-		GameRegistry.addSmelting(new ItemStack(carbonadoShardItem), new ItemStack(carbonadoShardMoltenItem), 3.0f);
-		
-		OreDictionary.registerOre("gemCarbonado", carbonadoItem);
-	}*/
 }

@@ -1,2 +1,3 @@
 * Carbonado Items Crafting now requires slightly more levels when upgrading an enchanted items
 * Reduced by 1% armor durability
+* Carbonado Molten shard now requires less time to be smelted and experience given has been halved

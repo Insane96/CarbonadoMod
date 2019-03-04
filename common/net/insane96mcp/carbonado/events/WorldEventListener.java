@@ -6,14 +6,15 @@ import java.util.List;
 import net.insane96mcp.carbonado.init.ModConfig;
 import net.insane96mcp.carbonado.init.ModItems;
 import net.insane96mcp.carbonado.utils.FallingAnvil;
+import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityFallingBlock;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particles.IParticleData;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -28,8 +29,10 @@ public class WorldEventListener implements IWorldEventListener {
         if(!(entity instanceof EntityFallingBlock))
         	return false;
         EntityFallingBlock entityFallingBlock = (EntityFallingBlock)entity;
-        if (entityFallingBlock.getBlockState().getBlock() == Blocks.ANVIL)
-            return true;
+        for (Block block : BlockTags.ANVIL.getAllElements()) {
+        	if (entityFallingBlock.getBlockState().getBlock().equals(block))
+                return true;
+		}
         return false;
     }
     
