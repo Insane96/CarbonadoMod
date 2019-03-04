@@ -1,3 +1,5 @@
 * Carbonado Items Crafting now requires slightly more levels when upgrading an enchanted items
 * Reduced by 1% armor durability
 * Carbonado Molten shard now requires less time to be smelted and experience given has been halved
+* Reduced Carbonado ore exp drop
+* Fortune now works differently from before on the ore. Before you just had 1 level less when mining (e.g. with Fortune III you would have mined ore like if you were using Fortune II. That implied that Fortune I would be useless). Now instead, uses a slightly modified version of vanilla one. Vanilla has increased drops for Fortune I/II/III by 33%/75%/125% (so e.g. with Fortune III you would have got 45 coal from 20 ores), instead carbonado has increased drops by 20%/50%/85% with Fortune I/II/III (with Fortune III then you would get 37 carbonado from 20 ores)

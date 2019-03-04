@@ -12,6 +12,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.IItemProvider;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
@@ -25,16 +26,23 @@ public class BlockCarbonadoOre extends BlockOre{
 	}
 	
 	@Override
-	//TODO Overhaul fortune mechanic
 	public IItemProvider getItemDropped(IBlockState state, World worldIn, BlockPos pos, int fortune) {
-		if (fortune > 0)
-			fortune--;
 		return ModItems.carbonado;
 	}
 	
 	@Override
-	public int getItemsToDropCount(IBlockState state, int fortune, World worldIn, BlockPos pos, Random random) {
-		return super.getItemsToDropCount(state, fortune, worldIn, pos, random);
+	public int getItemsToDropCount(IBlockState state, int fortune, World worldIn, BlockPos pos, Random random) {		
+		if (fortune > 0 && this != this.getItemDropped(this.getStateContainer().getValidStates().iterator().next(), worldIn, pos, fortune)) {
+		     int i = random.nextInt(fortune + 4) - 3;
+		     if (i < 0) {
+		        i = 0;
+		     }
+		
+		     return this.quantityDropped(state, random) * (i + 1);
+		} 
+		else {
+		     return this.quantityDropped(state, random);
+		}
 	}
 	
 	@Override
@@ -49,6 +57,6 @@ public class BlockCarbonadoOre extends BlockOre{
 	
 	@Override
 	public int getExpDrop(IBlockState state, IWorldReader reader, BlockPos pos, int fortune) {
-		return Carbonado.RANDOM.nextInt(7) + 8;
+		return MathHelper.nextInt(Carbonado.RANDOM, 6, 14);
 	}
 }

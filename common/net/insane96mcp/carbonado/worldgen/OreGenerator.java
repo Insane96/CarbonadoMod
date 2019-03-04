@@ -52,7 +52,7 @@ public class OreGenerator {
 					Decoration.UNDERGROUND_ORES, 
 					Biome.createCompositeFeature(
 						Feature.MINABLE, 
-						new MinableConfig(IS_BEDROCK, ModBlocks.carbonadoOre.getDefaultState(), 1), 
+						new MinableConfig(IS_BEDROCK, ModBlocks.carbonadoOre.getDefaultState(), 3), 
 						new CountRange(), 
 						placementConfigOverworld
 					)
