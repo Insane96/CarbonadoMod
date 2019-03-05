@@ -23,10 +23,9 @@
     "block.carbonado.carbonado_glass": "Carbonado Reinforced Glass",
 	"block.carbonado.carbonado_glass_pane": "Carbonado Reinforced Glass Pane",
 
-    "tooltip.carbonado.base_blackDiamond": "§7Also known as Black Diamond",
+    "tooltip.carbonado.black_diamond": "§7Also known as Black Diamond",
 
-    "tooltip.carbonado_glass.base_info": "§8Stronger than normal Glass and prevents light from passing through",
-    "tooltip.carbonado_glass.base_createGlass": "§7Drop an anvil from at least 4 blocks on a Carbonado to get Carbonado Shards, then smelt them ...",
+    "tooltip.carbonado_glass.info": "§8Stronger than normal Glass and prevents light from passing through",
 
     "advancements.carbonado.root.title": "Carbonado Mod",
     "advancements.carbonado.root.description": "Also called Black Diamond",

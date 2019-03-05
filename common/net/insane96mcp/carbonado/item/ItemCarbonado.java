@@ -23,6 +23,6 @@ public class ItemCarbonado extends Item {
 
 	@Override
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-		tooltip.add(new TextComponentTranslation(Tooltips.Gem.base_blackDiamond));
+		tooltip.add(new TextComponentTranslation(Tooltips.Gem.blackDiamond));
 	}
 }

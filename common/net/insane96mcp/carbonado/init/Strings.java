@@ -22,11 +22,11 @@ public class Strings {
 	
 	public static class Tooltips {		
 		public static class Gem{
-			public static final String base_blackDiamond = "tooltip.carbonado.base_blackDiamond";
+			public static final String blackDiamond = "tooltip.carbonado.black_diamond";
 		}
 		
 		public static class GlassCreation{
-			public static final String info = "tooltip.carbonado_glass.base_info";
+			public static final String info = "tooltip.carbonado_glass.info";
 		}
 	}
 

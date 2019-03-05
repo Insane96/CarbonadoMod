@@ -21,30 +21,4 @@ public class ModBlocks {
 	
 	@ObjectHolder(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_GLASS_PANE)
 	public static BlockCarbonadoPane carbonadoGlassPane;
-	
-	/*ResourceLocation location = new ResourceLocation(Carbonado.MOD_ID, Names.CARBONADO_BLOCK);
-		carbonadoBlock = new BlockCarbonado();
-		carbonadoBlock.setRegistryName(location);
-		carbonadoBlock.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
-		carbonadoBlock.setHardness(15.0f);
-		carbonadoBlock.setResistance(15.0f);
-		carbonadoBlock.setHarvestLevel("pickaxe", 3);
-		BLOCKS.add(carbonadoBlock);
-
-		location = new ResourceLocation(Carbonado.MOD_ID, Names.CARBONADO_ORE);
-		carbonadoOre = new BlockCarbonadoOre();
-		carbonadoOre.setRegistryName(location);
-		carbonadoOre.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
-		carbonadoOre.setHardness(15.0f);
-		carbonadoOre.setResistance(33.3f);
-		carbonadoOre.setHarvestLevel("pickaxe", 3);
-		BLOCKS.add(carbonadoOre);
-		GameRegistry.registerWorldGenerator(new OreGenerator(), 0);
-
-		location = new ResourceLocation(Carbonado.MOD_ID, Names.CARBONADO_GLASS);
-		carbonadoGlass = new BlockCarbonadoGlass();
-		carbonadoGlass.setRegistryName(location);
-		carbonadoGlass.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
-		BLOCKS.add(carbonadoGlass);
-	}*/
 }

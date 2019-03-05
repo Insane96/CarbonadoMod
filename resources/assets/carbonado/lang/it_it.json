@@ -19,10 +19,9 @@
     "block.carbonado.carbonado_glass": "Vetro Rinforzato con Carbonado",
 	"block.carbonado.carbonado_glass_pane": "Pannello di Vetro Rinforzato con Carbonado", 
 
-    "tooltip.carbonado.base_blackDiamond": "§7Conosciuto anche come Diamante Nero",
+    "tooltip.carbonado.black_diamond": "§7Conosciuto anche come Diamante Nero",
 
-    "tooltip.carbonado_glass.base_info": "§8Più resistente del Vetro normale e previene che la luce vi passi attraverso",
-    "tooltip.carbonado_glass.base_createGlass": "§7Getta un'incudine da almeno 4 blocchi su un Carbonado per ottenere i Frammenti di Carbonado. Poi fondi questi frammenti ...",
+    "tooltip.carbonado_glass.info": "§8Più resistente del Vetro normale e previene che la luce vi passi attraverso",
 
     "advancements.carbonado.carbonado.title": "Migliore del Diamante",
     "advancements.carbonado.carbonado.description": "Ottieni un Carbonado. Anche chiamato Diamante Nero",
