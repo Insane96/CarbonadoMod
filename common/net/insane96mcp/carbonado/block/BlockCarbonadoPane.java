@@ -1,31 +1,38 @@
 package net.insane96mcp.carbonado.block;
 
-import java.util.List;
 import java.util.Random;
 
-import net.insane96mcp.carbonado.init.Strings.Tooltips;
+import net.insane96mcp.carbonado.init.ModBlocks;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockGlass;
+import net.minecraft.block.BlockGlassPane;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.IItemProvider;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class BlockCarbonadoGlass extends BlockGlass{
+public class BlockCarbonadoPane extends BlockGlassPane{
 
-	public BlockCarbonadoGlass(String id) {
-		super(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.9f, 10f).sound(SoundType.GLASS));
+	public BlockCarbonadoPane(String id) {
+		super(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.9f).sound(SoundType.GLASS));
 
 		setRegistryName(id);
+	}
+	
+	@Override
+	public int quantityDropped(IBlockState state, Random random) {
+		return random.nextFloat() < 0.5f ? 1 : 0;
+	}
+	
+	@Override
+	public IItemProvider getItemDropped(IBlockState state, World worldIn, BlockPos pos, int fortune) {
+		return ModBlocks.carbonadoGlassPane;
 	}
 	
 	@OnlyIn(Dist.CLIENT)
@@ -40,17 +47,7 @@ public class BlockCarbonadoGlass extends BlockGlass{
 	}
 	
 	@Override
-	public int quantityDropped(IBlockState state, Random random) {
-		return 1;
-	}
-	
-	@Override
 	public int getOpacity(IBlockState state, IBlockReader worldIn, BlockPos pos) {
 		return 15;
-	}
-	
-	@Override
-	public void addInformation(ItemStack stack, IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-		tooltip.add(new TextComponentTranslation(Tooltips.GlassCreation.info));
 	}
 }

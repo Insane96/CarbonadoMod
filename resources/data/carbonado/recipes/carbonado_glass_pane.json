@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "GGG"
+  ],
+  "key": {
+    "G": {
+      "item": "carbonado:carbonado_glass"
+    }
+  },
+  "result": {
+    "item": "carbonado:carbonado_glass_pane",
+	"count": 16
+  }
+}

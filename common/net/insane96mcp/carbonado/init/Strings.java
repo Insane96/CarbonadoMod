@@ -17,6 +17,7 @@ public class Strings {
 		public static final String CARBONADO_GLASS = "carbonado_glass";
 		public static final String CARBONADO_SHARD = "carbonado_shard";
 		public static final String CARBONADO_SHARD_MOLTEN = "carbonado_shard_molten";
+		public static final String CARBONADO_GLASS_PANE = "carbonado_glass_pane";
 	}
 	
 	public static class Tooltips {		
@@ -25,8 +26,7 @@ public class Strings {
 		}
 		
 		public static class GlassCreation{
-			public static final String base_createGlass = "tooltip.carbonado_glass.base_createGlass";
-			public static final String base_info = "tooltip.carbonado_glass.base_info";
+			public static final String info = "tooltip.carbonado_glass.base_info";
 		}
 	}
 

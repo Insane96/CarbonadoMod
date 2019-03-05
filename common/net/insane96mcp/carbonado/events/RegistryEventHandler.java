@@ -4,6 +4,7 @@ import net.insane96mcp.carbonado.Carbonado;
 import net.insane96mcp.carbonado.block.BlockCarbonado;
 import net.insane96mcp.carbonado.block.BlockCarbonadoGlass;
 import net.insane96mcp.carbonado.block.BlockCarbonadoOre;
+import net.insane96mcp.carbonado.block.BlockCarbonadoPane;
 import net.insane96mcp.carbonado.init.ModBlocks;
 import net.insane96mcp.carbonado.init.Strings.Names;
 import net.insane96mcp.carbonado.item.ItemCarbonado;
@@ -33,7 +34,8 @@ public class RegistryEventHandler {
         blockRegistryEvent.getRegistry().registerAll(
         	new BlockCarbonado(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_BLOCK),
         	new BlockCarbonadoGlass(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_GLASS),
-        	new BlockCarbonadoOre(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_ORE)
+        	new BlockCarbonadoOre(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_ORE),
+        	new BlockCarbonadoPane(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_GLASS_PANE)
         );
     }
     
@@ -56,9 +58,10 @@ public class RegistryEventHandler {
     		new ItemCarbonadoShovel(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_SHOVEL),
     		new ItemCarbonadoSword(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_SWORD),
 
-    		new ItemBlock(ModBlocks.carbonadoBlock, new Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_BLOCK),
-    		new ItemBlock(ModBlocks.carbonadoGlass, new Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_GLASS),
-    		new ItemBlock(ModBlocks.carbonadoOre, new Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_ORE)
+    		new ItemBlock(ModBlocks.carbonadoBlock, new Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(Carbonado.MOD_ID, Names.CARBONADO_BLOCK),
+    		new ItemBlock(ModBlocks.carbonadoGlass, new Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(Carbonado.MOD_ID, Names.CARBONADO_GLASS),
+    		new ItemBlock(ModBlocks.carbonadoOre, new Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(Carbonado.MOD_ID, Names.CARBONADO_ORE),
+    		new ItemBlock(ModBlocks.carbonadoGlassPane, new Properties().group(ItemGroup.DECORATIONS)).setRegistryName(Carbonado.MOD_ID, Names.CARBONADO_GLASS_PANE)
     	);
     }
 }

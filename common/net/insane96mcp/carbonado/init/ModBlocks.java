@@ -4,6 +4,7 @@ import net.insane96mcp.carbonado.Carbonado;
 import net.insane96mcp.carbonado.block.BlockCarbonado;
 import net.insane96mcp.carbonado.block.BlockCarbonadoGlass;
 import net.insane96mcp.carbonado.block.BlockCarbonadoOre;
+import net.insane96mcp.carbonado.block.BlockCarbonadoPane;
 import net.insane96mcp.carbonado.init.Strings.Names;
 import net.minecraftforge.registries.ObjectHolder;
 
@@ -17,6 +18,9 @@ public class ModBlocks {
 
 	@ObjectHolder(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_GLASS)
 	public static BlockCarbonadoGlass carbonadoGlass;
+	
+	@ObjectHolder(Carbonado.RESOURCE_PREFIX + Names.CARBONADO_GLASS_PANE)
+	public static BlockCarbonadoPane carbonadoGlassPane;
 	
 	/*ResourceLocation location = new ResourceLocation(Carbonado.MOD_ID, Names.CARBONADO_BLOCK);
 		carbonadoBlock = new BlockCarbonado();
