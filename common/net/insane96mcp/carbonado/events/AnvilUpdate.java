@@ -4,6 +4,7 @@ import java.util.Map;
 
 import net.insane96mcp.carbonado.Carbonado;
 import net.insane96mcp.carbonado.init.ModItems;
+import net.insane96mcp.carbonado.lib.Properties;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.init.Items;
@@ -36,6 +37,8 @@ public class AnvilUpdate {
 		
 	@SubscribeEvent
 	public static void EventAnvilOuput(AnvilUpdateEvent event) {
+		if (!Properties.config.tools.enableAnvilCrafting)
+			return;
 		
 		ItemStack left = event.getLeft();
 		ItemStack right = event.getRight();
@@ -49,6 +52,8 @@ public class AnvilUpdate {
 				continue;
 			
 			IRecipe recipe = CraftingManager.getRecipe(left.getItem().getRegistryName());
+			if (recipe == null)
+				continue;
 
 			int carbonadoAmount = 0;
 			for (Ingredient ingredient : recipe.getIngredients()) {
