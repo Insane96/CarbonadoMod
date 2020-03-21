@@ -39,5 +39,13 @@ public class Properties {
 			@Comment("Maximum shards that can drop a single carbonado")
 			public int maxCount = 24;
 		}
+
+		public Tools tools = new Tools();
+
+		public static class Tools {
+			@Name("Enable Anvil Crafting")
+			@Comment("Enable crafting Carbonado tools in the Anvil; disable only if other ways of obtaining Carbonado tools exist")
+			public boolean enableAnvilCrafting = true;
+		}
 	}
 }
