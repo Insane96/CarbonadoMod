@@ -1,0 +1,7 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "carbonado:item/carbonado_pickaxe"
+  }
+}
+

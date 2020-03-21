@@ -1,0 +1,10 @@
+{
+	"type": "smelting",
+	"ingredient":
+	{
+		"item": "carbonado:carbonado_shard"
+	},
+	"result": "carbonado:carbonado_shard_molten",
+	"experience": 1.5,
+	"cookingtime": 125
+}
