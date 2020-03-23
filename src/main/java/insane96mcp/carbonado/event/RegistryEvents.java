@@ -38,7 +38,7 @@ public class RegistryEvents {
 				new ArmorItem(ModMaterial.ARMOR_CARBONADO, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName(Carbonado.MOD_ID, Strings.Names.CARBONADO_CHESTPLATE),
 				new ArmorItem(ModMaterial.ARMOR_CARBONADO, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName(Carbonado.MOD_ID, Strings.Names.CARBONADO_LEGGINGS),
 				new ArmorItem(ModMaterial.ARMOR_CARBONADO, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName(Carbonado.MOD_ID, Strings.Names.CARBONADO_BOOTS),
-				new AxeItem(ModMaterial.TOOLS_CARBONADO, 6.0f, -3.0f, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName(Carbonado.MOD_ID, Strings.Names.CARBONADO_AXE),
+				new AxeItem(ModMaterial.TOOLS_CARBONADO, 5.0f, -3.0f, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName(Carbonado.MOD_ID, Strings.Names.CARBONADO_AXE),
 				new HoeItem(ModMaterial.TOOLS_CARBONADO, 1.0f, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName(Carbonado.MOD_ID, Strings.Names.CARBONADO_HOE),
 				new PickaxeItem(ModMaterial.TOOLS_CARBONADO, 1, -2.8f, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName(Carbonado.MOD_ID, Strings.Names.CARBONADO_PICKAXE),
 				new ShovelItem(ModMaterial.TOOLS_CARBONADO, 1.5f, -3f, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName(Carbonado.MOD_ID, Strings.Names.CARBONADO_SHOVEL),
