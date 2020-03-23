@@ -1,0 +1,119 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:anvil"
+		},
+		"title": {
+			"translate": "advancements.carbonado.upgrade.title"
+		},
+		"description": {
+			"translate": "advancements.carbonado.upgrade.description"
+		}
+	},
+	"parent": "carbonado:carbonado/carbonado",
+	"criteria": {
+		"carbonado_equipment1": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "carbonado:carbonado_pickaxe"
+					}
+				]
+			}
+		},
+		"carbonado_equipment2": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "carbonado:carbonado_sword"
+					}
+				]
+			}
+		},
+		"carbonado_equipment3": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "carbonado:carbonado_axe"
+					}
+				]
+			}
+		},
+		"carbonado_equipment4": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "carbonado:carbonado_shovel"
+					}
+				]
+			}
+		},
+		"carbonado_equipment5": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "carbonado:carbonado_hoe"
+					}
+				]
+			}
+		},
+		"carbonado_equipment7": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "carbonado:carbonado_helmet"
+					}
+				]
+			}
+		},
+		"carbonado_equipment8": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "carbonado:carbonado_chestplate"
+					}
+				]
+			}
+		},
+		"carbonado_equipment9": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "carbonado:carbonado_leggings"
+					}
+				]
+			}
+		},
+		"carbonado_equipment10": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "carbonado:carbonado_boots"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"carbonado_equipment1",
+			"carbonado_equipment2",
+			"carbonado_equipment3",
+			"carbonado_equipment4",
+			"carbonado_equipment5",
+			"carbonado_equipment7",
+			"carbonado_equipment8",
+			"carbonado_equipment9",
+			"carbonado_equipment10"
+		]
+	]
+}

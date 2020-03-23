@@ -14,15 +14,48 @@
 		"announce_to_chat": false
     },
     "criteria": {
-        "carbonado": {
-            "trigger": "minecraft:inventory_changed",
+        "y_check_overworld": {
+            "trigger": "minecraft:location",
             "conditions": {
-                "items": [
-                    {
-                        "item": "minecraft:diamond_pickaxe"
+                "position": {
+                    "y": {
+                        "min": 0,
+                        "max": 6
                     }
-                ]
+                },
+                "dimension": "overworld"
+            }
+        },
+        "bottom_y_check_nether": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "position": {
+                    "y": {
+                        "min": 0,
+                        "max": 6
+                    }
+                },
+                "dimension": "the_nether"
+            }
+        },
+        "top_y_check_nether": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "position": {
+                    "y": {
+                        "min": 122,
+                        "max": 127
+                    }
+                },
+                "dimension": "the_nether"
             }
         }
-    }
+    },
+    "requirements": [
+        [
+            "y_check_overworld",
+            "bottom_y_check_nether",
+            "top_y_check_nether"
+        ]
+    ]
 }

@@ -30,7 +30,6 @@ public class RegistryEvents {
 
 	@SubscribeEvent
 	public static void onRegisterItems(final RegistryEvent.Register<Item> itemRegistryEvent) {
-
 		itemRegistryEvent.getRegistry().registerAll(
 				new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName(Carbonado.MOD_ID, Strings.Names.CARBONADO_ITEM),
 				new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName(Carbonado.MOD_ID, Strings.Names.CARBONADO_SHARD),
@@ -43,7 +42,7 @@ public class RegistryEvents {
 				new HoeItem(ModMaterial.TOOLS_CARBONADO, 1.0f, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName(Carbonado.MOD_ID, Strings.Names.CARBONADO_HOE),
 				new PickaxeItem(ModMaterial.TOOLS_CARBONADO, 1, -2.8f, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName(Carbonado.MOD_ID, Strings.Names.CARBONADO_PICKAXE),
 				new ShovelItem(ModMaterial.TOOLS_CARBONADO, 1.5f, -3f, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName(Carbonado.MOD_ID, Strings.Names.CARBONADO_SHOVEL),
-				new SwordItem(ModMaterial.TOOLS_CARBONADO, 3, -2.4f, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName(Carbonado.MOD_ID, Strings.Names.CARBONADO_SWORD),
+				new SwordItem(ModMaterial.TOOLS_CARBONADO, 3, -2.4f, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName(Carbonado.MOD_ID, Strings.Names.CARBONADO_SWORD),
 				new BlockItem(ModBlocks.carbonadoOre, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(Carbonado.MOD_ID, Strings.Names.CARBONADO_ORE),
 				new BlockItem(ModBlocks.carbonadoBlock, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(Carbonado.MOD_ID, Strings.Names.CARBONADO_BLOCK),
 				new BlockItem(ModBlocks.carbonadoGlass, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(Carbonado.MOD_ID, Strings.Names.CARBONADO_GLASS),

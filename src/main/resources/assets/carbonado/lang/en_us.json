@@ -13,41 +13,27 @@
     "item.carbonado.carbonado_chestplate": "Carbonado Chestplate",
     "item.carbonado.carbonado_leggings": "Carbonado Leggings",
     "item.carbonado.carbonado_boots": "Carbonado Boots",
-
     "block.carbonado.carbonado_block": "Carbonado Block",
     "block.carbonado.carbonado_ore": "Carbonado Ore",
     "block.carbonado.carbonado_glass": "Carbonado Reinforced Glass",
-
-    "block.carbonado.carbonado_block": "Carbonado Block",
-    "block.carbonado.carbonado_ore": "Carbonado Ore",
-    "block.carbonado.carbonado_glass": "Carbonado Reinforced Glass",
-	"block.carbonado.carbonado_glass_pane": "Carbonado Reinforced Glass Pane",
-
-    "tooltip.carbonado.black_diamond": "§7Also known as Black Diamond",
-
+    "block.carbonado.carbonado_glass_pane": "Carbonado Reinforced Glass Pane",
     "tooltip.carbonado_glass.info": "§8Stronger than normal Glass and prevents light from passing through",
-
     "advancements.carbonado.root.title": "Carbonado Mod",
-    "advancements.carbonado.root.description": "Also called Black Diamond",
-
+    "advancements.carbonado.root.description": "Also known as Black Diamond",
     "advancements.carbonado.carbonado.title": "Stronger than Diamond",
-    "advancements.carbonado.carbonado.description": "Obtain a Carbonado. Try checking inside Bedrock",
-
+    "advancements.carbonado.carbonado.description": "Obtain a Carbonado. Try checking inside Bedrock.\nAlso you might need something explosive to extract it.",
+    "advancements.carbonado.upgrade.title": "Forging Equipment",
+    "advancements.carbonado.upgrade.description": "Diamond Equipment and some Carbonado in an Anvil will create upgraded Equipment!",
     "advancements.carbonado.armor.title": "Man in Black",
-    "advancements.carbonado.armor.description": "Obtain a full set of Carbonado armor. Those can be created in an anvil with a Diamond armor piece and the right amount of Carbonado. Enchantments are kept but at a cost.",
-
+    "advancements.carbonado.armor.description": "Obtain a full set of Carbonado armor.",
     "advancements.carbonado.sword.title": "Not That Shiny, but Sharp",
-    "advancements.carbonado.sword.description": "Obtain a Carbonado Sword. This can be created in an anvil with a Diamond Sword and the right amount of Carbonado. Enchantments are kept but at a cost.",
-
+    "advancements.carbonado.sword.description": "Obtain a Carbonado Sword.",
     "advancements.carbonado.tools.title": "Yep, the Hoe too",
-    "advancements.carbonado.tools.description": "Obtain a full set of Carbonado Tools (yep, the Hoe too). Those can be created in an anvil with a Diamond tool and the right amount of Carbonado. Enchantments are kept but at a cost.",
-
-    "advancements.carbonado.hoe.title": "Even More dedication",
+    "advancements.carbonado.tools.description": "Obtain a full set of Carbonado Tools (yep, the Hoe too).",
+    "advancements.carbonado.hoe.title": "Even more dedication",
     "advancements.carbonado.hoe.description": "Break down a Carbonado Hoe",
-
-    "advancements.carbonado.shard.title": "A Falling Anvil",
-    "advancements.carbonado.shard.description": "Make an anvil fall on top of a Carbonado to obtain shards",
-
-    "advancements.carbonado.glass.title": "Tinted Window",
-    "advancements.carbonado.glass.description": "Melt the shards and use them to get Carbonado Reinforced Glass"
+    "advancements.carbonado.shard.title": "Double Explosion",
+    "advancements.carbonado.shard.description": "After extracting Carbonado with TNT try to make it blow up.",
+    "advancements.carbonado.glass.title": "Looking at the Dark",
+    "advancements.carbonado.glass.description": "Smelt the shards and use them to get Carbonado Reinforced Glass.\nYou can make Panes too."
 }

@@ -10,7 +10,7 @@
             "translate": "advancements.carbonado.armor.description"
         }
     },
-    "parent": "carbonado:carbonado/carbonado",
+    "parent": "carbonado:carbonado/carbonado_upgrade",
     "criteria": {
         "carbonado_helmet": {
             "trigger": "minecraft:inventory_changed",
