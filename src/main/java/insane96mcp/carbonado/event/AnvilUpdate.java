@@ -24,21 +24,21 @@ public class AnvilUpdate {
 	@SubscribeEvent
 	public static void onAnvilUpdate(AnvilUpdateEvent event){
 		if (EQUIPMENT_UPGRADES.isEmpty()){
-			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_PICKAXE, ModItems.carbonadoPickaxe, 2));
-			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_SWORD, ModItems.carbonadoSword, 1));
-			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_AXE, ModItems.carbonadoAxe, 2));
-			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_SHOVEL, ModItems.carbonadoShovel, 1));
-			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_HOE, ModItems.carbonadoHoe, 1));
-			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_HELMET, ModItems.carbonadoHelmet, 3));
-			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_CHESTPLATE, ModItems.carbonadoChestplate, 4));
-			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_LEGGINGS, ModItems.carbonadoLeggings, 4));
-			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_BOOTS, ModItems.carbonadoBoots, 2));
+			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_PICKAXE, ModItems.CARBONADO_PICKAXE.get(), 2));
+			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_SWORD, ModItems.CARBONADO_SWORD.get(), 1));
+			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_AXE, ModItems.CARBONADO_AXE.get(), 2));
+			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_SHOVEL, ModItems.CARBONADO_SHOVEL.get(), 1));
+			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_HOE, ModItems.CARBONADO_HOE.get(), 1));
+			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_HELMET, ModItems.CARBONADO_HELMET.get(), 3));
+			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_CHESTPLATE, ModItems.CARBONADO_HELMET.get(), 4));
+			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_LEGGINGS, ModItems.CARBONADO_LEGGINGS.get(), 4));
+			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_BOOTS, ModItems.CARBONADO_BOOTS.get(), 2));
 		}
 
 		ItemStack left = event.getLeft();
 		ItemStack right = event.getRight();
 
-		if (!right.getItem().equals(ModItems.carbonado))
+		if (!right.getItem().equals(ModItems.CARBONADO))
 			return;
 
 		for (EquipmentUpgrade equipmentUpgrade : EQUIPMENT_UPGRADES) {
@@ -49,10 +49,8 @@ public class AnvilUpdate {
 				continue;
 
 			ItemStack output = new ItemStack(equipmentUpgrade.outputItem, 1);
-			CompoundNBT tags;
-			if (left.getTag() != null)
-				tags = left.getTag().copy();
-			else
+			CompoundNBT tags = left.getTag();
+			if (tags == null)
 				tags = new CompoundNBT();
 			tags.putInt("Damage", 0);
 			output.setTag(tags);

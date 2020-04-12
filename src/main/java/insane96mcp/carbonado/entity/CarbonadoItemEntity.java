@@ -1,5 +1,6 @@
 package insane96mcp.carbonado.entity;
 
+import insane96mcp.carbonado.setup.ModConfig;
 import insane96mcp.carbonado.setup.ModItems;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.item.ItemStack;
@@ -26,7 +27,7 @@ public class CarbonadoItemEntity extends ItemEntity {
 		//And check if the entity is dead
 		if (this.removed) {
 			if (source.isExplosion()) {
-				ItemEntity shards = new ItemEntity(world, x, y, z, new ItemStack(ModItems.CARBONADO_SHARD.get(), 8 * carbonadoCount));
+				ItemEntity shards = new ItemEntity(world, x, y, z, new ItemStack(ModItems.CARBONADO_SHARD.get(), carbonadoCount * ModConfig.COMMON.shards.amountPerCarbonado.get()));
 				world.addEntity(shards);
 				world.playSound(null, x, y, z, SoundEvents.ENTITY_ITEM_BREAK, SoundCategory.NEUTRAL, 1.0f, 1.0f);
 			}

@@ -28,21 +28,13 @@ public class ModConfig {
 		public static class Shards {
 			public static String name = "shards";
 
-			public static ConfigValue<Integer> minHeight;
-			public static ConfigValue<Integer> amountAtMinHeight;
-			public static ConfigValue<Integer> maxAmount;
+			public ConfigValue<Integer> amountPerCarbonado;
 
 			public Shards(ForgeConfigSpec.Builder builder) {
 				builder.push(name);
-				minHeight = builder
-						.comment("Anvil minimum height to fall for the carbonado to be destroyed and give shards")
-						.defineInRange("min_height", 4, 1, 255);
-				amountAtMinHeight = builder
-						.comment("Amount of shards dropped at min_height, increased by 1 for each block higher")
-						.defineInRange("amount_at_min_height", 8, 1, 256);
-				maxAmount = builder
-						.comment("Maximum shards that can drop a single carbonado")
-						.defineInRange("max_amount", 24, 1, 256);
+				amountPerCarbonado = builder
+						.comment("How many Carbonado Shards are given by blowing up one Carbonado?")
+						.defineInRange("amount_per_carbonado", 8, 1, 64);
 				builder.pop();
 			}
 		}
