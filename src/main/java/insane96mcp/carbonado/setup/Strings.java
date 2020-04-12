@@ -1,8 +1,8 @@
 package insane96mcp.carbonado.setup;
 
 public class Strings {
-	public static class Names {
-		public static final String CARBONADO_ITEM = "carbonado";
+	public static class RegistryNames {
+		public static final String CARBONADO = "carbonado";
 		public static final String CARBONADO_BLOCK = "carbonado_block";
 		public static final String CARBONADO_ORE = "carbonado_ore";
 		public static final String CARBONADO_PICKAXE = "carbonado_pickaxe";
@@ -17,17 +17,6 @@ public class Strings {
 		public static final String CARBONADO_GLASS = "carbonado_glass";
 		public static final String CARBONADO_GLASS_PANE = "carbonado_glass_pane";
 		public static final String CARBONADO_SHARD = "carbonado_shard";
-		public static final String CARBONADO_SHARD_MOLTEN = "carbonado_shard_molten";
+		public static final String MOLTEN_CARBONADO_SHARD = "carbonado_shard_molten";
 	}
-
-	public static class Tooltips {
-		public static class Gem {
-			public static final String blackDiamond = "tooltip.carbonado.black_diamond";
-		}
-
-		public static class GlassCreation {
-			public static final String info = "tooltip.carbonado_glass.info";
-		}
-	}
-
 }

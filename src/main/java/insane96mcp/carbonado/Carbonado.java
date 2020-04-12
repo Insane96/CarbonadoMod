@@ -1,7 +1,9 @@
 package insane96mcp.carbonado;
 
+import insane96mcp.carbonado.setup.ModBlocks;
+import insane96mcp.carbonado.setup.ModItems;
 import insane96mcp.carbonado.worldgen.OreGenerator;
-import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -20,7 +22,10 @@ public class Carbonado {
 	public Carbonado() {
 		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, insane96mcp.carbonado.setup.ModConfig.COMMON_SPEC);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-		MinecraftForge.EVENT_BUS.register(this);
+
+		final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+		ModBlocks.BLOCKS.register(modEventBus);
+		ModItems.ITEMS.register(modEventBus);
 	}
 
 	private void setup(final FMLCommonSetupEvent event) {

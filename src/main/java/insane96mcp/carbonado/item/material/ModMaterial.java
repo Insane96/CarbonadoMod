@@ -13,7 +13,7 @@ public class ModMaterial {
 
 		@Override
 		public Ingredient getRepairMaterial() {
-			return Ingredient.fromItems(ModItems.carbonado);
+			return Ingredient.fromItems(ModItems.CARBONADO.get());
 		}
 
 		@Override
@@ -46,7 +46,7 @@ public class ModMaterial {
 
 		@Override
 		public float getToughness() {
-			return 2.5f;
+			return 2f;
 		}
 
 		@Override
@@ -56,7 +56,7 @@ public class ModMaterial {
 
 		@Override
 		public Ingredient getRepairMaterial() {
-			return Ingredient.fromItems(ModItems.carbonado);
+			return Ingredient.fromItems(ModItems.CARBONADO.get());
 		}
 
 		@Override

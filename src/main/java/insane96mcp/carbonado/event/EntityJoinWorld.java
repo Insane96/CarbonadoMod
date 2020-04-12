@@ -1,7 +1,7 @@
 package insane96mcp.carbonado.event;
 
 import insane96mcp.carbonado.Carbonado;
-import insane96mcp.carbonado.item.material.CarbonadoItemEntity;
+import insane96mcp.carbonado.entity.CarbonadoItemEntity;
 import insane96mcp.carbonado.setup.ModItems;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
@@ -18,9 +18,9 @@ public class EntityJoinWorld {
 		if (!event.getEntity().getClass().equals(ItemEntity.class))
 			return;
 		ItemEntity itemEntity = (ItemEntity) event.getEntity();
-		if (itemEntity.getItem().getItem() != ModItems.carbonado)
+		if (itemEntity.getItem().getItem() != ModItems.CARBONADO.get())
 			return;
-		CarbonadoItemEntity carbonadoItemEntity = new CarbonadoItemEntity(itemEntity.world, itemEntity.posX, itemEntity.posY, itemEntity.posZ, itemEntity.getItem());
+		CarbonadoItemEntity carbonadoItemEntity = new CarbonadoItemEntity(itemEntity.world, itemEntity.getPosX(), itemEntity.getPosY(), itemEntity.getPosZ(), itemEntity.getItem());
 		carbonadoItemEntity.setPickupDelay(itemEntity.pickupDelay);
 		carbonadoItemEntity.setMotion(itemEntity.getMotion());
 		event.getWorld().addEntity(carbonadoItemEntity);

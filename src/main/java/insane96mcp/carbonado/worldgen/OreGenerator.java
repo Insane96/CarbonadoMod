@@ -22,35 +22,40 @@ public class OreGenerator {
 		for (Biome biome : ForgeRegistries.BIOMES.getValues()) {
 			if (biome.getCategory().equals(Biome.Category.NETHER)) {
 				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
-						Biome.createDecoratedFeature(Feature.ORE,
+						Feature.ORE.withConfiguration(
 								new OreFeatureConfig(
 										BEDROCK,
-										ModBlocks.carbonadoOre.getDefaultState(),
+										ModBlocks.CARBONADO_ORE.get().getDefaultState(),
 										VEIN_SIZE
-								),
-								Placement.COUNT_RANGE, BOTTOM_BEDROCK_NETHER
+								)
+						).withPlacement(
+								Placement.COUNT_RANGE.configure(BOTTOM_BEDROCK_NETHER)
 						)
 				);
 				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
-						Biome.createDecoratedFeature(Feature.ORE,
+						Feature.ORE.withConfiguration(
 								new OreFeatureConfig(
 										BEDROCK,
-										ModBlocks.carbonadoOre.getDefaultState(),
+										ModBlocks.CARBONADO_ORE.get().getDefaultState(),
 										VEIN_SIZE
-								),
-								Placement.COUNT_RANGE, TOP_BEDROCK_NETHER
+								)
+
+						).withPlacement(
+								Placement.COUNT_RANGE.configure(TOP_BEDROCK_NETHER)
 						)
 				);
 			}
 			else if (!biome.getCategory().equals(Biome.Category.NETHER) && !biome.getCategory().equals(Biome.Category.THEEND)) {
 				biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
-						Biome.createDecoratedFeature(Feature.ORE,
+						Feature.ORE.withConfiguration(
 								new OreFeatureConfig(
 										BEDROCK,
-										ModBlocks.carbonadoOre.getDefaultState(),
+										ModBlocks.CARBONADO_ORE.get().getDefaultState(),
 										VEIN_SIZE
-								),
-								Placement.COUNT_RANGE, BOTTOM_BEDROCK_OVERWORLD
+								)
+
+						).withPlacement(
+								Placement.COUNT_RANGE.configure(BOTTOM_BEDROCK_OVERWORLD)
 						)
 				);
 			}
