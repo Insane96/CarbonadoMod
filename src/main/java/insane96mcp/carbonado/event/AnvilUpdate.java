@@ -38,7 +38,7 @@ public class AnvilUpdate {
 		ItemStack left = event.getLeft();
 		ItemStack right = event.getRight();
 
-		if (!right.getItem().equals(ModItems.CARBONADO))
+		if (!right.getItem().equals(ModItems.CARBONADO.get()))
 			return;
 
 		for (EquipmentUpgrade equipmentUpgrade : EQUIPMENT_UPGRADES) {
