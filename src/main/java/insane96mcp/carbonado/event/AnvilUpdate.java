@@ -30,7 +30,7 @@ public class AnvilUpdate {
 			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_SHOVEL, ModItems.CARBONADO_SHOVEL.get(), 1));
 			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_HOE, ModItems.CARBONADO_HOE.get(), 1));
 			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_HELMET, ModItems.CARBONADO_HELMET.get(), 3));
-			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_CHESTPLATE, ModItems.CARBONADO_HELMET.get(), 4));
+			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_CHESTPLATE, ModItems.CARBONADO_CHESTPLATE.get(), 4));
 			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_LEGGINGS, ModItems.CARBONADO_LEGGINGS.get(), 4));
 			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_BOOTS, ModItems.CARBONADO_BOOTS.get(), 2));
 		}
