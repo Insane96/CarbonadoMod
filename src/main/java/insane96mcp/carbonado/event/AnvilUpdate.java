@@ -9,35 +9,37 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.event.AnvilUpdateEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
 
 @Mod.EventBusSubscriber(modid = Carbonado.MOD_ID)
 public class AnvilUpdate {
-	final static ArrayList<EquipmentUpgrade> EQUIPMENT_UPGRADES = new ArrayList<>();
+
+	public final static ArrayList<EquipmentUpgrade> EQUIPMENT_UPGRADES = new ArrayList<>(Arrays.asList(
+		new EquipmentUpgrade(Items.DIAMOND_AXE, 2),
+		new EquipmentUpgrade(Items.DIAMOND_SHOVEL, 1),
+		new EquipmentUpgrade(Items.DIAMOND_PICKAXE, 2),
+		new EquipmentUpgrade(Items.DIAMOND_SWORD, 1),
+		new EquipmentUpgrade(Items.DIAMOND_HOE, 1),
+		new EquipmentUpgrade(Items.DIAMOND_HELMET, 3),
+		new EquipmentUpgrade(Items.DIAMOND_CHESTPLATE, 4),
+		new EquipmentUpgrade(Items.DIAMOND_LEGGINGS, 4),
+		new EquipmentUpgrade(Items.DIAMOND_BOOTS, 2)
+	));
 
 	@SubscribeEvent
 	public static void onAnvilUpdate(AnvilUpdateEvent event){
 		if (ModConfig.COMMON.disableAnvilRecipes.get())
 			return;
-
-		if (EQUIPMENT_UPGRADES.isEmpty()){
-			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_PICKAXE, ModItems.CARBONADO_PICKAXE.get(), 2));
-			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_SWORD, ModItems.CARBONADO_SWORD.get(), 1));
-			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_AXE, ModItems.CARBONADO_AXE.get(), 2));
-			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_SHOVEL, ModItems.CARBONADO_SHOVEL.get(), 1));
-			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_HOE, ModItems.CARBONADO_HOE.get(), 1));
-			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_HELMET, ModItems.CARBONADO_HELMET.get(), 3));
-			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_CHESTPLATE, ModItems.CARBONADO_CHESTPLATE.get(), 4));
-			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_LEGGINGS, ModItems.CARBONADO_LEGGINGS.get(), 4));
-			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_BOOTS, ModItems.CARBONADO_BOOTS.get(), 2));
-		}
 
 		ItemStack left = event.getLeft();
 		ItemStack right = event.getRight();
@@ -52,7 +54,9 @@ public class AnvilUpdate {
 			if (right.getCount() < equipmentUpgrade.materialAmount)
 				continue;
 
-			ItemStack output = new ItemStack(equipmentUpgrade.outputItem, 1);
+			String itemName = left.getItem().getRegistryName().getPath();
+			ResourceLocation carbonadoName = new ResourceLocation(Carbonado.MOD_ID, itemName.replace("diamond", "carbonado"));
+			ItemStack output = new ItemStack(ForgeRegistries.ITEMS.getValue(carbonadoName));
 			CompoundNBT tags = output.getTag();
 			if (tags == null)
 				tags = new CompoundNBT();
@@ -90,14 +94,12 @@ public class AnvilUpdate {
 		}
 	}
 
-	private static class EquipmentUpgrade {
+	public static class EquipmentUpgrade {
 		public Item inputItem;
-		public Item outputItem;
 		public int materialAmount;
 
-		public EquipmentUpgrade(Item inputItem, Item outputItem, int materialAmount) {
+		public EquipmentUpgrade(Item inputItem, int materialAmount) {
 			this.inputItem = inputItem;
-			this.outputItem = outputItem;
 			this.materialAmount = materialAmount;
 		}
 	}
