@@ -17,6 +17,10 @@ public class CarbonadoItemEntity extends ItemEntity {
 
 	@Override
 	public boolean attackEntityFrom(DamageSource source, float amount) {
+		int shardsAmount = ModConfig.COMMON.amountPerCarbonado.get();
+		if (shardsAmount == 0)
+			return false;
+
 		World world = this.world;
 		double x = this.getPosX();
 		double y = this.getPosY();
@@ -27,7 +31,7 @@ public class CarbonadoItemEntity extends ItemEntity {
 		//And check if the entity is dead
 		if (this.removed) {
 			if (source.isExplosion()) {
-				ItemEntity shards = new ItemEntity(world, x, y, z, new ItemStack(ModItems.CARBONADO_SHARD.get(), carbonadoCount * ModConfig.COMMON.shards.amountPerCarbonado.get()));
+				ItemEntity shards = new ItemEntity(world, x, y, z, new ItemStack(ModItems.CARBONADO_SHARD.get(), carbonadoCount * shardsAmount));
 				world.addEntity(shards);
 				world.playSound(null, x, y, z, SoundEvents.ENTITY_ITEM_BREAK, SoundCategory.NEUTRAL, 1.0f, 1.0f);
 			}

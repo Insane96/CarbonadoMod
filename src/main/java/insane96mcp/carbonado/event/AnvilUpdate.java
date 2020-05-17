@@ -1,6 +1,7 @@
 package insane96mcp.carbonado.event;
 
 import insane96mcp.carbonado.Carbonado;
+import insane96mcp.carbonado.setup.ModConfig;
 import insane96mcp.carbonado.setup.ModItems;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -23,6 +24,9 @@ public class AnvilUpdate {
 
 	@SubscribeEvent
 	public static void onAnvilUpdate(AnvilUpdateEvent event){
+		if (ModConfig.COMMON.disableAnvilRecipes.get())
+			return;
+
 		if (EQUIPMENT_UPGRADES.isEmpty()){
 			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_PICKAXE, ModItems.CARBONADO_PICKAXE.get(), 2));
 			EQUIPMENT_UPGRADES.add(new EquipmentUpgrade(Items.DIAMOND_SWORD, ModItems.CARBONADO_SWORD.get(), 1));

@@ -18,25 +18,16 @@ public class ModConfig {
 	}
 
 	public static class CommonConfig {
-
-		public final Shards shards;
+		public ConfigValue<Integer> amountPerCarbonado;
+		public ConfigValue<Boolean> disableAnvilRecipes;
 
 		public CommonConfig(final ForgeConfigSpec.Builder builder) {
-			shards = new Shards(builder);
-		}
-
-		public static class Shards {
-			public static String name = "shards";
-
-			public ConfigValue<Integer> amountPerCarbonado;
-
-			public Shards(ForgeConfigSpec.Builder builder) {
-				builder.push(name);
-				amountPerCarbonado = builder
-						.comment("How many Carbonado Shards are given by blowing up one Carbonado?")
-						.defineInRange("amount_per_carbonado", 8, 1, 64);
-				builder.pop();
-			}
+			amountPerCarbonado = builder
+					.comment("How many Carbonado Shards are given by blowing up one Carbonado?")
+					.defineInRange("amount_per_carbonado", 8, 1, 64);
+			disableAnvilRecipes = builder
+					.comment("Disable the forging of Carbonado via Anvil if pack makes want to use another way.")
+					.define("disable_anvil_recipes", false);
 		}
 	}
 }
