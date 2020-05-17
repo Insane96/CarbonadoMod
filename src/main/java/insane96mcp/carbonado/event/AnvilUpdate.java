@@ -53,7 +53,7 @@ public class AnvilUpdate {
 				continue;
 
 			ItemStack output = new ItemStack(equipmentUpgrade.outputItem, 1);
-			CompoundNBT tags = left.getTag();
+			CompoundNBT tags = output.getTag();
 			if (tags == null)
 				tags = new CompoundNBT();
 			tags.putInt("Damage", 0);
