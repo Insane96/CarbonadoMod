@@ -48,8 +48,8 @@ public class JEIPlugin implements IModPlugin {
 			ItemStack equipment = new ItemStack(upgrade.inputItem);
 			ItemStack carbonado = new ItemStack(ModItems.CARBONADO.get(), upgrade.materialAmount);
 			String itemName = upgrade.inputItem.getRegistryName().getPath();
-			ResourceLocation vulcaniteName = new ResourceLocation(Carbonado.MOD_ID, itemName.replace("diamond", "carbonado"));
-			ItemStack output = new ItemStack(ForgeRegistries.ITEMS.getValue(vulcaniteName));
+			ResourceLocation carbonadoName = new ResourceLocation(Carbonado.MOD_ID, itemName.replace("diamond", "carbonado"));
+			ItemStack output = new ItemStack(ForgeRegistries.ITEMS.getValue(carbonadoName), upgrade.materialAmount);
 
 			recipes.add(factory.createAnvilRecipe(equipment,
 					Collections.singletonList(carbonado),
